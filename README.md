@@ -1,4 +1,4 @@
-# Atlas in Motion
+# Motion Atlas
 
 A privacy-conscious OpenStreetMap view of Garmin Connect activities. Activities of the same sport whose start points are connected within a 100 km radius are published as one marker. Clicking a marker shows the activity count for each year.
 

@@ -72,9 +72,9 @@ function ActivityMap({ groups, activeSports }) {
         icon: L.divIcon({
           className: "sport-marker",
           html: markerMarkup(group),
-          iconSize: [54, 62],
-          iconAnchor: [27, 54],
-          popupAnchor: [0, -50],
+          iconSize: [42, 48],
+          iconAnchor: [21, 43],
+          popupAnchor: [0, -39],
         }),
       });
       marker.bindPopup(popupMarkup(group), {
@@ -108,7 +108,7 @@ function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
   const [activeSports, setActiveSports] = useState(new Set());
-  const [panelOpen, setPanelOpen] = useState(true);
+  const [panelOpen, setPanelOpen] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -169,7 +169,7 @@ function App() {
             <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
             <p>GARMIN ACTIVITY ARCHIVE</p>
           </div>
-          <h1>Atlas in Motion</h1>
+          <h1>Motion Atlas</h1>
           <p className="lede">A life in movement, mapped across the world.</p>
 
           {error ? <div className="notice notice--error">{error}</div> : null}

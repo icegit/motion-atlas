@@ -17,45 +17,55 @@ button { font: inherit; }
   inset: 0;
   z-index: 400;
   pointer-events: none;
-  box-shadow: inset 0 0 150px rgb(10 45 35 / 14%);
+  box-shadow: inset 0 0 100px rgb(10 45 35 / 7%);
 }
 
-.leaflet-tile-pane { filter: saturate(0.72) sepia(0.08) contrast(0.92) brightness(1.04); }
-.leaflet-control-zoom { border: 0 !important; box-shadow: 0 12px 30px rgb(16 48 38 / 20%) !important; }
+.leaflet-tile-pane { filter: saturate(0.62) contrast(0.93) brightness(1.06); }
+.leaflet-control-zoom { border: 1px solid #e2e3df !important; box-shadow: 0 6px 20px rgb(16 48 38 / 10%) !important; }
 .leaflet-control-zoom a { color: #173b30 !important; background: #fbfaf5 !important; }
 .leaflet-control-attribution { color: #68756f; background: rgb(250 249 244 / 86%) !important; }
 
 .explorer {
   position: absolute;
   z-index: 800;
-  top: 24px;
-  left: 24px;
-  width: min(392px, calc(100vw - 48px));
-  max-height: calc(100vh - 48px);
-  border: 1px solid rgb(255 255 255 / 66%);
-  border-radius: 26px;
-  background: rgb(250 249 244 / 93%);
-  box-shadow: 0 24px 68px rgb(12 42 33 / 22%);
-  backdrop-filter: blur(20px);
-  transition: width 180ms ease;
+  top: 20px;
+  left: 20px;
+  width: min(360px, calc(100vw - 40px));
+  max-height: calc(100vh - 40px);
+  border: 1px solid #dedfd9;
+  border-radius: 18px;
+  background: rgb(250 249 244 / 96%);
+  box-shadow: 0 10px 34px rgb(12 42 33 / 13%);
+  backdrop-filter: blur(16px);
+  transition: width 160ms ease, height 160ms ease, border-radius 160ms ease;
 }
 
-.explorer__content { max-height: calc(100vh - 48px); padding: 30px; overflow-y: auto; scrollbar-width: thin; }
+.explorer__content { max-height: calc(100vh - 40px); padding: 26px; overflow-y: auto; scrollbar-width: thin; }
 .panel-toggle {
   position: absolute;
   z-index: 2;
-  top: 16px;
-  right: 16px;
-  display: none;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
   width: 34px;
   height: 34px;
   padding: 0;
-  border: 1px solid #d9ddd8;
-  border-radius: 50%;
+  border: 0;
+  border-radius: 10px;
   color: #21463a;
-  background: #fffef9;
+  background: #f0f1ec;
   cursor: pointer;
 }
+
+.explorer.is-closed {
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.explorer.is-closed .panel-toggle { top: 8px; right: 8px; }
+.explorer.is-closed .explorer__content { visibility: hidden; pointer-events: none; }
 
 .brand-row { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; }
 .brand-row p { margin: 0; color: #a94f34; font-size: 0.67rem; font-weight: 800; letter-spacing: 0.15em; }
@@ -68,7 +78,7 @@ button { font: inherit; }
 h1 {
   margin: 0;
   max-width: 300px;
-  font-size: clamp(2.25rem, 4vw, 3.35rem);
+  font-size: clamp(2.15rem, 4vw, 3rem);
   font-weight: 760;
   line-height: 0.96;
   letter-spacing: -0.064em;
@@ -104,8 +114,8 @@ h1 {
   cursor: pointer;
   transition: border-color 140ms ease, background 140ms ease, color 140ms ease, transform 140ms ease;
 }
-.sport-filter:hover { transform: translateY(-1px); border-color: color-mix(in srgb, var(--sport-color) 44%, #d9ddd8); }
-.sport-filter.is-active { color: #1d332b; border-color: color-mix(in srgb, var(--sport-color) 38%, white); background: color-mix(in srgb, var(--sport-color) 9%, #fffef9); }
+.sport-filter:hover { border-color: color-mix(in srgb, var(--sport-color) 28%, #d9ddd8); }
+.sport-filter.is-active { color: #1d332b; border-color: #d8dad5; background: #f2f2ed; }
 .sport-filter__icon { display: grid; width: 26px; height: 26px; place-items: center; border-radius: 9px; color: var(--sport-color); background: color-mix(in srgb, var(--sport-color) 12%, white); }
 .sport-filter__icon svg { width: 13px; height: 13px; }
 .sport-filter__label { overflow: hidden; font-size: 0.75rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
@@ -128,30 +138,30 @@ h1 {
   border-radius: 999px;
   color: #54645e;
   background: rgb(250 249 244 / 90%);
-  box-shadow: 0 10px 30px rgb(12 42 33 / 15%);
+  box-shadow: 0 6px 20px rgb(12 42 33 / 9%);
   font-size: 0.7rem;
   backdrop-filter: blur(14px);
 }
 .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #42a66f; box-shadow: 0 0 0 3px rgb(66 166 111 / 15%); }
 
 .sport-marker { border: 0; background: transparent; }
-.sport-pin { position: relative; width: 54px; height: 62px; filter: drop-shadow(0 8px 7px rgb(7 37 28 / 24%)); transition: transform 150ms ease; }
+.sport-pin { position: relative; width: 42px; height: 48px; filter: drop-shadow(0 5px 5px rgb(7 37 28 / 19%)); transition: transform 150ms ease; }
 .sport-marker:hover .sport-pin { transform: translateY(-3px); }
 .sport-pin::before {
   content: "";
   position: absolute;
-  left: 7px;
+  left: 6px;
   top: 2px;
-  width: 40px;
-  height: 40px;
-  border: 4px solid #f9f8f2;
-  border-radius: 50% 50% 50% 12px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #f9f8f2;
+  border-radius: 50% 50% 50% 9px;
   background: var(--sport-color);
   transform: rotate(-45deg);
 }
-.sport-pin__glyph { position: absolute; z-index: 1; top: 11px; left: 16px; display: grid; width: 22px; height: 22px; place-items: center; color: white; }
-.sport-pin__glyph svg { width: 20px; height: 20px; }
-.sport-pin__count { position: absolute; z-index: 2; top: -4px; right: 0; min-width: 22px; height: 22px; padding: 0 6px; border: 2px solid #f9f8f2; border-radius: 11px; color: #173229; background: #f4d974; box-shadow: 0 4px 8px rgb(14 43 34 / 18%); font-size: 0.64rem; font-weight: 800; line-height: 18px; text-align: center; }
+.sport-pin__glyph { position: absolute; z-index: 1; top: 9px; left: 13px; display: grid; width: 16px; height: 16px; place-items: center; color: white; }
+.sport-pin__glyph svg { width: 14px; height: 14px; }
+.sport-pin__count { position: absolute; z-index: 2; top: -3px; right: -2px; min-width: 18px; height: 18px; padding: 0 4px; border: 2px solid #f9f8f2; border-radius: 9px; color: #173229; background: #f4d974; box-shadow: 0 3px 7px rgb(14 43 34 / 14%); font-size: 0.54rem; font-weight: 800; line-height: 14px; text-align: center; }
 
 .activity-popup .leaflet-popup-content-wrapper { overflow: hidden; border-radius: 18px; background: #fbfaf5; box-shadow: 0 18px 55px rgb(8 38 29 / 25%); }
 .activity-popup .leaflet-popup-content { margin: 0; width: auto !important; }
@@ -168,10 +178,8 @@ h1 {
 @media (max-width: 720px) {
   .explorer { top: 12px; left: 12px; width: calc(100vw - 24px); max-height: calc(100vh - 24px); border-radius: 22px; }
   .explorer__content { max-height: calc(100vh - 24px); padding: 23px; }
-  .panel-toggle { display: grid; place-items: center; }
-  .explorer.is-closed { width: 62px; height: 62px; overflow: hidden; }
-  .explorer.is-closed .panel-toggle { top: 13px; right: 13px; }
-  .explorer.is-closed .explorer__content { visibility: hidden; }
+  .explorer.is-closed { width: 52px; height: 52px; }
+  .explorer.is-closed .panel-toggle { top: 8px; right: 8px; }
   .map-caption { top: auto; right: 12px; bottom: 30px; max-width: calc(100vw - 84px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .sport-filters { grid-template-columns: 1fr; }
   .leaflet-control-attribution { max-width: 70vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
