@@ -20,4 +20,17 @@ describe("map presentation helpers", () => {
     });
     expect(markup.indexOf("2026")).toBeLessThan(markup.indexOf("2024"));
   });
+
+  it("prioritizes the sport name without repeating the grouping explanation", () => {
+    const markup = popupMarkup({
+      label: "Walking",
+      activityCount: 1,
+      clusterRadiusKm: 100,
+      years: { 2026: 1 },
+    });
+
+    expect(markup).toContain("<h2>Walking</h2>");
+    expect(markup).toContain('<p class="popup-card__total">1 activity</p>');
+    expect(markup).not.toContain("Grouped activity starts");
+  });
 });

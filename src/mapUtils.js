@@ -29,9 +29,8 @@ export function popupMarkup(group) {
 
   return `
     <article class="popup-card">
-      <p class="popup-card__eyebrow">${escapeHtml(group.label)}</p>
-      <h2>${escapeHtml(formatActivityCount(group.activityCount))}</h2>
-      <p class="popup-card__context">Grouped activity starts within ${escapeHtml(group.clusterRadiusKm)} km.</p>
+      <h2>${escapeHtml(group.label)}</h2>
+      <p class="popup-card__total">${escapeHtml(formatActivityCount(group.activityCount))}</p>
       <ul>${rows}</ul>
     </article>`;
 }

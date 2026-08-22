@@ -50,28 +50,11 @@ function ActivityMap({ groups, activeSports }) {
     });
 
     L.control.zoom({ position: "bottomright" }).addTo(map);
-    const terrainLayer = L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
-      attribution:
-        'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, SRTM | Map style &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
-      maxNativeZoom: 13,
-      maxZoom: 18,
-      subdomains: "abc",
-    }).addTo(map);
-
-    const fallbackLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 18,
-    });
-
-    let terrainErrors = 0;
-    terrainLayer.on("tileerror", () => {
-      terrainErrors += 1;
-      if (terrainErrors >= 4 && map.hasLayer(terrainLayer)) {
-        map.removeLayer(terrainLayer);
-        fallbackLayer.addTo(map);
-      }
-    });
+    }).addTo(map);
 
     markersRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
