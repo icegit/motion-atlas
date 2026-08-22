@@ -20,7 +20,7 @@ button { font: inherit; }
   box-shadow: inset 0 0 100px rgb(10 45 35 / 7%);
 }
 
-.leaflet-tile-pane { filter: saturate(0.62) contrast(0.93) brightness(1.06); }
+.leaflet-tile-pane { filter: saturate(0.64) contrast(0.9) brightness(1.07); }
 .leaflet-control-zoom { border: 1px solid #e2e3df !important; box-shadow: 0 6px 20px rgb(16 48 38 / 10%) !important; }
 .leaflet-control-zoom a { color: #173b30 !important; background: #fbfaf5 !important; }
 .leaflet-control-attribution { color: #68756f; background: rgb(250 249 244 / 86%) !important; }
@@ -117,7 +117,7 @@ h1 {
 .sport-filter:hover { border-color: color-mix(in srgb, var(--sport-color) 28%, #d9ddd8); }
 .sport-filter.is-active { color: #1d332b; border-color: #d8dad5; background: #f2f2ed; }
 .sport-filter__icon { display: grid; width: 26px; height: 26px; place-items: center; border-radius: 9px; color: var(--sport-color); background: color-mix(in srgb, var(--sport-color) 12%, white); }
-.sport-filter__icon svg { width: 13px; height: 13px; }
+.sport-filter__icon svg { width: 17px; height: 17px; }
 .sport-filter__label { overflow: hidden; font-size: 0.75rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
 .sport-filter strong { color: #66736d; font-size: 0.72rem; font-variant-numeric: tabular-nums; }
 
@@ -145,35 +145,35 @@ h1 {
 .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #42a66f; box-shadow: 0 0 0 3px rgb(66 166 111 / 15%); }
 
 .sport-marker { border: 0; background: transparent; }
-.sport-pin { position: relative; width: 42px; height: 48px; filter: drop-shadow(0 5px 5px rgb(7 37 28 / 19%)); transition: transform 150ms ease; }
+.sport-pin { position: relative; width: 42px; height: 46px; filter: drop-shadow(0 5px 5px rgb(7 37 28 / 17%)); transition: transform 150ms ease; }
 .sport-marker:hover .sport-pin { transform: translateY(-3px); }
 .sport-pin::before {
   content: "";
   position: absolute;
-  left: 6px;
-  top: 2px;
-  width: 30px;
-  height: 30px;
-  border: 3px solid #f9f8f2;
-  border-radius: 50% 50% 50% 9px;
+  left: 5px;
+  top: 1px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgb(249 248 242 / 94%);
+  border-radius: 50% 50% 50% 10px;
   background: var(--sport-color);
   transform: rotate(-45deg);
 }
-.sport-pin__glyph { position: absolute; z-index: 1; top: 9px; left: 13px; display: grid; width: 16px; height: 16px; place-items: center; color: white; }
-.sport-pin__glyph svg { width: 14px; height: 14px; }
+.sport-pin__glyph { position: absolute; z-index: 1; top: 7px; left: 10px; display: grid; width: 22px; height: 22px; place-items: center; color: white; }
+.sport-pin__glyph svg { width: 20px; height: 20px; stroke-linecap: round; stroke-linejoin: round; }
 .sport-pin__count { position: absolute; z-index: 2; top: -3px; right: -2px; min-width: 18px; height: 18px; padding: 0 4px; border: 2px solid #f9f8f2; border-radius: 9px; color: #173229; background: #f4d974; box-shadow: 0 3px 7px rgb(14 43 34 / 14%); font-size: 0.54rem; font-weight: 800; line-height: 14px; text-align: center; }
 
 .activity-popup .leaflet-popup-content-wrapper { overflow: hidden; border-radius: 18px; background: #fbfaf5; box-shadow: 0 18px 55px rgb(8 38 29 / 25%); }
-.activity-popup .leaflet-popup-content { margin: 0; width: auto !important; }
+.activity-popup .leaflet-popup-content { margin: 0; width: 100% !important; }
 .activity-popup .leaflet-popup-tip { background: #fbfaf5; }
 .activity-popup .leaflet-popup-close-button { top: 8px !important; right: 9px !important; color: #718079 !important; font-size: 21px !important; }
-.popup-card { padding: 21px 20px 17px; }
+.popup-card { min-width: 320px; padding: 23px 24px 19px; }
 .popup-card__eyebrow { margin: 0 24px 7px 0; color: #a84e33; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
 .popup-card h2 { margin: 0; color: #18352b; font-size: 1.35rem; letter-spacing: -0.035em; }
-.popup-card__context { margin: 7px 0 14px; color: #75817c; font-size: 0.69rem; line-height: 1.45; }
+.popup-card__context { margin: 9px 0 16px; color: #75817c; font-size: 0.76rem; line-height: 1.5; }
 .popup-card ul { margin: 0; padding: 0; list-style: none; border-top: 1px solid #e1e3df; }
-.popup-card li { display: flex; justify-content: space-between; gap: 18px; padding: 8px 0; border-bottom: 1px solid #eceeeb; color: #65716c; font-size: 0.78rem; }
-.popup-card li strong { color: #253c34; font-size: 0.76rem; }
+.popup-card li { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 9px 0; border-bottom: 1px solid #eceeeb; color: #65716c; font-size: 0.8rem; }
+.popup-card li strong { flex: 0 0 auto; color: #253c34; font-size: 0.78rem; white-space: nowrap; }
 
 @media (max-width: 720px) {
   .explorer { top: 12px; left: 12px; width: calc(100vw - 24px); max-height: calc(100vh - 24px); border-radius: 22px; }
@@ -183,6 +183,7 @@ h1 {
   .map-caption { top: auto; right: 12px; bottom: 30px; max-width: calc(100vw - 84px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .sport-filters { grid-template-columns: 1fr; }
   .leaflet-control-attribution { max-width: 70vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .popup-card { min-width: min(300px, calc(100vw - 48px)); }
 }
 
 @media (prefers-reduced-motion: reduce) {

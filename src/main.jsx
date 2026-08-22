@@ -1,20 +1,30 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import L from "leaflet";
-import { icon as renderIcon } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import "leaflet/dist/leaflet.css";
-import { SPORT_META, sportIcon } from "./sportConfig";
+import { SPORT_META, sportIcon, sportIconNode } from "./sportConfig";
 import { formatActivityCount, popupMarkup } from "./mapUtils";
 import "./styles.css";
 
 const DATA_URL = `${import.meta.env.BASE_URL}data/activity-groups.json`;
 
+function svgIconMarkup(type) {
+  const nodes = sportIconNode(type)
+    .map(([tag, attributes]) => {
+      const renderedAttributes = Object.entries(attributes)
+        .filter(([name]) => name !== "key")
+        .map(([name, value]) => `${name}="${String(value).replaceAll("&", "&amp;").replaceAll('"', "&quot;")}"`)
+        .join(" ");
+      return `<${tag} ${renderedAttributes} />`;
+    })
+    .join("");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${nodes}</svg>`;
+}
+
 function markerMarkup(group) {
   const meta = SPORT_META[group.type] ?? SPORT_META.other;
-  const glyph = renderIcon(sportIcon(group.type), {
-    attributes: { "aria-hidden": "true" },
-  }).html.join("");
+  const glyph = svgIconMarkup(group.type);
 
   return `
     <div class="sport-pin" style="--sport-color:${meta.color}">
@@ -40,11 +50,28 @@ function ActivityMap({ groups, activeSports }) {
     });
 
     L.control.zoom({ position: "bottomright" }).addTo(map);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    const terrainLayer = L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
+      attribution:
+        'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, SRTM | Map style &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+      maxNativeZoom: 13,
+      maxZoom: 18,
+      subdomains: "abc",
+    }).addTo(map);
+
+    const fallbackLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 18,
-    }).addTo(map);
+    });
+
+    let terrainErrors = 0;
+    terrainLayer.on("tileerror", () => {
+      terrainErrors += 1;
+      if (terrainErrors >= 4 && map.hasLayer(terrainLayer)) {
+        map.removeLayer(terrainLayer);
+        fallbackLayer.addTo(map);
+      }
+    });
 
     markersRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
@@ -72,15 +99,15 @@ function ActivityMap({ groups, activeSports }) {
         icon: L.divIcon({
           className: "sport-marker",
           html: markerMarkup(group),
-          iconSize: [42, 48],
-          iconAnchor: [21, 43],
-          popupAnchor: [0, -39],
+          iconSize: [42, 46],
+          iconAnchor: [21, 41],
+          popupAnchor: [0, -37],
         }),
       });
       marker.bindPopup(popupMarkup(group), {
         className: "activity-popup",
-        maxWidth: 280,
-        minWidth: 230,
+        maxWidth: 360,
+        minWidth: 320,
       });
       marker.addTo(layer);
     });
@@ -192,7 +219,7 @@ function App() {
                 {sportTotals.map((sport) => {
                   const meta = SPORT_META[sport.type] ?? SPORT_META.other;
                   const selected = activeSports.has(sport.type);
-                  const glyph = renderIcon(sportIcon(sport.type)).html.join("");
+                  const SportIcon = sportIcon(sport.type);
                   return (
                     <button
                       type="button"
@@ -202,7 +229,9 @@ function App() {
                       onClick={() => toggleSport(sport.type)}
                       aria-pressed={selected}
                     >
-                      <span className="sport-filter__icon" aria-hidden="true" dangerouslySetInnerHTML={{ __html: glyph }} />
+                      <span className="sport-filter__icon" aria-hidden="true">
+                        <SportIcon stroke={1.9} />
+                      </span>
                       <span className="sport-filter__label">{sport.label}</span>
                       <strong>{sport.activityCount}</strong>
                     </button>
