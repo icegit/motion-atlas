@@ -1,5 +1,6 @@
 node_modules/
 dist/
+.work/
 .garminconnect/
 .activity-locations.json
 .custom-activities.json

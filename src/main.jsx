@@ -9,6 +9,7 @@ import "./styles.css";
 const DATA_URL = `${import.meta.env.BASE_URL}data/activity-groups.json`;
 
 function svgIconMarkup(type) {
+  const meta = SPORT_META[type] ?? SPORT_META.other;
   const nodes = sportIconNode(type)
     .map(([tag, attributes]) => {
       const renderedAttributes = Object.entries(attributes)
@@ -19,7 +20,7 @@ function svgIconMarkup(type) {
     })
     .join("");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${nodes}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${meta.iconViewBox}" fill="${meta.iconFill}" stroke="${meta.iconStroke}" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${nodes}</svg>`;
 }
 
 function markerMarkup(group) {

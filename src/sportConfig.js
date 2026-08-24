@@ -1,151 +1,135 @@
-import IconBallBaseball, { __iconNode as ballBaseballNode } from "@tabler/icons-react/dist/esm/icons/IconBallBaseball.mjs";
-import IconBallAmericanFootball, { __iconNode as ballAmericanFootballNode } from "@tabler/icons-react/dist/esm/icons/IconBallAmericanFootball.mjs";
-import IconBallBasketball, { __iconNode as ballBasketballNode } from "@tabler/icons-react/dist/esm/icons/IconBallBasketball.mjs";
-import IconBallFootball, { __iconNode as ballFootballNode } from "@tabler/icons-react/dist/esm/icons/IconBallFootball.mjs";
-import IconBallTennis, { __iconNode as ballTennisNode } from "@tabler/icons-react/dist/esm/icons/IconBallTennis.mjs";
-import IconBallVolleyball, { __iconNode as ballVolleyballNode } from "@tabler/icons-react/dist/esm/icons/IconBallVolleyball.mjs";
-import IconBarbell, { __iconNode as barbellNode } from "@tabler/icons-react/dist/esm/icons/IconBarbell.mjs";
 import IconAirBalloon, { __iconNode as airBalloonNode } from "@tabler/icons-react/dist/esm/icons/IconAirBalloon.mjs";
-import IconArcheryArrow, { __iconNode as archeryArrowNode } from "@tabler/icons-react/dist/esm/icons/IconArcheryArrow.mjs";
-import IconBallBowling, { __iconNode as ballBowlingNode } from "@tabler/icons-react/dist/esm/icons/IconBallBowling.mjs";
-import IconBike, { __iconNode as bikeNode } from "@tabler/icons-react/dist/esm/icons/IconBike.mjs";
-import IconBolt, { __iconNode as boltNode } from "@tabler/icons-react/dist/esm/icons/IconBolt.mjs";
-import IconCar, { __iconNode as carNode } from "@tabler/icons-react/dist/esm/icons/IconCar.mjs";
-import IconCar4wd, { __iconNode as car4wdNode } from "@tabler/icons-react/dist/esm/icons/IconCar4wd.mjs";
-import IconDiscGolf, { __iconNode as discGolfNode } from "@tabler/icons-react/dist/esm/icons/IconDiscGolf.mjs";
-import IconDumbbell, { __iconNode as dumbbellNode } from "@tabler/icons-react/dist/esm/icons/IconDumbbell.mjs";
-import IconFerry, { __iconNode as ferryNode } from "@tabler/icons-react/dist/esm/icons/IconFerry.mjs";
-import IconFish, { __iconNode as fishNode } from "@tabler/icons-react/dist/esm/icons/IconFish.mjs";
-import IconGolf, { __iconNode as golfNode } from "@tabler/icons-react/dist/esm/icons/IconGolf.mjs";
-import IconGymnastics, { __iconNode as gymnasticsNode } from "@tabler/icons-react/dist/esm/icons/IconGymnastics.mjs";
-import IconHorse, { __iconNode as horseNode } from "@tabler/icons-react/dist/esm/icons/IconHorse.mjs";
-import IconJetski, { __iconNode as jetskiNode } from "@tabler/icons-react/dist/esm/icons/IconJetski.mjs";
-import IconJumpRope, { __iconNode as jumpRopeNode } from "@tabler/icons-react/dist/esm/icons/IconJumpRope.mjs";
-import IconKayak, { __iconNode as kayakNode } from "@tabler/icons-react/dist/esm/icons/IconKayak.mjs";
-import IconKarate, { __iconNode as karateNode } from "@tabler/icons-react/dist/esm/icons/IconKarate.mjs";
-import IconMapPinSearch, { __iconNode as mapPinSearchNode } from "@tabler/icons-react/dist/esm/icons/IconMapPinSearch.mjs";
-import IconMedal, { __iconNode as medalNode } from "@tabler/icons-react/dist/esm/icons/IconMedal.mjs";
-import IconMotorbike, { __iconNode as motorbikeNode } from "@tabler/icons-react/dist/esm/icons/IconMotorbike.mjs";
-import IconMountain, { __iconNode as mountainNode } from "@tabler/icons-react/dist/esm/icons/IconMountain.mjs";
-import IconParachute, { __iconNode as parachuteNode } from "@tabler/icons-react/dist/esm/icons/IconParachute.mjs";
-import IconPlaneTilt, { __iconNode as planeTiltNode } from "@tabler/icons-react/dist/esm/icons/IconPlaneTilt.mjs";
-import IconRipple, { __iconNode as rippleNode } from "@tabler/icons-react/dist/esm/icons/IconRipple.mjs";
-import IconRun, { __iconNode as runNode } from "@tabler/icons-react/dist/esm/icons/IconRun.mjs";
-import IconRunSprint, { __iconNode as runSprintNode } from "@tabler/icons-react/dist/esm/icons/IconRunSprint.mjs";
-import IconSailboat, { __iconNode as sailboatNode } from "@tabler/icons-react/dist/esm/icons/IconSailboat.mjs";
-import IconScubaDiving, { __iconNode as scubaDivingNode } from "@tabler/icons-react/dist/esm/icons/IconScubaDiving.mjs";
-import IconScooter, { __iconNode as scooterNode } from "@tabler/icons-react/dist/esm/icons/IconScooter.mjs";
-import IconSkiJumping, { __iconNode as skiJumpingNode } from "@tabler/icons-react/dist/esm/icons/IconSkiJumping.mjs";
-import IconSkateboarding, { __iconNode as skateboardingNode } from "@tabler/icons-react/dist/esm/icons/IconSkateboarding.mjs";
-import IconSnowboarding, { __iconNode as snowboardingNode } from "@tabler/icons-react/dist/esm/icons/IconSnowboarding.mjs";
-import IconSwimming, { __iconNode as swimmingNode } from "@tabler/icons-react/dist/esm/icons/IconSwimming.mjs";
-import IconStairs, { __iconNode as stairsNode } from "@tabler/icons-react/dist/esm/icons/IconStairs.mjs";
 import IconSubmarine, { __iconNode as submarineNode } from "@tabler/icons-react/dist/esm/icons/IconSubmarine.mjs";
-import IconTargetArrow, { __iconNode as targetArrowNode } from "@tabler/icons-react/dist/esm/icons/IconTargetArrow.mjs";
-import IconTent, { __iconNode as tentNode } from "@tabler/icons-react/dist/esm/icons/IconTent.mjs";
-import IconTrekking, { __iconNode as trekkingNode } from "@tabler/icons-react/dist/esm/icons/IconTrekking.mjs";
-import IconWalk, { __iconNode as walkNode } from "@tabler/icons-react/dist/esm/icons/IconWalk.mjs";
-import IconWind, { __iconNode as windNode } from "@tabler/icons-react/dist/esm/icons/IconWind.mjs";
-import IconYoga, { __iconNode as yogaNode } from "@tabler/icons-react/dist/esm/icons/IconYoga.mjs";
+import {
+  GARMIN_ICON_VIEW_BOX,
+  garminActivityIcon,
+  garminActivityIconNode,
+} from "./garminActivityIcons.js";
+
+const garminMeta = (label, color, glyph) => ({
+  label,
+  color,
+  glyph,
+  iconSource: "garmin",
+  icon: garminActivityIcon(glyph),
+  iconNode: garminActivityIconNode(glyph),
+  iconViewBox: GARMIN_ICON_VIEW_BOX,
+  iconFill: "currentColor",
+  iconStroke: "none",
+});
+
+const customMeta = (label, color, icon, iconNode, iconAsset) => ({
+  label,
+  color,
+  iconSource: "custom-fallback",
+  iconAsset,
+  icon,
+  iconNode,
+  iconViewBox: "0 0 24 24",
+  iconFill: "none",
+  iconStroke: "currentColor",
+});
+
+const g = garminMeta;
 
 export const SPORT_META = {
-  running: { label: "Running", color: "#d65b3d", icon: IconRun, iconNode: runNode },
-  trail_running: { label: "Trail running", color: "#b65b37", icon: IconTrekking, iconNode: trekkingNode },
-  treadmill_running: { label: "Treadmill running", color: "#c64f45", icon: IconRunSprint, iconNode: runSprintNode },
-  cycling: { label: "Cycling", color: "#3378a5", icon: IconBike, iconNode: bikeNode },
-  road_cycling: { label: "Road cycling", color: "#2f73a0", icon: IconBike, iconNode: bikeNode },
-  gravel_cycling: { label: "Gravel cycling", color: "#667b48", icon: IconBike, iconNode: bikeNode },
-  mountain_biking: { label: "Mountain biking", color: "#4c724f", icon: IconBike, iconNode: bikeNode },
-  indoor_cycling: { label: "Indoor cycling", color: "#5a6d9f", icon: IconBike, iconNode: bikeNode },
-  e_biking: { label: "E-biking", color: "#3d7f95", icon: IconBike, iconNode: bikeNode },
-  swimming: { label: "Swimming", color: "#168da0", icon: IconSwimming, iconNode: swimmingNode },
-  walking: { label: "Walking", color: "#8b6f47", icon: IconWalk, iconNode: walkNode },
-  hiking: { label: "Hiking", color: "#4f7b52", icon: IconTrekking, iconNode: trekkingNode },
-  mountaineering: { label: "Mountaineering", color: "#606e4b", icon: IconMountain, iconNode: mountainNode },
-  rucking: { label: "Rucking", color: "#6d7248", icon: IconTrekking, iconNode: trekkingNode },
-  strength: { label: "Strength", color: "#6d5b91", icon: IconDumbbell, iconNode: dumbbellNode },
-  fitness: { label: "Fitness", color: "#bc4d78", icon: IconBolt, iconNode: boltNode },
-  cardio: { label: "Cardio", color: "#b84d76", icon: IconBolt, iconNode: boltNode },
-  hiit: { label: "HIIT", color: "#d04d64", icon: IconBolt, iconNode: boltNode },
-  stair_climbing: { label: "Stair climbing", color: "#936077", icon: IconStairs, iconNode: stairsNode },
-  elliptical: { label: "Elliptical", color: "#a2587a", icon: IconBolt, iconNode: boltNode },
-  boxing: { label: "Boxing", color: "#a95054", icon: IconBarbell, iconNode: barbellNode },
-  dance: { label: "Dance", color: "#c05887", icon: IconBolt, iconNode: boltNode },
-  jump_rope: { label: "Jump rope", color: "#b45c72", icon: IconJumpRope, iconNode: jumpRopeNode },
-  skiing: { label: "Skiing", color: "#607fa1", icon: IconSkiJumping, iconNode: skiJumpingNode },
-  snowboarding: { label: "Snowboarding", color: "#65758b", icon: IconSnowboarding, iconNode: snowboardingNode },
-  snow_sports: { label: "Skiing & snowboarding", color: "#637b96", icon: IconSnowboarding, iconNode: snowboardingNode },
-  snowshoeing: { label: "Snowshoeing", color: "#71889a", icon: IconTrekking, iconNode: trekkingNode },
-  golf: { label: "Golf", color: "#768f42", icon: IconGolf, iconNode: golfNode },
-  racket: { label: "Racket sports", color: "#d38a2f", icon: IconBallTennis, iconNode: ballTennisNode },
-  tennis: { label: "Tennis", color: "#d38a2f", icon: IconBallTennis, iconNode: ballTennisNode },
-  table_tennis: { label: "Table tennis", color: "#c8792f", icon: IconBallTennis, iconNode: ballTennisNode },
-  badminton: { label: "Badminton", color: "#c98c35", icon: IconBallTennis, iconNode: ballTennisNode },
-  squash: { label: "Squash", color: "#b97838", icon: IconBallTennis, iconNode: ballTennisNode },
-  pickleball: { label: "Pickleball", color: "#c89638", icon: IconBallTennis, iconNode: ballTennisNode },
-  padel: { label: "Padel", color: "#bf8332", icon: IconBallTennis, iconNode: ballTennisNode },
-  team_sport: { label: "Team sports", color: "#bb623d", icon: IconBallFootball, iconNode: ballFootballNode },
-  soccer: { label: "Soccer", color: "#af6540", icon: IconBallFootball, iconNode: ballFootballNode },
-  american_football: { label: "American football", color: "#a45d3e", icon: IconBallAmericanFootball, iconNode: ballAmericanFootballNode },
-  rugby: { label: "Rugby", color: "#9b6541", icon: IconBallAmericanFootball, iconNode: ballAmericanFootballNode },
-  hockey: { label: "Hockey", color: "#716f86", icon: IconMedal, iconNode: medalNode },
-  cricket: { label: "Cricket", color: "#8b713e", icon: IconMedal, iconNode: medalNode },
-  lacrosse: { label: "Lacrosse", color: "#9e6747", icon: IconMedal, iconNode: medalNode },
-  handball: { label: "Handball", color: "#b36340", icon: IconBallVolleyball, iconNode: ballVolleyballNode },
-  sailing: { label: "Sailing", color: "#277f91", icon: IconSailboat, iconNode: sailboatNode },
-  kayaking: { label: "Kayaking", color: "#197d8d", icon: IconKayak, iconNode: kayakNode },
-  canoeing: { label: "Canoeing", color: "#347b89", icon: IconKayak, iconNode: kayakNode },
-  paddling: { label: "Paddling", color: "#2e8291", icon: IconKayak, iconNode: kayakNode },
-  stand_up_paddling: { label: "Stand-up paddling", color: "#3a8891", icon: IconKayak, iconNode: kayakNode },
-  surfing: { label: "Surfing", color: "#0d8797", icon: IconRipple, iconNode: rippleNode },
-  windsurfing: { label: "Windsurfing", color: "#2a7898", icon: IconWind, iconNode: windNode },
-  kitesurfing: { label: "Kitesurfing", color: "#39729a", icon: IconWind, iconNode: windNode },
-  jet_skiing: { label: "Jet skiing", color: "#2c718f", icon: IconJetski, iconNode: jetskiNode },
-  rowing: { label: "Rowing", color: "#407c85", icon: IconKayak, iconNode: kayakNode },
-  indoor_rowing: { label: "Indoor rowing", color: "#597a82", icon: IconKayak, iconNode: kayakNode },
-  yoga: { label: "Yoga & mobility", color: "#92678e", icon: IconYoga, iconNode: yogaNode },
-  pilates: { label: "Pilates", color: "#9a668b", icon: IconYoga, iconNode: yogaNode },
-  mobility: { label: "Mobility", color: "#856b93", icon: IconYoga, iconNode: yogaNode },
-  breathwork: { label: "Breathwork", color: "#6e7694", icon: IconWind, iconNode: windNode },
-  climbing: { label: "Climbing", color: "#735f46", icon: IconMountain, iconNode: mountainNode },
-  bouldering: { label: "Bouldering", color: "#7d6545", icon: IconMountain, iconNode: mountainNode },
-  via_ferrata: { label: "Via ferrata", color: "#6c604b", icon: IconMountain, iconNode: mountainNode },
-  equestrian: { label: "Equestrian", color: "#8d643e", icon: IconHorse, iconNode: horseNode },
-  horseback_riding: { label: "Horseback riding", color: "#8d643e", icon: IconHorse, iconNode: horseNode },
-  motorsport: { label: "Motorsport", color: "#53606b", icon: IconMotorbike, iconNode: motorbikeNode },
-  atv: { label: "ATV", color: "#5f665b", icon: IconCar4wd, iconNode: car4wdNode },
-  excursion: { label: "Excursion", color: "#7c6448", icon: IconCar, iconNode: carNode },
-  submarine: { label: "Submarine", color: "#235f73", icon: IconSubmarine, iconNode: submarineNode },
-  hot_air_balloon: { label: "Hot-air balloon", color: "#a8683f", icon: IconAirBalloon, iconNode: airBalloonNode },
-  scuba_diving: { label: "Scuba diving", color: "#176d80", icon: IconScubaDiving, iconNode: scubaDivingNode },
-  freediving: { label: "Freediving", color: "#28788a", icon: IconScubaDiving, iconNode: scubaDivingNode },
-  paragliding: { label: "Paragliding", color: "#9a6540", icon: IconParachute, iconNode: parachuteNode },
-  hang_gliding: { label: "Hang gliding", color: "#946a48", icon: IconParachute, iconNode: parachuteNode },
-  skydiving: { label: "Skydiving", color: "#8c674f", icon: IconParachute, iconNode: parachuteNode },
-  flight: { label: "Flight", color: "#68788a", icon: IconPlaneTilt, iconNode: planeTiltNode },
-  rafting: { label: "Rafting", color: "#287a8b", icon: IconKayak, iconNode: kayakNode },
-  wakeboarding: { label: "Wakeboarding", color: "#167f91", icon: IconRipple, iconNode: rippleNode },
-  water_skiing: { label: "Water skiing", color: "#268092", icon: IconRipple, iconNode: rippleNode },
-  archery: { label: "Archery", color: "#7b6545", icon: IconArcheryArrow, iconNode: archeryArrowNode },
-  bowling: { label: "Bowling", color: "#976047", icon: IconBallBowling, iconNode: ballBowlingNode },
-  disc_golf: { label: "Disc golf", color: "#718345", icon: IconDiscGolf, iconNode: discGolfNode },
-  fishing: { label: "Fishing", color: "#367582", icon: IconFish, iconNode: fishNode },
-  hunting: { label: "Hunting", color: "#6b6747", icon: IconTargetArrow, iconNode: targetArrowNode },
-  geocaching: { label: "Geocaching", color: "#657348", icon: IconMapPinSearch, iconNode: mapPinSearchNode },
-  camping: { label: "Camping", color: "#687347", icon: IconTent, iconNode: tentNode },
-  martial_arts: { label: "Martial arts", color: "#9b554f", icon: IconKarate, iconNode: karateNode },
-  gymnastics: { label: "Gymnastics", color: "#a95c77", icon: IconGymnastics, iconNode: gymnasticsNode },
-  scooter: { label: "Scooter", color: "#5c7180", icon: IconScooter, iconNode: scooterNode },
-  snowmobiling: { label: "Snowmobiling", color: "#65798c", icon: IconMotorbike, iconNode: motorbikeNode },
-  ferry: { label: "Ferry", color: "#3d7186", icon: IconFerry, iconNode: ferryNode },
-  boating: { label: "Boating", color: "#316f91", icon: IconSailboat, iconNode: sailboatNode },
-  snorkeling: { label: "Snorkeling", color: "#0e8795", icon: IconSwimming, iconNode: swimmingNode },
-  multisport: { label: "Multisport", color: "#a8554c", icon: IconMedal, iconNode: medalNode },
-  skating: { label: "Skating", color: "#5b7d99", icon: IconSkateboarding, iconNode: skateboardingNode },
-  baseball: { label: "Baseball", color: "#a65b3c", icon: IconBallBaseball, iconNode: ballBaseballNode },
-  basketball: { label: "Basketball", color: "#c2742e", icon: IconBallBasketball, iconNode: ballBasketballNode },
-  volleyball: { label: "Volleyball", color: "#597eb7", icon: IconBallVolleyball, iconNode: ballVolleyballNode },
-  other: { label: "Other", color: "#66756f", icon: IconBarbell, iconNode: barbellNode },
+  running: g("Running", "#d65b3d", "activity-running"),
+  trail_running: g("Trail running", "#b65b37", "activity-running"),
+  treadmill_running: g("Treadmill running", "#c64f45", "activity-running"),
+  cycling: g("Cycling", "#3378a5", "activity-cycling"),
+  road_cycling: g("Road cycling", "#2f73a0", "activity-cycling"),
+  gravel_cycling: g("Gravel cycling", "#667b48", "activity-cycling"),
+  mountain_biking: g("Mountain biking", "#4c724f", "activity-cycling"),
+  indoor_cycling: g("Indoor cycling", "#5a6d9f", "activity-cycling"),
+  e_biking: g("E-biking", "#3d7f95", "activity-cycling"),
+  swimming: g("Swimming", "#168da0", "activity-swimming"),
+  walking: g("Walking", "#8b6f47", "activity-walking"),
+  hiking: g("Hiking", "#4f7b52", "activity-hiking"),
+  mountaineering: g("Mountaineering", "#606e4b", "activity-hiking"),
+  rucking: g("Rucking", "#6d7248", "activity-hiking"),
+  strength: g("Strength", "#6d5b91", "activity-fitness-equipment"),
+  fitness: g("Fitness", "#bc4d78", "activity-fitness-equipment"),
+  cardio: g("Cardio", "#b84d76", "activity-fitness-equipment"),
+  hiit: g("HIIT", "#d04d64", "activity-fitness-equipment"),
+  stair_climbing: g("Stair climbing", "#936077", "activity-fitness-equipment"),
+  elliptical: g("Elliptical", "#a2587a", "activity-elliptical"),
+  boxing: g("Boxing", "#a95054", "activity-fitness-equipment"),
+  dance: g("Dance", "#c05887", "activities"),
+  jump_rope: g("Jump rope", "#b45c72", "activity-fitness-equipment"),
+  skiing: g("Skiing", "#607fa1", "activity-hiking"),
+  snowboarding: g("Snowboarding", "#65758b", "activity-hiking"),
+  snow_sports: g("Skiing & snowboarding", "#637b96", "activity-hiking"),
+  snowshoeing: g("Snowshoeing", "#71889a", "activity-hiking"),
+  golf: g("Golf", "#768f42", "activity-golf"),
+  racket: g("Racket sports", "#d38a2f", "activity-multisport-people"),
+  tennis: g("Tennis", "#d38a2f", "activity-multisport-people"),
+  table_tennis: g("Table tennis", "#c8792f", "activity-multisport-people"),
+  badminton: g("Badminton", "#c98c35", "activity-multisport-people"),
+  squash: g("Squash", "#b97838", "activity-multisport-people"),
+  pickleball: g("Pickleball", "#c89638", "activity-multisport-people"),
+  padel: g("Padel", "#bf8332", "activity-multisport-people"),
+  team_sport: g("Team sports", "#bb623d", "activity-multisport-people"),
+  soccer: g("Soccer", "#af6540", "activity-multisport-people"),
+  american_football: g("American football", "#a45d3e", "activity-multisport-people"),
+  rugby: g("Rugby", "#9b6541", "activity-multisport-people"),
+  hockey: g("Hockey", "#716f86", "activity-multisport-people"),
+  cricket: g("Cricket", "#8b713e", "activity-multisport-people"),
+  lacrosse: g("Lacrosse", "#9e6747", "activity-multisport-people"),
+  handball: g("Handball", "#b36340", "activity-multisport-people"),
+  sailing: g("Sailing", "#277f91", "activity-marine"),
+  kayaking: g("Kayaking", "#197d8d", "activity-marine"),
+  canoeing: g("Canoeing", "#347b89", "activity-marine"),
+  paddling: g("Paddling", "#2e8291", "activity-marine"),
+  stand_up_paddling: g("Stand-up paddling", "#3a8891", "activity-marine"),
+  surfing: g("Surfing", "#0d8797", "activity-swimming"),
+  windsurfing: g("Windsurfing", "#2a7898", "activity-marine"),
+  kitesurfing: g("Kitesurfing", "#39729a", "activity-marine"),
+  jet_skiing: g("Jet skiing", "#2c718f", "activity-marine"),
+  rowing: g("Rowing", "#407c85", "activity-marine"),
+  indoor_rowing: g("Indoor rowing", "#597a82", "activity-fitness-equipment"),
+  yoga: g("Yoga & mobility", "#92678e", "activities"),
+  pilates: g("Pilates", "#9a668b", "activities"),
+  mobility: g("Mobility", "#856b93", "activities"),
+  breathwork: g("Breathwork", "#6e7694", "activities"),
+  climbing: g("Climbing", "#735f46", "activity-climbing"),
+  bouldering: g("Bouldering", "#7d6545", "activity-climbing"),
+  via_ferrata: g("Via ferrata", "#6c604b", "activity-climbing"),
+  equestrian: g("Equestrian", "#8d643e", "activity-other"),
+  horseback_riding: g("Horseback riding", "#8d643e", "activity-other"),
+  motorsport: g("Motorsport", "#53606b", "activity-motorcycle"),
+  atv: g("ATV", "#5f665b", "activity-motorcycle"),
+  excursion: g("Excursion", "#7c6448", "activity-motorcycle"),
+  submarine: customMeta("Submarine", "#235f73", IconSubmarine, submarineNode, "submarine.svg"),
+  hot_air_balloon: customMeta("Hot-air balloon", "#a8683f", IconAirBalloon, airBalloonNode, "air-balloon.svg"),
+  scuba_diving: g("Scuba diving", "#176d80", "activity-swimming"),
+  freediving: g("Freediving", "#28788a", "activity-swimming"),
+  paragliding: g("Paragliding", "#9a6540", "activity-other"),
+  hang_gliding: g("Hang gliding", "#946a48", "activity-other"),
+  skydiving: g("Skydiving", "#8c674f", "activity-other"),
+  flight: g("Flight", "#68788a", "activity-other"),
+  rafting: g("Rafting", "#287a8b", "activity-marine"),
+  wakeboarding: g("Wakeboarding", "#167f91", "activity-swimming"),
+  water_skiing: g("Water skiing", "#268092", "activity-swimming"),
+  archery: g("Archery", "#7b6545", "activity-other"),
+  bowling: g("Bowling", "#976047", "activity-other"),
+  disc_golf: g("Disc golf", "#718345", "activity-golf"),
+  fishing: g("Fishing", "#367582", "activity-marine"),
+  hunting: g("Hunting", "#6b6747", "activity-hiking"),
+  geocaching: g("Geocaching", "#657348", "activity-hiking"),
+  camping: g("Camping", "#687347", "activity-hiking"),
+  martial_arts: g("Martial arts", "#9b554f", "activity-fitness-equipment"),
+  gymnastics: g("Gymnastics", "#a95c77", "activities"),
+  scooter: g("Scooter", "#5c7180", "activity-motorcycle"),
+  snowmobiling: g("Snowmobiling", "#65798c", "activity-motorcycle"),
+  ferry: g("Ferry", "#3d7186", "activity-marine"),
+  boating: g("Boating", "#316f91", "activity-marine"),
+  snorkeling: g("Snorkeling", "#0e8795", "activity-swimming"),
+  multisport: g("Multisport", "#a8554c", "activity-multisport"),
+  skating: g("Skating", "#5b7d99", "activity-other"),
+  baseball: g("Baseball", "#a65b3c", "activity-multisport-people"),
+  basketball: g("Basketball", "#c2742e", "activity-multisport-people"),
+  volleyball: g("Volleyball", "#597eb7", "activity-multisport-people"),
+  other: g("Other", "#66756f", "activity-uncategorized"),
 };
 
 export function sportIcon(type) {
