@@ -102,7 +102,7 @@ function ActivityMap({ groups, activeSports }) {
     }
   }, [groups, activeSports]);
 
-  return <div ref={elementRef} className="map" aria-label="World map of Garmin activities" />;
+  return <div ref={elementRef} className="map" aria-label="Motion Black activity map" />;
 }
 
 function Stat({ value, label }) {
@@ -141,7 +141,14 @@ function App() {
   }, []);
 
   const sportTotals = data?.sportTotals ?? [];
+  const unlocatedSportTotals = data?.unlocatedSportTotals ?? [];
   const groups = data?.groups ?? [];
+  const activityTypeCount = useMemo(
+    () => new Set(
+      [...sportTotals, ...unlocatedSportTotals].map((sport) => sport.type),
+    ).size,
+    [sportTotals, unlocatedSportTotals],
+  );
   const years = useMemo(() => {
     const values = new Set();
     groups.forEach((group) => Object.keys(group.years).forEach((year) => values.add(year)));
@@ -179,7 +186,7 @@ function App() {
             <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
             <p>GARMIN ACTIVITY ARCHIVE</p>
           </div>
-          <h1>Motion Atlas</h1>
+          <h1>Motion Black</h1>
           <p className="lede">A life in movement, mapped across the world.</p>
 
           {error ? <div className="notice notice--error">{error}</div> : null}
@@ -189,7 +196,7 @@ function App() {
             <>
               <div className="stats" aria-label="Archive summary">
                 <Stat value={data.mappedActivities.toLocaleString()} label="mapped" />
-                <Stat value={sportTotals.length.toLocaleString()} label="sports" />
+                <Stat value={activityTypeCount.toLocaleString()} label="types" />
                 <Stat value={years.length.toLocaleString()} label="years" />
               </div>
 
@@ -222,11 +229,43 @@ function App() {
                 })}
               </div>
 
+              {unlocatedSportTotals.length ? (
+                <>
+                  <div className="section-heading section-heading--unlocated">
+                    <span>WITHOUT GPS</span>
+                    <strong>{data.unlocatedActivities}</strong>
+                  </div>
+                  <div className="unlocated-list">
+                    {unlocatedSportTotals.map((sport) => {
+                      const meta = SPORT_META[sport.type] ?? SPORT_META.other;
+                      const SportIcon = sportIcon(sport.type);
+                      return (
+                        <div
+                          className="unlocated-item"
+                          key={sport.type}
+                          style={{ "--sport-color": meta.color }}
+                          title="Add a private location rule to place these activities on the map"
+                        >
+                          <span className="sport-filter__icon" aria-hidden="true">
+                            <SportIcon stroke={1.9} />
+                          </span>
+                          <span>{sport.label}</span>
+                          <strong>{sport.activityCount}</strong>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="unlocated-help">
+                    Assign an approximate place by activity type, date range, or Garmin activity ID to map these safely.
+                  </p>
+                </>
+              ) : null}
+
               <div className="privacy-note">
                 <span aria-hidden="true">◎</span>
                 <p>
                   Nearby matching sports are combined within {data.clusterRadiusKm} km.
-                  Locations are rounded for privacy.
+                  GPS starts and privately assigned places are rounded for privacy.
                 </p>
               </div>
             </>
@@ -238,6 +277,7 @@ function App() {
         <div className="map-caption">
           <span className="live-dot" aria-hidden="true" />
           Updated {new Date(data.generatedAt).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}
+          {data.manuallyLocatedActivities ? ` · ${data.manuallyLocatedActivities} manually placed` : ""}
           {data.unlocatedActivities ? ` · ${data.unlocatedActivities} without GPS` : ""}
         </div>
       ) : null}

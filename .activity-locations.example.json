@@ -1,0 +1,23 @@
+{
+  "locations": {
+    "amsterdam_gym": {
+      "latitude": 52.3676,
+      "longitude": 4.9041
+    }
+  },
+  "rules": [
+    {
+      "location": "amsterdam_gym",
+      "activityTypes": [
+        "strength_training",
+        "treadmill_running",
+        "indoor_cardio",
+        "stair_climbing"
+      ],
+      "from": "2026-01-01"
+    }
+  ],
+  "activities": {
+    "123456789": "amsterdam_gym"
+  }
+}

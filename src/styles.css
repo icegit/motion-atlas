@@ -99,6 +99,8 @@ h1 {
 .section-heading span { color: #7b8580; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.13em; }
 .section-heading button { padding: 0; border: 0; color: #3e675a; background: transparent; font-size: 0.72rem; font-weight: 700; cursor: pointer; }
 .section-heading button:hover { color: #b45134; }
+.section-heading--unlocated { margin-top: 20px; }
+.section-heading--unlocated strong { color: #7b8580; font-size: 0.72rem; font-variant-numeric: tabular-nums; }
 
 .sport-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .sport-filter {
@@ -120,6 +122,22 @@ h1 {
 .sport-filter__icon svg { width: 17px; height: 17px; }
 .sport-filter__label { overflow: hidden; font-size: 0.75rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
 .sport-filter strong { color: #66736d; font-size: 0.72rem; font-variant-numeric: tabular-nums; }
+
+.unlocated-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.unlocated-item {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  align-items: center;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px dashed #d5d9d4;
+  border-radius: 12px;
+  color: #65706b;
+  background: rgb(255 255 255 / 24%);
+}
+.unlocated-item > span:nth-child(2) { overflow: hidden; font-size: 0.75rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+.unlocated-item > strong { color: #66736d; font-size: 0.72rem; font-variant-numeric: tabular-nums; }
+.unlocated-help { margin: 9px 2px 0; color: #7a8580; font-size: 0.68rem; line-height: 1.45; }
 
 .privacy-note { display: flex; gap: 10px; margin-top: 20px; padding-top: 17px; border-top: 1px solid #d9ddd8; color: #6f7b75; }
 .privacy-note > span { color: #4b7568; font-size: 1.05rem; }
@@ -181,6 +199,7 @@ h1 {
   .explorer.is-closed .panel-toggle { top: 8px; right: 8px; }
   .map-caption { top: auto; right: 12px; bottom: 30px; max-width: calc(100vw - 84px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .sport-filters { grid-template-columns: 1fr; }
+  .unlocated-list { grid-template-columns: 1fr; }
   .leaflet-control-attribution { max-width: 70vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .popup-card { min-width: min(300px, calc(100vw - 48px)); }
 }

@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .garminconnect/
+.activity-locations.json
 __pycache__/
 *.pyc
 .env

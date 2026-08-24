@@ -25,13 +25,22 @@ def activity(activity_type: str, latitude=None, longitude=None, year="2026"):
 
 class GarminActivityMapTests(unittest.TestCase):
     def test_classifies_common_garmin_sports(self):
-        self.assertEqual(canonical_sport("trail_running"), "running")
-        self.assertEqual(canonical_sport("lap_swimming"), "swimming")
-        self.assertEqual(canonical_sport("road_biking"), "cycling")
-        self.assertEqual(canonical_sport("resort_skiing_snowboarding"), "snowboarding")
+        self.assertEqual(canonical_sport("trail_running"), "trail_running")
+        self.assertEqual(canonical_sport("treadmill_running"), "treadmill_running")
+        self.assertEqual(canonical_sport("lap_swimming"), "lap_swimming")
+        self.assertEqual(canonical_sport("open_water_swimming"), "open_water_swimming")
+        self.assertEqual(canonical_sport("road_biking"), "road_cycling")
+        self.assertEqual(canonical_sport("gravel_cycling"), "gravel_cycling")
+        self.assertEqual(canonical_sport("resort_skiing_snowboarding_ws"), "snow_sports")
         self.assertEqual(canonical_sport("boating_v2"), "boating")
         self.assertEqual(canonical_sport("overland"), "overland")
-        self.assertEqual(canonical_sport("rucking"), "hiking")
+        self.assertEqual(canonical_sport("rucking"), "rucking")
+
+    def test_keeps_water_activities_specific(self):
+        self.assertEqual(canonical_sport("sailing_v2"), "sailing")
+        self.assertEqual(canonical_sport("kayaking_v2"), "kayaking")
+        self.assertEqual(canonical_sport("surfing_v2"), "surfing")
+        self.assertEqual(canonical_sport("stand_up_paddleboarding"), "stand_up_paddling")
 
     def test_haversine_distance_is_geographic(self):
         distance = haversine_km((52.3676, 4.9041), (51.9244, 4.4777))
@@ -42,7 +51,7 @@ class GarminActivityMapTests(unittest.TestCase):
         archive = build_public_archive(
             [
                 activity("running", 52.3676, 4.9041, "2026"),
-                activity("trail_running", 51.9244, 4.4777, "2025"),
+                activity("running", 51.9244, 4.4777, "2025"),
             ],
             100.0,
         )
@@ -61,9 +70,39 @@ class GarminActivityMapTests(unittest.TestCase):
         self.assertEqual(len(archive["groups"]), 2)
 
     def test_unlocated_activities_are_reported(self):
-        archive = build_public_archive([activity("running")], 100.0)
+        archive = build_public_archive(
+            [activity("strength_training"), activity("lap_swimming")],
+            100.0,
+        )
         self.assertEqual(archive["mappedActivities"], 0)
-        self.assertEqual(archive["unlocatedActivities"], 1)
+        self.assertEqual(archive["unlocatedActivities"], 2)
+        self.assertEqual(
+            [item["label"] for item in archive["unlocatedSportTotals"]],
+            ["Lap swimming", "Strength"],
+        )
+
+    def test_private_rules_can_place_gps_free_activities_by_type_and_date(self):
+        archive = build_public_archive(
+            [activity("strength_training", year="2026")],
+            100.0,
+            {
+                "locations": {
+                    "gym": {"latitude": 52.3676123, "longitude": 4.9041389}
+                },
+                "rules": [
+                    {
+                        "location": "gym",
+                        "activityTypes": ["strength_training"],
+                        "from": "2026-01-01",
+                    }
+                ],
+            },
+        )
+        self.assertEqual(archive["mappedActivities"], 1)
+        self.assertEqual(archive["manuallyLocatedActivities"], 1)
+        self.assertEqual(archive["unlocatedActivities"], 0)
+        self.assertEqual(archive["groups"][0]["latitude"], 52.4)
+        self.assertEqual(archive["groups"][0]["longitude"], 4.9)
 
     def test_zero_zero_is_not_a_real_activity_start(self):
         self.assertIsNone(activity_location(activity("running", 0, 0)))
