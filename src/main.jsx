@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { SPORT_META, sportIcon, sportIconNode } from "./sportConfig";
+import { areAllSportsActive, toggleAllSports, toggleSportSelection } from "./filterUtils.js";
 import { formatActivityCount, popupMarkup } from "./mapUtils";
 import "./styles.css";
 
@@ -144,6 +145,7 @@ function App() {
   }, []);
 
   const sportTotals = data?.sportTotals ?? [];
+  const sportTypes = useMemo(() => sportTotals.map((sport) => sport.type), [sportTotals]);
   const unlocatedSportTotals = data?.unlocatedSportTotals ?? [];
   const groups = data?.groups ?? [];
   const activityTypeCount = useMemo(
@@ -158,16 +160,25 @@ function App() {
     return [...values].filter((year) => year !== "Unknown").sort((a, b) => b.localeCompare(a));
   }, [groups]);
 
+  const allSportsActive = areAllSportsActive(activeSports, sportTypes);
+  const selectedSport = activeSports.size === 1
+    ? sportTotals.find((sport) => activeSports.has(sport.type))
+    : null;
+  const selectionSummary = allSportsActive
+    ? "All shown"
+    : activeSports.size === 0
+      ? "None shown"
+      : selectedSport
+        ? `${selectedSport.label} shown`
+        : `${activeSports.size} shown`;
+
   const toggleSport = (type) => {
-    setActiveSports((current) => {
-      const next = new Set(current);
-      if (next.has(type)) next.delete(type);
-      else next.add(type);
-      return next;
-    });
+    setActiveSports((current) => toggleSportSelection(current, type, sportTypes));
   };
 
-  const showAll = () => setActiveSports(new Set(sportTotals.map((sport) => sport.type)));
+  const toggleAll = () => {
+    setActiveSports((current) => toggleAllSports(current, sportTypes));
+  };
 
   return (
     <main>
@@ -205,7 +216,10 @@ function App() {
 
               <div className="section-heading">
                 <span>ACTIVITY TYPES</span>
-                <button type="button" onClick={showAll}>Show all</button>
+                <div className="section-heading__actions">
+                  <small aria-live="polite">{selectionSummary}</small>
+                  <button type="button" onClick={toggleAll}>{allSportsActive ? "Hide all" : "Show all"}</button>
+                </div>
               </div>
 
               <div className="sport-filters">
@@ -213,6 +227,11 @@ function App() {
                   const meta = SPORT_META[sport.type] ?? SPORT_META.other;
                   const selected = activeSports.has(sport.type);
                   const SportIcon = sportIcon(sport.type);
+                  const actionLabel = allSportsActive
+                    ? `Show only ${sport.label}`
+                    : selected
+                      ? `Hide ${sport.label}`
+                      : `Show ${sport.label}`;
                   return (
                     <button
                       type="button"
@@ -221,6 +240,8 @@ function App() {
                       style={{ "--sport-color": meta.color }}
                       onClick={() => toggleSport(sport.type)}
                       aria-pressed={selected}
+                      aria-label={actionLabel}
+                      title={actionLabel}
                     >
                       <span className="sport-filter__icon" aria-hidden="true">
                         <SportIcon stroke={1.9} />

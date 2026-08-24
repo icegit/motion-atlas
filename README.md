@@ -1,6 +1,6 @@
 # Motion Black
 
-A privacy-conscious topographic view of Garmin Connect activities. Activities of the same specific type whose start points are connected within a 100 km radius are published as one marker. Clicking a marker shows the activity count for each year.
+A privacy-conscious topographic view of Garmin Connect activities. Activities of the same specific type whose start points are connected within a 30 km radius are published as one marker. Clicking a marker shows the activity count for each year.
 
 The public data file contains only canonical activity categories, rounded cluster centers, totals, and per-year counts. Sailing, kayaking, surfing, trail running, treadmill running, and other distinct Garmin types stay separate; open-water, pool, and lap swimming are combined as **Swimming**. Garmin `driving` and `overland` activities are published under the single **Excursion** type. Garmin activity IDs, names, routes, timestamps, and exact coordinates are never written to the repository.
 

@@ -1,57 +1,57 @@
 {
-  "generatedAt": "2026-08-24T16:04:25+00:00",
+  "generatedAt": "2026-08-24T16:58:34+00:00",
   "source": "Garmin Connect",
-  "clusterRadiusKm": 100,
+  "clusterRadiusKm": 30,
   "locationInferenceWindowDays": 2,
   "privacyPrecisionDecimals": 1,
-  "totalActivities": 2920,
+  "totalActivities": 2925,
   "customActivities": 0,
-  "mappedActivities": 2909,
-  "inferredLocationActivities": 370,
+  "mappedActivities": 2914,
+  "inferredLocationActivities": 371,
   "manuallyLocatedActivities": 0,
   "unlocatedActivities": 11,
   "sportTotals": [
     {
       "type": "walking",
       "label": "Walking",
-      "activityCount": 1369,
-      "groupCount": 87
+      "activityCount": 1370,
+      "groupCount": 132
     },
     {
       "type": "cycling",
       "label": "Cycling",
-      "activityCount": 623,
-      "groupCount": 8
+      "activityCount": 625,
+      "groupCount": 13
     },
     {
       "type": "swimming",
       "label": "Swimming",
       "activityCount": 236,
-      "groupCount": 66
+      "groupCount": 85
     },
     {
       "type": "strength",
       "label": "Strength",
-      "activityCount": 205,
-      "groupCount": 32
+      "activityCount": 206,
+      "groupCount": 33
     },
     {
       "type": "excursion",
       "label": "Excursion",
-      "activityCount": 172,
-      "groupCount": 44
+      "activityCount": 171,
+      "groupCount": 62
     },
     {
       "type": "yoga",
       "label": "Yoga",
       "activityCount": 66,
-      "groupCount": 6
+      "groupCount": 8
     },
     {
       "type": "boating",
       "label": "Boating",
       "activityCount": 60,
-      "groupCount": 24
+      "groupCount": 27
     },
     {
       "type": "running",
@@ -63,19 +63,19 @@
       "type": "hiking",
       "label": "Hiking",
       "activityCount": 36,
-      "groupCount": 12
+      "groupCount": 14
     },
     {
-      "type": "snow_sports",
-      "label": "Skiing & snowboarding",
+      "type": "snowboarding",
+      "label": "Snowboarding",
       "activityCount": 12,
       "groupCount": 3
     },
     {
       "type": "snorkeling",
       "label": "Snorkeling",
-      "activityCount": 11,
-      "groupCount": 6
+      "activityCount": 10,
+      "groupCount": 7
     },
     {
       "type": "breathwork",
@@ -85,9 +85,9 @@
     },
     {
       "type": "trail_running",
-      "label": "Trail running",
+      "label": "Trail Running",
       "activityCount": 8,
-      "groupCount": 3
+      "groupCount": 4
     },
     {
       "type": "kayaking",
@@ -97,7 +97,7 @@
     },
     {
       "type": "treadmill_running",
-      "label": "Treadmill running",
+      "label": "Treadmill Running",
       "activityCount": 5,
       "groupCount": 5
     },
@@ -109,7 +109,7 @@
     },
     {
       "type": "stair_climbing",
-      "label": "Stair climbing",
+      "label": "Stair Climbing",
       "activityCount": 4,
       "groupCount": 1
     },
@@ -127,7 +127,7 @@
     },
     {
       "type": "table_tennis",
-      "label": "Table tennis",
+      "label": "Table Tennis",
       "activityCount": 3,
       "groupCount": 1
     },
@@ -163,7 +163,7 @@
     },
     {
       "type": "horseback_riding",
-      "label": "Horseback riding",
+      "label": "Horseback Riding",
       "activityCount": 1,
       "groupCount": 1
     },
@@ -187,7 +187,25 @@
     },
     {
       "type": "indoor_cycling",
-      "label": "Indoor cycling",
+      "label": "Indoor Cycling",
+      "activityCount": 1,
+      "groupCount": 1
+    },
+    {
+      "type": "submarine",
+      "label": "Submarine",
+      "activityCount": 1,
+      "groupCount": 1
+    },
+    {
+      "type": "scuba_diving",
+      "label": "Scuba Diving",
+      "activityCount": 1,
+      "groupCount": 1
+    },
+    {
+      "type": "skydiving",
+      "label": "Skydiving",
       "activityCount": 1,
       "groupCount": 1
     },
@@ -205,7 +223,7 @@
     },
     {
       "type": "gravel_cycling",
-      "label": "Gravel cycling",
+      "label": "Gravel Cycling",
       "activityCount": 1,
       "groupCount": 1
     }
@@ -246,15 +264,15 @@
       "label": "Walking",
       "latitude": 52.3,
       "longitude": 4.8,
-      "activityCount": 1044,
-      "clusterRadiusKm": 100,
+      "activityCount": 1028,
+      "clusterRadiusKm": 30,
       "years": {
-        "2026": 156,
-        "2025": 309,
-        "2024": 288,
+        "2026": 154,
+        "2025": 302,
+        "2024": 286,
         "2023": 145,
-        "2022": 98,
-        "2021": 31,
+        "2022": 96,
+        "2021": 28,
         "2020": 14,
         "2019": 3
       }
@@ -265,16 +283,16 @@
       "label": "Cycling",
       "latitude": 52.3,
       "longitude": 4.8,
-      "activityCount": 604,
-      "clusterRadiusKm": 100,
+      "activityCount": 605,
+      "clusterRadiusKm": 30,
       "years": {
-        "2026": 94,
+        "2026": 96,
         "2025": 37,
         "2024": 42,
         "2023": 97,
         "2022": 90,
         "2021": 87,
-        "2020": 148,
+        "2020": 147,
         "2019": 9
       }
     },
@@ -284,10 +302,10 @@
       "label": "Strength",
       "latitude": 52.3,
       "longitude": 4.8,
-      "activityCount": 166,
-      "clusterRadiusKm": 100,
+      "activityCount": 167,
+      "clusterRadiusKm": 30,
       "years": {
-        "2026": 54,
+        "2026": 55,
         "2025": 13,
         "2024": 6,
         "2023": 19,
@@ -298,17 +316,17 @@
       }
     },
     {
-      "id": "c22e3cd81f28",
+      "id": "96455dc1034f",
       "type": "yoga",
       "label": "Yoga",
       "latitude": 52.3,
-      "longitude": 4.9,
-      "activityCount": 60,
-      "clusterRadiusKm": 100,
+      "longitude": 4.8,
+      "activityCount": 58,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 24,
         "2025": 6,
-        "2024": 7,
+        "2024": 5,
         "2023": 2,
         "2022": 13,
         "2021": 3,
@@ -323,7 +341,7 @@
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 43,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 12,
         "2025": 10,
@@ -342,11 +360,11 @@
       "label": "Walking",
       "latitude": 38.7,
       "longitude": 35.5,
-      "activityCount": 39,
-      "clusterRadiusKm": 100,
+      "activityCount": 37,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 13,
-        "2024": 22,
+        "2024": 20,
         "2022": 4
       }
     },
@@ -357,7 +375,7 @@
       "latitude": 52.3,
       "longitude": 4.7,
       "activityCount": 24,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 11,
         "2025": 3,
@@ -367,25 +385,13 @@
       }
     },
     {
-      "id": "5dcc93d3c236",
-      "type": "swimming",
-      "label": "Swimming",
-      "latitude": -8.7,
-      "longitude": 115.2,
-      "activityCount": 16,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 16
-      }
-    },
-    {
       "id": "c17021861033",
       "type": "swimming",
       "label": "Swimming",
       "latitude": 16.6,
       "longitude": -22.9,
       "activityCount": 16,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 16
       }
@@ -397,32 +403,19 @@
       "latitude": 28.1,
       "longitude": -16.7,
       "activityCount": 16,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 16
       }
     },
     {
-      "id": "25f78822c828",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 40.9,
-      "longitude": 32.5,
-      "activityCount": 15,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 3,
-        "2023": 12
-      }
-    },
-    {
-      "id": "8cd7e37861e0",
-      "type": "excursion",
-      "label": "Excursion",
-      "latitude": -8.7,
+      "id": "6e6dd9901dbf",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -8.8,
       "longitude": 115.2,
       "activityCount": 14,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 14
       }
@@ -434,55 +427,21 @@
       "latitude": 36.9,
       "longitude": 27.2,
       "activityCount": 14,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2020": 14
       }
     },
     {
-      "id": "4b27a3eab7e6",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 64.1,
-      "longitude": -18.2,
-      "activityCount": 14,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2022": 14
-      }
-    },
-    {
-      "id": "fb700790aed5",
-      "type": "boating",
-      "label": "Boating",
-      "latitude": 52.3,
-      "longitude": 4.9,
+      "id": "8cd7e37861e0",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": -8.7,
+      "longitude": 115.2,
       "activityCount": 13,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2026": 2,
-        "2025": 2,
-        "2024": 3,
-        "2023": 1,
-        "2022": 1,
-        "2021": 3,
-        "2020": 1
-      }
-    },
-    {
-      "id": "76a324275852",
-      "type": "hiking",
-      "label": "Hiking",
-      "latitude": 52.3,
-      "longitude": 5.0,
-      "activityCount": 13,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 3,
-        "2023": 3,
-        "2022": 2,
-        "2021": 1,
-        "2020": 4
+        "2025": 13
       }
     },
     {
@@ -492,7 +451,7 @@
       "latitude": 25.1,
       "longitude": 55.2,
       "activityCount": 13,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 3,
         "2023": 6,
@@ -500,27 +459,21 @@
       }
     },
     {
-      "id": "f3c9ddab67b1",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": -8.7,
-      "longitude": 115.2,
+      "id": "fb700790aed5",
+      "type": "boating",
+      "label": "Boating",
+      "latitude": 52.3,
+      "longitude": 4.9,
       "activityCount": 12,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2025": 12
-      }
-    },
-    {
-      "id": "fcb883166899",
-      "type": "excursion",
-      "label": "Excursion",
-      "latitude": 25.7,
-      "longitude": 32.6,
-      "activityCount": 11,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 11
+        "2026": 2,
+        "2025": 2,
+        "2024": 3,
+        "2023": 1,
+        "2022": 1,
+        "2021": 2,
+        "2020": 1
       }
     },
     {
@@ -530,7 +483,7 @@
       "latitude": 42.0,
       "longitude": 35.2,
       "activityCount": 11,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 4,
         "2024": 1,
@@ -540,28 +493,39 @@
       }
     },
     {
+      "id": "fcb883166899",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 25.7,
+      "longitude": 32.6,
+      "activityCount": 10,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 10
+      }
+    },
+    {
       "id": "ab14e7b548f8",
       "type": "swimming",
       "label": "Swimming",
       "latitude": -6.1,
       "longitude": 39.4,
       "activityCount": 10,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 10
       }
     },
     {
-      "id": "49f2e3b6cb09",
+      "id": "f3c9ddab67b1",
       "type": "walking",
       "label": "Walking",
-      "latitude": 51.6,
-      "longitude": -0.3,
+      "latitude": -8.7,
+      "longitude": 115.2,
       "activityCount": 10,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2025": 4,
-        "2024": 6
+        "2025": 10
       }
     },
     {
@@ -571,33 +535,9 @@
       "latitude": 22.3,
       "longitude": 114.1,
       "activityCount": 9,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 9
-      }
-    },
-    {
-      "id": "c47c1e8684b7",
-      "type": "excursion",
-      "label": "Excursion",
-      "latitude": 34.8,
-      "longitude": 32.7,
-      "activityCount": 9,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 9
-      }
-    },
-    {
-      "id": "d6574e8d946e",
-      "type": "excursion",
-      "label": "Excursion",
-      "latitude": 40.1,
-      "longitude": 117.0,
-      "activityCount": 9,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 9
       }
     },
     {
@@ -607,7 +547,7 @@
       "latitude": 34.9,
       "longitude": 32.4,
       "activityCount": 9,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 9
       }
@@ -619,10 +559,23 @@
       "latitude": 35.3,
       "longitude": 25.1,
       "activityCount": 9,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2,
         "2023": 7
+      }
+    },
+    {
+      "id": "a27fc59740c2",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 51.5,
+      "longitude": -0.2,
+      "activityCount": 9,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 3,
+        "2024": 6
       }
     },
     {
@@ -632,7 +585,7 @@
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 8,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1,
         "2022": 3,
@@ -646,7 +599,7 @@
       "latitude": 16.7,
       "longitude": -22.9,
       "activityCount": 8,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 8
       }
@@ -658,21 +611,23 @@
       "latitude": 20.6,
       "longitude": -87.1,
       "activityCount": 8,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 8
       }
     },
     {
-      "id": "a1cfcd5531a0",
-      "type": "excursion",
-      "label": "Excursion",
-      "latitude": 20.6,
-      "longitude": -87.1,
+      "id": "99dccaa6f455",
+      "type": "hiking",
+      "label": "Hiking",
+      "latitude": 52.5,
+      "longitude": 4.7,
       "activityCount": 7,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2023": 7
+        "2023": 3,
+        "2021": 1,
+        "2020": 3
       }
     },
     {
@@ -682,7 +637,7 @@
       "latitude": 45.9,
       "longitude": 6.9,
       "activityCount": 7,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2019": 7
       }
@@ -694,24 +649,10 @@
       "latitude": 36.8,
       "longitude": 34.6,
       "activityCount": 7,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2,
         "2022": 5
-      }
-    },
-    {
-      "id": "96c90cb0ade0",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 41.2,
-      "longitude": 28.9,
-      "activityCount": 7,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 1,
-        "2025": 5,
-        "2024": 1
       }
     },
     {
@@ -721,7 +662,19 @@
       "latitude": 34.8,
       "longitude": 32.5,
       "activityCount": 7,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 7
+      }
+    },
+    {
+      "id": "bf88495fdb3d",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 51.7,
+      "longitude": 6.0,
+      "activityCount": 7,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 7
       }
@@ -733,7 +686,7 @@
       "latitude": -6.2,
       "longitude": 39.3,
       "activityCount": 6,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 6
       }
@@ -745,21 +698,9 @@
       "latitude": 30.0,
       "longitude": 31.2,
       "activityCount": 6,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 6
-      }
-    },
-    {
-      "id": "32605c0048b5",
-      "type": "excursion",
-      "label": "Excursion",
-      "latitude": 25.1,
-      "longitude": 55.1,
-      "activityCount": 6,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 6
       }
     },
     {
@@ -769,31 +710,33 @@
       "latitude": 78.2,
       "longitude": 15.7,
       "activityCount": 6,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 6
       }
     },
     {
-      "id": "8dfbc31ea848",
-      "type": "excursion",
-      "label": "Excursion",
-      "latitude": 39.5,
-      "longitude": 67.2,
+      "id": "f9aa6cbe2feb",
+      "type": "hiking",
+      "label": "Hiking",
+      "latitude": 52.1,
+      "longitude": 5.3,
       "activityCount": 6,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2026": 6
+        "2025": 3,
+        "2022": 2,
+        "2020": 1
       }
     },
     {
-      "id": "3839b5282f74",
-      "type": "snow_sports",
-      "label": "Skiing & snowboarding",
+      "id": "c9e1d3d9f61f",
+      "type": "snowboarding",
+      "label": "Snowboarding",
       "latitude": 52.4,
       "longitude": 5.8,
       "activityCount": 6,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 6
       }
@@ -805,19 +748,7 @@
       "latitude": 43.3,
       "longitude": 77.0,
       "activityCount": 6,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 6
-      }
-    },
-    {
-      "id": "6eca287a6ac3",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 41.0,
-      "longitude": 37.9,
-      "activityCount": 6,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 6
       }
@@ -829,24 +760,10 @@
       "latitude": 52.2,
       "longitude": 21.0,
       "activityCount": 6,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 3,
         "2023": 3
-      }
-    },
-    {
-      "id": "dbc2c5f4fd70",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 49.2,
-      "longitude": 3.1,
-      "activityCount": 6,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 1,
-        "2024": 2,
-        "2022": 3
       }
     },
     {
@@ -856,7 +773,7 @@
       "latitude": -8.7,
       "longitude": 115.4,
       "activityCount": 5,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 5
       }
@@ -868,11 +785,35 @@
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 5,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1,
         "2023": 2,
         "2022": 2
+      }
+    },
+    {
+      "id": "1dcdbd47cfaa",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 40.2,
+      "longitude": 117.5,
+      "activityCount": 5,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 5
+      }
+    },
+    {
+      "id": "5cfd7e5be03d",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 25.2,
+      "longitude": 55.3,
+      "activityCount": 5,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 5
       }
     },
     {
@@ -882,71 +823,21 @@
       "latitude": 67.5,
       "longitude": 24.3,
       "activityCount": 5,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 5
       }
     },
     {
-      "id": "902f66ae5ccf",
+      "id": "9c3687608bc0",
       "type": "excursion",
       "label": "Excursion",
-      "latitude": 13.3,
-      "longitude": 100.7,
+      "latitude": 34.8,
+      "longitude": 32.4,
       "activityCount": 5,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 5
-      }
-    },
-    {
-      "id": "c1869a61cc23",
-      "type": "excursion",
-      "label": "Excursion",
-      "latitude": 43.2,
-      "longitude": 78.5,
-      "activityCount": 5,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 5
-      }
-    },
-    {
-      "id": "c6df7eb48621",
-      "type": "excursion",
-      "label": "Excursion",
-      "latitude": 16.4,
-      "longitude": 107.7,
-      "activityCount": 5,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 5
-      }
-    },
-    {
-      "id": "0436fba5d24f",
-      "type": "swimming",
-      "label": "Swimming",
-      "latitude": 49.3,
-      "longitude": 3.3,
-      "activityCount": 5,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 1,
-        "2022": 2,
-        "2020": 2
-      }
-    },
-    {
-      "id": "42d85bd627e5",
-      "type": "swimming",
-      "label": "Swimming",
-      "latitude": 27.2,
-      "longitude": 33.8,
-      "activityCount": 5,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 5
       }
     },
     {
@@ -956,22 +847,9 @@
       "latitude": 36.9,
       "longitude": 31.0,
       "activityCount": 5,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2022": 5
-      }
-    },
-    {
-      "id": "b53047384f9a",
-      "type": "swimming",
-      "label": "Swimming",
-      "latitude": 51.4,
-      "longitude": 5.6,
-      "activityCount": 5,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 2,
-        "2025": 3
       }
     },
     {
@@ -981,34 +859,9 @@
       "latitude": 16.7,
       "longitude": -22.9,
       "activityCount": 5,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 5
-      }
-    },
-    {
-      "id": "0b938be88a68",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 48.1,
-      "longitude": 7.4,
-      "activityCount": 5,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 2,
-        "2022": 3
-      }
-    },
-    {
-      "id": "95b629908177",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 40.0,
-      "longitude": 116.6,
-      "activityCount": 5,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 5
       }
     },
     {
@@ -1018,34 +871,10 @@
       "latitude": 41.9,
       "longitude": 35.1,
       "activityCount": 5,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1,
         "2024": 4
-      }
-    },
-    {
-      "id": "c69da0293270",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 43.1,
-      "longitude": 78.6,
-      "activityCount": 5,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 5
-      }
-    },
-    {
-      "id": "d59fd114bebb",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 78.3,
-      "longitude": 15.7,
-      "activityCount": 5,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 5
       }
     },
     {
@@ -1055,33 +884,9 @@
       "latitude": 25.7,
       "longitude": 32.6,
       "activityCount": 5,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 5
-      }
-    },
-    {
-      "id": "e9be30790ed5",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 37.8,
-      "longitude": 23.8,
-      "activityCount": 5,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 5
-      }
-    },
-    {
-      "id": "f39832b291b1",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 54.7,
-      "longitude": 24.9,
-      "activityCount": 5,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 5
       }
     },
     {
@@ -1091,7 +896,7 @@
       "latitude": 25.7,
       "longitude": 32.6,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 4
       }
@@ -1103,7 +908,7 @@
       "latitude": 27.2,
       "longitude": 33.9,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 4
       }
@@ -1115,7 +920,19 @@
       "latitude": 20.9,
       "longitude": 107.1,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 4
+      }
+    },
+    {
+      "id": "0aeb048a9dd3",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 16.4,
+      "longitude": 107.6,
+      "activityCount": 4,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 4
       }
@@ -1127,22 +944,33 @@
       "latitude": 21.0,
       "longitude": 105.8,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 4
       }
     },
     {
-      "id": "8a67d0bc2e3d",
+      "id": "945e70341bc6",
       "type": "excursion",
       "label": "Excursion",
-      "latitude": 51.5,
-      "longitude": -0.2,
+      "latitude": 39.9,
+      "longitude": 116.4,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2025": 3,
-        "2024": 1
+        "2025": 4
+      }
+    },
+    {
+      "id": "a1cfcd5531a0",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 20.6,
+      "longitude": -87.1,
+      "activityCount": 4,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 4
       }
     },
     {
@@ -1152,21 +980,9 @@
       "latitude": -54.8,
       "longitude": -68.5,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 4
-      }
-    },
-    {
-      "id": "ed60c18ab8cb",
-      "type": "excursion",
-      "label": "Excursion",
-      "latitude": 41.7,
-      "longitude": 60.7,
-      "activityCount": 4,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 4
       }
     },
     {
@@ -1176,7 +992,7 @@
       "latitude": -34.6,
       "longitude": -58.4,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1,
         "2024": 3
@@ -1189,20 +1005,20 @@
       "latitude": 52.3,
       "longitude": 4.9,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2021": 3,
         "2020": 1
       }
     },
     {
-      "id": "e8caef3f2215",
-      "type": "snow_sports",
-      "label": "Skiing & snowboarding",
+      "id": "272e996c98d0",
+      "type": "snowboarding",
+      "label": "Snowboarding",
       "latitude": 48.1,
       "longitude": 6.9,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2022": 4
       }
@@ -1210,26 +1026,26 @@
     {
       "id": "c2fdee19124f",
       "type": "stair_climbing",
-      "label": "Stair climbing",
+      "label": "Stair Climbing",
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 2,
         "2025": 2
       }
     },
     {
-      "id": "708f6d9a4f5d",
+      "id": "42d85bd627e5",
       "type": "swimming",
       "label": "Swimming",
-      "latitude": -46.0,
-      "longitude": -62.0,
+      "latitude": 27.2,
+      "longitude": 33.8,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2025": 4
+        "2024": 4
       }
     },
     {
@@ -1239,45 +1055,35 @@
       "latitude": 38.0,
       "longitude": 23.7,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 4
       }
     },
     {
-      "id": "e352a15ae293",
-      "type": "swimming",
-      "label": "Swimming",
-      "latitude": 41.0,
-      "longitude": 38.0,
-      "activityCount": 4,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 4
-      }
-    },
-    {
       "id": "2a3ee51648f1",
       "type": "trail_running",
-      "label": "Trail running",
+      "label": "Trail Running",
       "latitude": 34.9,
       "longitude": 32.4,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 4
       }
     },
     {
-      "id": "0c38f3a34de6",
+      "id": "016d4edac252",
       "type": "walking",
       "label": "Walking",
-      "latitude": 20.5,
-      "longitude": -87.2,
+      "latitude": 41.3,
+      "longitude": 28.7,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2023": 4
+        "2026": 1,
+        "2025": 2,
+        "2024": 1
       }
     },
     {
@@ -1287,10 +1093,22 @@
       "latitude": 53.5,
       "longitude": 10.0,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 3,
         "2023": 1
+      }
+    },
+    {
+      "id": "37a18c55f7ad",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 78.2,
+      "longitude": 15.6,
+      "activityCount": 4,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 4
       }
     },
     {
@@ -1300,7 +1118,7 @@
       "latitude": -54.8,
       "longitude": -68.5,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 4
       }
@@ -1312,7 +1130,7 @@
       "latitude": 50.1,
       "longitude": 14.4,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 4
       }
@@ -1324,9 +1142,21 @@
       "latitude": 16.4,
       "longitude": 107.6,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 4
+      }
+    },
+    {
+      "id": "a9664eb3b4c0",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 54.7,
+      "longitude": 25.2,
+      "activityCount": 4,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 4
       }
     },
     {
@@ -1336,9 +1166,33 @@
       "latitude": 55.7,
       "longitude": 9.1,
       "activityCount": 4,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 4
+      }
+    },
+    {
+      "id": "c05b49876387",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 39.9,
+      "longitude": 116.4,
+      "activityCount": 4,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 4
+      }
+    },
+    {
+      "id": "f6c00342d113",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 38.0,
+      "longitude": 23.7,
+      "activityCount": 4,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 4
       }
     },
     {
@@ -1348,7 +1202,7 @@
       "latitude": 26.2,
       "longitude": 56.3,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 3
       }
@@ -1360,7 +1214,7 @@
       "latitude": 36.2,
       "longitude": 25.3,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 3
       }
@@ -1372,7 +1226,7 @@
       "latitude": 45.4,
       "longitude": 12.3,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 3
       }
@@ -1384,7 +1238,7 @@
       "latitude": 37.4,
       "longitude": 25.3,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 3
       }
@@ -1396,31 +1250,19 @@
       "latitude": -7.8,
       "longitude": 38.2,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 3
       }
     },
     {
-      "id": "d191d9036086",
-      "type": "cycling",
-      "label": "Cycling",
-      "latitude": 14.8,
-      "longitude": -61.2,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 3
-      }
-    },
-    {
-      "id": "2b21384763c8",
+      "id": "1af0a999a67d",
       "type": "excursion",
       "label": "Excursion",
-      "latitude": 10.7,
-      "longitude": 106.8,
+      "latitude": 13.0,
+      "longitude": 100.9,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 3
       }
@@ -1432,7 +1274,19 @@
       "latitude": 43.3,
       "longitude": 76.9,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 3
+      }
+    },
+    {
+      "id": "6366e6d02e43",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 39.7,
+      "longitude": 67.0,
+      "activityCount": 3,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 3
       }
@@ -1444,34 +1298,46 @@
       "latitude": 38.2,
       "longitude": 20.6,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 3
       }
     },
     {
-      "id": "b70b33dfebe0",
+      "id": "8899b7e70c15",
       "type": "excursion",
       "label": "Excursion",
-      "latitude": 38.7,
-      "longitude": 35.1,
+      "latitude": 34.8,
+      "longitude": 32.8,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2024": 3
+        "2025": 3
       }
     },
     {
-      "id": "a501df5d0d1c",
-      "type": "hiking",
-      "label": "Hiking",
-      "latitude": 40.8,
-      "longitude": 31.8,
+      "id": "96a1299530ba",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 43.0,
+      "longitude": 78.4,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 3
+      }
+    },
+    {
+      "id": "9df00d6075fa",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 51.6,
+      "longitude": -0.2,
+      "activityCount": 3,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 2,
-        "2022": 1
+        "2024": 1
       }
     },
     {
@@ -1481,7 +1347,7 @@
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 2,
         "2025": 1
@@ -1494,21 +1360,9 @@
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2020": 3
-      }
-    },
-    {
-      "id": "c0cd0e4328a9",
-      "type": "snorkeling",
-      "label": "Snorkeling",
-      "latitude": 27.2,
-      "longitude": 33.9,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 3
       }
     },
     {
@@ -1518,7 +1372,7 @@
       "latitude": 52.2,
       "longitude": 21.0,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 3
       }
@@ -1530,7 +1384,7 @@
       "latitude": 8.3,
       "longitude": 105.1,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 3
       }
@@ -1542,7 +1396,7 @@
       "latitude": 27.2,
       "longitude": 33.8,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 3
       }
@@ -1554,34 +1408,21 @@
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2020": 3
       }
     },
     {
-      "id": "2a9580d010b6",
+      "id": "3c8205635fee",
       "type": "swimming",
       "label": "Swimming",
-      "latitude": 13.9,
-      "longitude": 109.6,
+      "latitude": 41.0,
+      "longitude": 37.9,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2025": 3
-      }
-    },
-    {
-      "id": "4a8ed0e4bf33",
-      "type": "swimming",
-      "label": "Swimming",
-      "latitude": 40.6,
-      "longitude": 31.9,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 2,
-        "2023": 1
+        "2026": 3
       }
     },
     {
@@ -1591,21 +1432,9 @@
       "latitude": 50.0,
       "longitude": 19.9,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 3
-      }
-    },
-    {
-      "id": "99a814f00a7b",
-      "type": "swimming",
-      "label": "Swimming",
-      "latitude": 6.8,
-      "longitude": 102.7,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 3
       }
     },
     {
@@ -1615,7 +1444,7 @@
       "latitude": 1.3,
       "longitude": 103.9,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 3
       }
@@ -1627,48 +1456,46 @@
       "latitude": 41.4,
       "longitude": 60.4,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 3
       }
     },
     {
-      "id": "fcb13e9cf406",
+      "id": "e9d1b0a18822",
       "type": "swimming",
       "label": "Swimming",
-      "latitude": 48.5,
-      "longitude": 8.2,
+      "latitude": 51.7,
+      "longitude": 6.0,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2024": 3
+        "2025": 3
       }
     },
     {
       "id": "1199ba54fb06",
       "type": "table_tennis",
-      "label": "Table tennis",
+      "label": "Table Tennis",
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1,
         "2025": 2
       }
     },
     {
-      "id": "1a16a6481b57",
-      "type": "trail_running",
-      "label": "Trail running",
-      "latitude": 52.2,
-      "longitude": 5.2,
+      "id": "059a6bac757f",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 41.1,
+      "longitude": 29.0,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2026": 1,
-        "2025": 1,
-        "2016": 1
+        "2025": 3
       }
     },
     {
@@ -1678,7 +1505,7 @@
       "latitude": 21.0,
       "longitude": 105.8,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 3
       }
@@ -1690,9 +1517,21 @@
       "latitude": 43.2,
       "longitude": 76.9,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 3
+      }
+    },
+    {
+      "id": "243fe07b603e",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 63.5,
+      "longitude": -19.5,
+      "activityCount": 3,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 3
       }
     },
     {
@@ -1702,7 +1541,7 @@
       "latitude": 50.3,
       "longitude": 6.5,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2021": 3
       }
@@ -1714,7 +1553,7 @@
       "latitude": 44.8,
       "longitude": -0.6,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 3
       }
@@ -1726,9 +1565,57 @@
       "latitude": 13.7,
       "longitude": 100.5,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 3
+      }
+    },
+    {
+      "id": "6e6f9f6dfb4d",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 48.0,
+      "longitude": 6.9,
+      "activityCount": 3,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 3
+      }
+    },
+    {
+      "id": "6eb6b45bc9b1",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 43.0,
+      "longitude": 78.4,
+      "activityCount": 3,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 3
+      }
+    },
+    {
+      "id": "79fc5786f5ef",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 40.0,
+      "longitude": 32.7,
+      "activityCount": 3,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 3
+      }
+    },
+    {
+      "id": "889b04f2d2b5",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 49.5,
+      "longitude": 3.7,
+      "activityCount": 3,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 3
       }
     },
     {
@@ -1738,7 +1625,7 @@
       "latitude": 1.3,
       "longitude": 103.8,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 3
       }
@@ -1750,21 +1637,9 @@
       "latitude": 30.0,
       "longitude": 31.2,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 3
-      }
-    },
-    {
-      "id": "af2c99709aad",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 65.7,
-      "longitude": -17.1,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2022": 3
       }
     },
     {
@@ -1774,19 +1649,7 @@
       "latitude": 22.2,
       "longitude": 114.1,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 3
-      }
-    },
-    {
-      "id": "b5a08d94c8a5",
-      "type": "walking",
-      "label": "Walking",
-      "latitude": 39.7,
-      "longitude": 67.1,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 3
       }
@@ -1798,7 +1661,7 @@
       "latitude": 41.4,
       "longitude": 60.4,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 3
       }
@@ -1810,7 +1673,7 @@
       "latitude": 20.9,
       "longitude": 107.1,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 3
       }
@@ -1822,7 +1685,7 @@
       "latitude": 53.4,
       "longitude": -6.3,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 3
       }
@@ -1834,9 +1697,45 @@
       "latitude": -34.6,
       "longitude": -58.4,
       "activityCount": 3,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 3
+      }
+    },
+    {
+      "id": "dee5360dcc4e",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 41.3,
+      "longitude": 32.7,
+      "activityCount": 3,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 3
+      }
+    },
+    {
+      "id": "e7c65c420f76",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 50.8,
+      "longitude": 4.4,
+      "activityCount": 3,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 3
+      }
+    },
+    {
+      "id": "ef7899323211",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 20.6,
+      "longitude": -87.1,
+      "activityCount": 3,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 3
       }
     },
     {
@@ -1846,70 +1745,33 @@
       "latitude": -6.1,
       "longitude": 39.2,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
       }
     },
     {
-      "id": "6de10d42f7fe",
-      "type": "boating",
-      "label": "Boating",
-      "latitude": 78.5,
-      "longitude": 16.0,
+      "id": "1dec99d1c017",
+      "type": "cycling",
+      "label": "Cycling",
+      "latitude": 14.6,
+      "longitude": -61.1,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 2
+      }
+    },
+    {
+      "id": "0f504a8c1936",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 10.8,
+      "longitude": 106.7,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 2
-      }
-    },
-    {
-      "id": "77c9d80b82f1",
-      "type": "boating",
-      "label": "Boating",
-      "latitude": -62.5,
-      "longitude": -57.8,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 2
-      }
-    },
-    {
-      "id": "1424d1948c2e",
-      "type": "cycling",
-      "label": "Cycling",
-      "latitude": 25.0,
-      "longitude": 55.1,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 1,
-        "2022": 1
-      }
-    },
-    {
-      "id": "d2bafd70019d",
-      "type": "cycling",
-      "label": "Cycling",
-      "latitude": 16.7,
-      "longitude": -61.7,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 2
-      }
-    },
-    {
-      "id": "de8fe9f6df83",
-      "type": "cycling",
-      "label": "Cycling",
-      "latitude": 17.7,
-      "longitude": -62.9,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 2
       }
     },
     {
@@ -1919,7 +1781,7 @@
       "latitude": 42.9,
       "longitude": 74.6,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 2
       }
@@ -1931,7 +1793,19 @@
       "latitude": 66.5,
       "longitude": 25.7,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 2
+      }
+    },
+    {
+      "id": "5d307751b09a",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 38.7,
+      "longitude": 34.8,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2
       }
@@ -1943,21 +1817,45 @@
       "latitude": 35.3,
       "longitude": 25.1,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
       }
     },
     {
-      "id": "ab6a98f06efa",
+      "id": "7f54f8ffad5e",
       "type": "excursion",
       "label": "Excursion",
-      "latitude": -51.8,
-      "longitude": -58.1,
+      "latitude": 39.5,
+      "longitude": 67.4,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2024": 2
+        "2026": 2
+      }
+    },
+    {
+      "id": "9989fb48d277",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 41.5,
+      "longitude": 60.5,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 2
+      }
+    },
+    {
+      "id": "ae25699c0389",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 41.9,
+      "longitude": 61.0,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 2
       }
     },
     {
@@ -1967,7 +1865,19 @@
       "latitude": 53.4,
       "longitude": -6.2,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 2
+      }
+    },
+    {
+      "id": "c1430e54bd4b",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 13.7,
+      "longitude": 100.5,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 2
       }
@@ -1979,9 +1889,21 @@
       "latitude": 9.5,
       "longitude": 100.0,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 2
+      }
+    },
+    {
+      "id": "cfbe220001a2",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 20.3,
+      "longitude": -87.4,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 2
       }
     },
     {
@@ -1991,7 +1913,7 @@
       "latitude": 27.2,
       "longitude": 33.8,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2
       }
@@ -2003,7 +1925,7 @@
       "latitude": 26.2,
       "longitude": 50.6,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 2
       }
@@ -2015,9 +1937,22 @@
       "latitude": 36.4,
       "longitude": 25.4,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
+      }
+    },
+    {
+      "id": "0c4a7d2a7a90",
+      "type": "hiking",
+      "label": "Hiking",
+      "latitude": 40.9,
+      "longitude": 31.9,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1,
+        "2022": 1
       }
     },
     {
@@ -2027,7 +1962,7 @@
       "latitude": 42.0,
       "longitude": 60.9,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 2
       }
@@ -2039,7 +1974,7 @@
       "latitude": 41.9,
       "longitude": 35.0,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2022": 1,
         "2021": 1
@@ -2052,7 +1987,7 @@
       "latitude": 49.4,
       "longitude": 3.1,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2020": 2
       }
@@ -2064,7 +1999,7 @@
       "latitude": 38.1,
       "longitude": 35.2,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2022": 2
       }
@@ -2076,7 +2011,7 @@
       "latitude": -8.2,
       "longitude": 115.4,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 2
       }
@@ -2088,10 +2023,22 @@
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1,
         "2021": 1
+      }
+    },
+    {
+      "id": "0379402f2913",
+      "type": "snorkeling",
+      "label": "Snorkeling",
+      "latitude": 27.2,
+      "longitude": 34.0,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 2
       }
     },
     {
@@ -2101,21 +2048,9 @@
       "latitude": -8.7,
       "longitude": 115.5,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 2
-      }
-    },
-    {
-      "id": "21d04a2181f5",
-      "type": "snorkeling",
-      "label": "Snorkeling",
-      "latitude": 20.4,
-      "longitude": -87.3,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 2
       }
     },
     {
@@ -2125,19 +2060,19 @@
       "latitude": 26.2,
       "longitude": 56.4,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
       }
     },
     {
-      "id": "d30a0195f2b3",
-      "type": "snow_sports",
-      "label": "Skiing & snowboarding",
+      "id": "cef63dea0eb6",
+      "type": "snowboarding",
+      "label": "Snowboarding",
       "latitude": 38.5,
       "longitude": 35.5,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2020": 2
       }
@@ -2149,22 +2084,33 @@
       "latitude": -34.6,
       "longitude": -58.4,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2
       }
     },
     {
-      "id": "e7267865e86b",
-      "type": "strength",
-      "label": "Strength",
-      "latitude": 51.0,
-      "longitude": 3.8,
+      "id": "1e4979aafc7b",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 14.1,
+      "longitude": 109.6,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2026": 1,
-        "2024": 1
+        "2025": 2
+      }
+    },
+    {
+      "id": "2de0baf27064",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 49.4,
+      "longitude": 3.1,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2020": 2
       }
     },
     {
@@ -2174,9 +2120,21 @@
       "latitude": 53.1,
       "longitude": 10.0,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2022": 2
+      }
+    },
+    {
+      "id": "62de866152fe",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 40.7,
+      "longitude": 31.5,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 2
       }
     },
     {
@@ -2186,7 +2144,7 @@
       "latitude": -34.6,
       "longitude": -58.4,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2
       }
@@ -2198,7 +2156,7 @@
       "latitude": -44.3,
       "longitude": -59.2,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2
       }
@@ -2210,21 +2168,33 @@
       "latitude": 43.5,
       "longitude": 16.4,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2
       }
     },
     {
-      "id": "a7bdef6c133e",
+      "id": "84d23a3bf329",
       "type": "swimming",
       "label": "Swimming",
-      "latitude": 20.4,
-      "longitude": 111.4,
+      "latitude": 49.5,
+      "longitude": 3.7,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2026": 2
+        "2022": 2
+      }
+    },
+    {
+      "id": "8a10a11db2cb",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 48.8,
+      "longitude": 8.2,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 2
       }
     },
     {
@@ -2234,7 +2204,7 @@
       "latitude": 38.7,
       "longitude": 35.5,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2022": 2
       }
@@ -2246,21 +2216,9 @@
       "latitude": -7.7,
       "longitude": 38.2,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
-      }
-    },
-    {
-      "id": "e170d99abbc2",
-      "type": "swimming",
-      "label": "Swimming",
-      "latitude": 65.7,
-      "longitude": -17.3,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2022": 2
       }
     },
     {
@@ -2270,7 +2228,7 @@
       "latitude": 78.2,
       "longitude": 15.6,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 2
       }
@@ -2282,22 +2240,35 @@
       "latitude": 16.6,
       "longitude": -62.5,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
       }
     },
     {
-      "id": "f5029580228e",
-      "type": "swimming",
-      "label": "Swimming",
-      "latitude": -35.0,
-      "longitude": -55.9,
+      "id": "d62874f55922",
+      "type": "trail_running",
+      "label": "Trail Running",
+      "latitude": 52.3,
+      "longitude": 4.9,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2025": 1,
-        "2024": 1
+        "2026": 1,
+        "2025": 1
+      }
+    },
+    {
+      "id": "0739bcc9365e",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 52.4,
+      "longitude": 6.1,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1,
+        "2021": 1
       }
     },
     {
@@ -2307,7 +2278,7 @@
       "latitude": 45.5,
       "longitude": 9.2,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 2
       }
@@ -2319,21 +2290,33 @@
       "latitude": -6.1,
       "longitude": 39.2,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
       }
     },
     {
-      "id": "2d527a7b5081",
+      "id": "23b15a1a4248",
       "type": "walking",
       "label": "Walking",
-      "latitude": 38.3,
-      "longitude": 20.3,
+      "latitude": 64.0,
+      "longitude": -17.0,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2024": 2
+        "2022": 2
+      }
+    },
+    {
+      "id": "27ec8292ca81",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 64.3,
+      "longitude": -20.2,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 2
       }
     },
     {
@@ -2343,9 +2326,21 @@
       "latitude": 18.0,
       "longitude": -63.0,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
+      }
+    },
+    {
+      "id": "3a1108e1f733",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 51.5,
+      "longitude": 5.3,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2021": 2
       }
     },
     {
@@ -2355,7 +2350,7 @@
       "latitude": 43.0,
       "longitude": 74.7,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 2
       }
@@ -2367,9 +2362,21 @@
       "latitude": -7.8,
       "longitude": 38.2,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
+      }
+    },
+    {
+      "id": "5f59bf48058b",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 41.1,
+      "longitude": 37.4,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 2
       }
     },
     {
@@ -2379,21 +2386,57 @@
       "latitude": 56.9,
       "longitude": 24.1,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
       }
     },
     {
-      "id": "7f1f714a66e1",
+      "id": "6eca287a6ac3",
       "type": "walking",
       "label": "Walking",
-      "latitude": -51.8,
-      "longitude": -58.1,
+      "latitude": 41.0,
+      "longitude": 37.9,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
-        "2024": 2
+        "2026": 2
+      }
+    },
+    {
+      "id": "843fde3d7fc5",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 41.8,
+      "longitude": 32.4,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 2
+      }
+    },
+    {
+      "id": "8ee21a676093",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 39.7,
+      "longitude": 67.0,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 2
+      }
+    },
+    {
+      "id": "9669e0933d84",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 64.2,
+      "longitude": -15.0,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 2
       }
     },
     {
@@ -2403,10 +2446,34 @@
       "latitude": 66.5,
       "longitude": 25.7,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1,
         "2023": 1
+      }
+    },
+    {
+      "id": "9a7836ae4c41",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": -8.2,
+      "longitude": 115.1,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 2
+      }
+    },
+    {
+      "id": "9b6932f9abbd",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 48.9,
+      "longitude": 2.8,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 2
       }
     },
     {
@@ -2416,7 +2483,7 @@
       "latitude": 42.5,
       "longitude": 18.7,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2
       }
@@ -2428,7 +2495,7 @@
       "latitude": 60.2,
       "longitude": 25.0,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
       }
@@ -2440,7 +2507,7 @@
       "latitude": 27.2,
       "longitude": 33.8,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2
       }
@@ -2452,7 +2519,7 @@
       "latitude": 38.7,
       "longitude": -9.1,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
       }
@@ -2464,7 +2531,7 @@
       "latitude": 39.8,
       "longitude": 64.4,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 2
       }
@@ -2476,7 +2543,7 @@
       "latitude": 36.4,
       "longitude": 25.4,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
       }
@@ -2488,7 +2555,7 @@
       "latitude": 50.0,
       "longitude": 19.9,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 2
       }
@@ -2500,7 +2567,7 @@
       "latitude": 10.8,
       "longitude": 106.7,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 2
       }
@@ -2512,7 +2579,31 @@
       "latitude": 43.5,
       "longitude": 16.4,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 2
+      }
+    },
+    {
+      "id": "d402ae3e4f89",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 51.2,
+      "longitude": 3.2,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 2
+      }
+    },
+    {
+      "id": "d73cf0f36d41",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 38.7,
+      "longitude": 34.9,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2
       }
@@ -2524,9 +2615,21 @@
       "latitude": 37.4,
       "longitude": 25.3,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 2
+      }
+    },
+    {
+      "id": "d997c4fdbf80",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 43.3,
+      "longitude": 79.0,
+      "activityCount": 2,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 2
       }
     },
     {
@@ -2536,7 +2639,7 @@
       "latitude": 48.1,
       "longitude": 6.9,
       "activityCount": 2,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2022": 2
       }
@@ -2548,7 +2651,7 @@
       "latitude": 36.4,
       "longitude": 25.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
       }
@@ -2560,7 +2663,7 @@
       "latitude": -7.7,
       "longitude": 38.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
       }
@@ -2572,9 +2675,21 @@
       "latitude": 16.5,
       "longitude": -62.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
+      }
+    },
+    {
+      "id": "4254dd964514",
+      "type": "boating",
+      "label": "Boating",
+      "latitude": 78.2,
+      "longitude": 15.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
       }
     },
     {
@@ -2584,7 +2699,7 @@
       "latitude": 42.4,
       "longitude": 18.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -2596,7 +2711,7 @@
       "latitude": 66.1,
       "longitude": -17.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2022": 1
       }
@@ -2608,7 +2723,7 @@
       "latitude": 42.0,
       "longitude": 35.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2021": 1
       }
@@ -2620,7 +2735,7 @@
       "latitude": 25.3,
       "longitude": 55.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -2632,9 +2747,33 @@
       "latitude": -7.8,
       "longitude": 38.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
+      }
+    },
+    {
+      "id": "720f43e14ce4",
+      "type": "boating",
+      "label": "Boating",
+      "latitude": -62.3,
+      "longitude": -57.2,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "7f540aa993e4",
+      "type": "boating",
+      "label": "Boating",
+      "latitude": -62.7,
+      "longitude": -58.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
       }
     },
     {
@@ -2644,9 +2783,21 @@
       "latitude": 53.5,
       "longitude": 10.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
+      }
+    },
+    {
+      "id": "a17b198b8871",
+      "type": "boating",
+      "label": "Boating",
+      "latitude": 51.5,
+      "longitude": 5.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2021": 1
       }
     },
     {
@@ -2656,7 +2807,7 @@
       "latitude": 22.2,
       "longitude": 114.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -2668,9 +2819,21 @@
       "latitude": -64.3,
       "longitude": -61.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "f4996527e07b",
+      "type": "boating",
+      "label": "Boating",
+      "latitude": 78.7,
+      "longitude": 16.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
       }
     },
     {
@@ -2680,7 +2843,7 @@
       "latitude": -54.9,
       "longitude": -68.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -2692,7 +2855,7 @@
       "latitude": -61.2,
       "longitude": -54.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -2704,7 +2867,7 @@
       "latitude": 49.4,
       "longitude": 3.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2020": 1
       }
@@ -2716,9 +2879,81 @@
       "latitude": -34.6,
       "longitude": -58.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "013eb9321ec0",
+      "type": "cycling",
+      "label": "Cycling",
+      "latitude": 15.3,
+      "longitude": -61.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "0c520777ae9c",
+      "type": "cycling",
+      "label": "Cycling",
+      "latitude": 25.2,
+      "longitude": 55.3,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
+      }
+    },
+    {
+      "id": "64bc86e7575c",
+      "type": "cycling",
+      "label": "Cycling",
+      "latitude": 16.2,
+      "longitude": -61.5,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "7ac43bc7eba2",
+      "type": "cycling",
+      "label": "Cycling",
+      "latitude": 17.1,
+      "longitude": -61.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "8a7409076e36",
+      "type": "cycling",
+      "label": "Cycling",
+      "latitude": 17.3,
+      "longitude": -62.7,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "c03383d26074",
+      "type": "cycling",
+      "label": "Cycling",
+      "latitude": 18.0,
+      "longitude": -63.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
       }
     },
     {
@@ -2728,9 +2963,33 @@
       "latitude": 38.5,
       "longitude": 35.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2020": 1
+      }
+    },
+    {
+      "id": "e98d45516f11",
+      "type": "cycling",
+      "label": "Cycling",
+      "latitude": 52.1,
+      "longitude": 5.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2020": 1
+      }
+    },
+    {
+      "id": "fdc5a61e66b4",
+      "type": "cycling",
+      "label": "Cycling",
+      "latitude": 24.8,
+      "longitude": 54.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
       }
     },
     {
@@ -2740,9 +2999,33 @@
       "latitude": 53.6,
       "longitude": 10.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
+      }
+    },
+    {
+      "id": "100389dfefcb",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 34.9,
+      "longitude": 33.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "3d67596a0689",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 16.3,
+      "longitude": 108.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
       }
     },
     {
@@ -2752,9 +3035,21 @@
       "latitude": 24.3,
       "longitude": 52.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "6355ddf8f867",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 43.3,
+      "longitude": 79.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
       }
     },
     {
@@ -2764,9 +3059,57 @@
       "latitude": 20.9,
       "longitude": 107.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
+      }
+    },
+    {
+      "id": "758d249a0311",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 43.5,
+      "longitude": 78.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
+      }
+    },
+    {
+      "id": "7b593003a46d",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": -8.2,
+      "longitude": 115.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "8f27e021ec25",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 38.7,
+      "longitude": 35.5,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "8f3133d4d1d0",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": -51.9,
+      "longitude": -58.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
       }
     },
     {
@@ -2776,9 +3119,33 @@
       "latitude": 37.0,
       "longitude": 34.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "996755ce1c9e",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": -51.7,
+      "longitude": -57.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "a2edd020b98f",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 51.2,
+      "longitude": -0.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
       }
     },
     {
@@ -2788,7 +3155,7 @@
       "latitude": -42.8,
       "longitude": -65.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -2800,7 +3167,7 @@
       "latitude": 20.7,
       "longitude": -88.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
       }
@@ -2812,9 +3179,21 @@
       "latitude": 42.4,
       "longitude": 18.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "b38d4f9e0aad",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 21.0,
+      "longitude": -86.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
       }
     },
     {
@@ -2824,9 +3203,21 @@
       "latitude": -44.0,
       "longitude": -65.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "c023fc6f24b6",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 39.2,
+      "longitude": 67.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
       }
     },
     {
@@ -2836,7 +3227,7 @@
       "latitude": 48.9,
       "longitude": 2.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -2848,9 +3239,21 @@
       "latitude": 44.9,
       "longitude": 12.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "e3bc97b2b920",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 10.6,
+      "longitude": 107.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
       }
     },
     {
@@ -2860,7 +3263,19 @@
       "latitude": 25.3,
       "longitude": 51.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "edb32a9bd08e",
+      "type": "excursion",
+      "label": "Excursion",
+      "latitude": 24.5,
+      "longitude": 54.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -2868,11 +3283,11 @@
     {
       "id": "500a119af583",
       "type": "gravel_cycling",
-      "label": "Gravel cycling",
+      "label": "Gravel Cycling",
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2019": 1
       }
@@ -2884,7 +3299,7 @@
       "latitude": 20.6,
       "longitude": -87.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
       }
@@ -2896,7 +3311,7 @@
       "latitude": 52.9,
       "longitude": 7.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2020": 1
       }
@@ -2908,7 +3323,7 @@
       "latitude": 50.3,
       "longitude": 6.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2021": 1
       }
@@ -2920,9 +3335,21 @@
       "latitude": 37.5,
       "longitude": 36.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2021": 1
+      }
+    },
+    {
+      "id": "6b2e88c60549",
+      "type": "hiking",
+      "label": "Hiking",
+      "latitude": 40.7,
+      "longitude": 31.5,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
       }
     },
     {
@@ -2932,7 +3359,7 @@
       "latitude": -44.0,
       "longitude": -65.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -2944,7 +3371,7 @@
       "latitude": 53.1,
       "longitude": 10.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2022": 1
       }
@@ -2956,7 +3383,7 @@
       "latitude": 52.3,
       "longitude": 4.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2020": 1
       }
@@ -2964,11 +3391,11 @@
     {
       "id": "0435309db911",
       "type": "horseback_riding",
-      "label": "Horseback riding",
+      "label": "Horseback Riding",
       "latitude": 43.0,
       "longitude": 78.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -2976,11 +3403,11 @@
     {
       "id": "714898b711fa",
       "type": "indoor_cycling",
-      "label": "Indoor cycling",
+      "label": "Indoor Cycling",
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -2992,7 +3419,7 @@
       "latitude": 43.0,
       "longitude": 78.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3004,7 +3431,7 @@
       "latitude": 20.9,
       "longitude": 107.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3016,7 +3443,7 @@
       "latitude": -8.7,
       "longitude": 115.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3028,7 +3455,7 @@
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3040,7 +3467,7 @@
       "latitude": 38.5,
       "longitude": 35.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2019": 1
       }
@@ -3052,7 +3479,7 @@
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3064,7 +3491,7 @@
       "latitude": 20.8,
       "longitude": 107.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3076,7 +3503,7 @@
       "latitude": 45.5,
       "longitude": 9.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3088,7 +3515,7 @@
       "latitude": 44.8,
       "longitude": -0.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3100,7 +3527,7 @@
       "latitude": 20.1,
       "longitude": 110.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3112,7 +3539,7 @@
       "latitude": 49.5,
       "longitude": 8.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2019": 1
       }
@@ -3124,7 +3551,7 @@
       "latitude": 53.5,
       "longitude": 10.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3136,7 +3563,7 @@
       "latitude": 52.2,
       "longitude": 21.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3148,7 +3575,7 @@
       "latitude": 43.2,
       "longitude": 76.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3160,7 +3587,7 @@
       "latitude": 78.2,
       "longitude": 15.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3172,7 +3599,7 @@
       "latitude": 50.8,
       "longitude": 4.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3184,9 +3611,45 @@
       "latitude": 25.7,
       "longitude": 32.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "b152890b0a86",
+      "type": "scuba_diving",
+      "label": "Scuba Diving",
+      "latitude": 27.2,
+      "longitude": 33.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "3361d473c8cd",
+      "type": "skydiving",
+      "label": "Skydiving",
+      "latitude": 25.7,
+      "longitude": 32.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "1edbb13d011e",
+      "type": "snorkeling",
+      "label": "Snorkeling",
+      "latitude": 20.3,
+      "longitude": -87.5,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
       }
     },
     {
@@ -3196,9 +3659,21 @@
       "latitude": 36.9,
       "longitude": 27.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2020": 1
+      }
+    },
+    {
+      "id": "d11ebe53119a",
+      "type": "snorkeling",
+      "label": "Snorkeling",
+      "latitude": 20.6,
+      "longitude": -87.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
       }
     },
     {
@@ -3208,7 +3683,7 @@
       "latitude": 15.2,
       "longitude": -61.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
       }
@@ -3220,7 +3695,7 @@
       "latitude": -6.1,
       "longitude": 39.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
       }
@@ -3232,7 +3707,7 @@
       "latitude": 45.5,
       "longitude": 9.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3244,7 +3719,7 @@
       "latitude": 37.5,
       "longitude": 25.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3256,7 +3731,7 @@
       "latitude": -54.9,
       "longitude": -56.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3268,7 +3743,7 @@
       "latitude": -54.8,
       "longitude": -68.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3280,7 +3755,7 @@
       "latitude": 48.9,
       "longitude": 2.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3292,7 +3767,7 @@
       "latitude": 12.8,
       "longitude": 109.7,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3304,7 +3779,7 @@
       "latitude": 41.4,
       "longitude": 60.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3316,9 +3791,21 @@
       "latitude": 1.3,
       "longitude": 103.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "4d0b1ad924f5",
+      "type": "strength",
+      "label": "Strength",
+      "latitude": 51.2,
+      "longitude": 3.2,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
       }
     },
     {
@@ -3328,7 +3815,7 @@
       "latitude": 43.2,
       "longitude": 76.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3340,7 +3827,7 @@
       "latitude": 34.9,
       "longitude": 32.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3352,7 +3839,7 @@
       "latitude": -39.8,
       "longitude": -59.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3364,7 +3851,7 @@
       "latitude": 41.0,
       "longitude": 37.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3376,7 +3863,7 @@
       "latitude": 41.1,
       "longitude": 29.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3388,7 +3875,7 @@
       "latitude": 40.2,
       "longitude": 117.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3400,7 +3887,7 @@
       "latitude": 25.7,
       "longitude": 52.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3412,7 +3899,7 @@
       "latitude": 28.1,
       "longitude": -16.7,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3424,7 +3911,7 @@
       "latitude": -44.2,
       "longitude": -59.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3436,7 +3923,7 @@
       "latitude": 48.8,
       "longitude": 8.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3448,7 +3935,7 @@
       "latitude": 16.6,
       "longitude": -22.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3460,7 +3947,7 @@
       "latitude": 38.0,
       "longitude": 23.7,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3472,7 +3959,7 @@
       "latitude": 35.3,
       "longitude": 25.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
       }
@@ -3484,7 +3971,7 @@
       "latitude": 20.1,
       "longitude": 110.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3496,7 +3983,7 @@
       "latitude": 53.5,
       "longitude": 10.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3508,9 +3995,21 @@
       "latitude": 44.8,
       "longitude": -0.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "fafdda4c9885",
+      "type": "strength",
+      "label": "Strength",
+      "latitude": 50.8,
+      "longitude": 4.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
       }
     },
     {
@@ -3520,7 +4019,43 @@
       "latitude": 40.5,
       "longitude": 18.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "6ea6abb945c9",
+      "type": "submarine",
+      "label": "Submarine",
+      "latitude": 27.2,
+      "longitude": 33.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "003a4ab51db6",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -46.5,
+      "longitude": -61.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "06da6524ec97",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 48.9,
+      "longitude": 2.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3532,7 +4067,55 @@
       "latitude": 51.5,
       "longitude": -0.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "0d16b8719d78",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 47.9,
+      "longitude": 8.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "0d9d555fe486",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 40.5,
+      "longitude": 32.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "15be6186e384",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 7.2,
+      "longitude": 102.3,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "1edbdde21b4e",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -8.2,
+      "longitude": 115.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3544,9 +4127,33 @@
       "latitude": 24.3,
       "longitude": 52.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "3d7269cabd58",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 51.3,
+      "longitude": 5.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
+      }
+    },
+    {
+      "id": "4e68a02c275b",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 40.9,
+      "longitude": 38.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
       }
     },
     {
@@ -3556,7 +4163,7 @@
       "latitude": -42.8,
       "longitude": -64.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3568,7 +4175,7 @@
       "latitude": 35.5,
       "longitude": 24.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3580,7 +4187,7 @@
       "latitude": 39.7,
       "longitude": 67.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3592,7 +4199,19 @@
       "latitude": 8.4,
       "longitude": 105.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "6576174f9fe5",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -34.9,
+      "longitude": -56.2,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3604,7 +4223,7 @@
       "latitude": 9.5,
       "longitude": 100.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3616,7 +4235,7 @@
       "latitude": 16.5,
       "longitude": 108.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3628,9 +4247,21 @@
       "latitude": 20.7,
       "longitude": -88.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
+      }
+    },
+    {
+      "id": "7c36ec5f2285",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 20.3,
+      "longitude": 111.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
       }
     },
     {
@@ -3640,7 +4271,7 @@
       "latitude": 13.1,
       "longitude": 100.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3652,9 +4283,33 @@
       "latitude": 59.3,
       "longitude": 18.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "8681d3e92d0d",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 6.3,
+      "longitude": 103.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "8ca61284c67f",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 65.8,
+      "longitude": -16.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
       }
     },
     {
@@ -3664,9 +4319,33 @@
       "latitude": 50.3,
       "longitude": 6.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2021": 1
+      }
+    },
+    {
+      "id": "8e7c76e35c98",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 65.6,
+      "longitude": -18.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
+      }
+    },
+    {
+      "id": "9114a18811ea",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 20.6,
+      "longitude": 111.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
       }
     },
     {
@@ -3676,7 +4355,7 @@
       "latitude": 43.4,
       "longitude": 79.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3688,9 +4367,21 @@
       "latitude": -64.7,
       "longitude": -63.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "96afd0feffef",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -45.8,
+      "longitude": -62.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
       }
     },
     {
@@ -3700,7 +4391,7 @@
       "latitude": -39.0,
       "longitude": -58.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3712,7 +4403,7 @@
       "latitude": -36.3,
       "longitude": -55.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3724,9 +4415,33 @@
       "latitude": -54.9,
       "longitude": -56.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "a4119933ff67",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 13.5,
+      "longitude": 109.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "a6e567269aba",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -45.2,
+      "longitude": -62.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
       }
     },
     {
@@ -3736,7 +4451,7 @@
       "latitude": 30.0,
       "longitude": 31.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3748,7 +4463,7 @@
       "latitude": 64.1,
       "longitude": -21.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2022": 1
       }
@@ -3760,9 +4475,21 @@
       "latitude": -50.8,
       "longitude": -62.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "b96e71696dac",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -46.3,
+      "longitude": -61.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
       }
     },
     {
@@ -3772,7 +4499,7 @@
       "latitude": 54.9,
       "longitude": 23.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
       }
@@ -3784,7 +4511,19 @@
       "latitude": 25.3,
       "longitude": 51.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "d222076c86ea",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 6.8,
+      "longitude": 102.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3796,7 +4535,7 @@
       "latitude": 40.5,
       "longitude": 18.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3808,7 +4547,7 @@
       "latitude": 18.0,
       "longitude": -63.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
       }
@@ -3820,9 +4559,21 @@
       "latitude": 41.1,
       "longitude": 29.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "dc909fa7e7e4",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 52.3,
+      "longitude": 5.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
       }
     },
     {
@@ -3832,7 +4583,7 @@
       "latitude": 53.3,
       "longitude": -6.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3844,7 +4595,19 @@
       "latitude": -39.8,
       "longitude": -59.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "e99fc25b80ec",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -8.3,
+      "longitude": 115.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3856,9 +4619,21 @@
       "latitude": 25.7,
       "longitude": 32.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "f126c82bd483",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 50.8,
+      "longitude": 4.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
       }
     },
     {
@@ -3868,9 +4643,21 @@
       "latitude": 59.9,
       "longitude": 10.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "f8fa6b6d413b",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -35.1,
+      "longitude": -55.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
       }
     },
     {
@@ -3880,7 +4667,7 @@
       "latitude": 42.9,
       "longitude": 74.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2026": 1
       }
@@ -3892,7 +4679,7 @@
       "latitude": 25.7,
       "longitude": 52.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3904,19 +4691,31 @@
       "latitude": 52.3,
       "longitude": 4.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
     },
     {
+      "id": "05ae1acb77b9",
+      "type": "trail_running",
+      "label": "Trail Running",
+      "latitude": 52.0,
+      "longitude": 5.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2016": 1
+      }
+    },
+    {
       "id": "11ce20109415",
       "type": "trail_running",
-      "label": "Trail running",
+      "label": "Trail Running",
       "latitude": 40.2,
       "longitude": 117.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3924,11 +4723,11 @@
     {
       "id": "7451c3adf9e6",
       "type": "treadmill_running",
-      "label": "Treadmill running",
+      "label": "Treadmill Running",
       "latitude": 17.1,
       "longitude": -61.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
       }
@@ -3936,11 +4735,11 @@
     {
       "id": "aaff8fb54c47",
       "type": "treadmill_running",
-      "label": "Treadmill running",
+      "label": "Treadmill Running",
       "latitude": -44.2,
       "longitude": -59.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3948,11 +4747,11 @@
     {
       "id": "b7d10478a5ec",
       "type": "treadmill_running",
-      "label": "Treadmill running",
+      "label": "Treadmill Running",
       "latitude": 40.5,
       "longitude": 18.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -3960,11 +4759,11 @@
     {
       "id": "bbb63dfdb253",
       "type": "treadmill_running",
-      "label": "Treadmill running",
+      "label": "Treadmill Running",
       "latitude": 8.3,
       "longitude": 105.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -3972,13 +4771,25 @@
     {
       "id": "eeb6e5680571",
       "type": "treadmill_running",
-      "label": "Treadmill running",
+      "label": "Treadmill Running",
       "latitude": 40.2,
       "longitude": 117.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "004b72d74c77",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 40.6,
+      "longitude": 31.3,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
       }
     },
     {
@@ -3988,7 +4799,7 @@
       "latitude": 59.9,
       "longitude": 10.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -4000,9 +4811,21 @@
       "latitude": 60.4,
       "longitude": 22.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "1390b4f99204",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 40.2,
+      "longitude": 31.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
       }
     },
     {
@@ -4012,9 +4835,21 @@
       "latitude": 24.5,
       "longitude": 118.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "20627d4d24b5",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 65.6,
+      "longitude": -18.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
       }
     },
     {
@@ -4024,7 +4859,7 @@
       "latitude": 36.9,
       "longitude": 27.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2020": 1
       }
@@ -4036,9 +4871,21 @@
       "latitude": -45.5,
       "longitude": -62.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "3b3dbf8d9c82",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 40.9,
+      "longitude": 38.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
       }
     },
     {
@@ -4048,7 +4895,7 @@
       "latitude": 40.2,
       "longitude": 34.7,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -4060,9 +4907,93 @@
       "latitude": 67.8,
       "longitude": 24.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
+      }
+    },
+    {
+      "id": "4769faf280c9",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 51.8,
+      "longitude": -1.3,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "488d92c8627f",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 65.1,
+      "longitude": -14.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
+      }
+    },
+    {
+      "id": "4a7b9b741ce8",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 41.4,
+      "longitude": 31.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "527bd6569e46",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 52.8,
+      "longitude": 6.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
+      }
+    },
+    {
+      "id": "565b1cda3d47",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 78.7,
+      "longitude": 16.3,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "5683e85f67bc",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 41.4,
+      "longitude": 33.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "59ef2ea43aef",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 37.1,
+      "longitude": 23.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
       }
     },
     {
@@ -4072,7 +5003,19 @@
       "latitude": 45.4,
       "longitude": 12.3,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "62a696e49809",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 47.9,
+      "longitude": 8.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -4084,9 +5027,33 @@
       "latitude": 40.6,
       "longitude": 18.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "7107668c45da",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 40.7,
+      "longitude": 31.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "72d45832cdef",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 42.0,
+      "longitude": 33.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
       }
     },
     {
@@ -4096,7 +5063,7 @@
       "latitude": 55.7,
       "longitude": 21.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
       }
@@ -4108,7 +5075,7 @@
       "latitude": 37.6,
       "longitude": 36.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2021": 1
       }
@@ -4120,9 +5087,69 @@
       "latitude": 26.2,
       "longitude": 50.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "7b07d7709b1d",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 64.8,
+      "longitude": -20.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
+      }
+    },
+    {
+      "id": "7d89ff2d0fa5",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 65.6,
+      "longitude": -16.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
+      }
+    },
+    {
+      "id": "7e412a52332b",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 48.9,
+      "longitude": 2.3,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
+      }
+    },
+    {
+      "id": "864f19797cec",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 39.5,
+      "longitude": 67.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
+      }
+    },
+    {
+      "id": "88e0a4d3d47e",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 40.6,
+      "longitude": 38.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2026": 1
       }
     },
     {
@@ -4132,7 +5159,7 @@
       "latitude": 12.9,
       "longitude": 100.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -4144,9 +5171,45 @@
       "latitude": 14.6,
       "longitude": -61.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
+      }
+    },
+    {
+      "id": "8e7f9fba1d09",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 38.4,
+      "longitude": 20.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "90f31604d313",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": -51.7,
+      "longitude": -57.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "939507e8d10d",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 64.1,
+      "longitude": -21.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
       }
     },
     {
@@ -4156,9 +5219,33 @@
       "latitude": 28.1,
       "longitude": -16.7,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "9c07e529d8b1",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 64.1,
+      "longitude": -16.2,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
+      }
+    },
+    {
+      "id": "a7a8a594bfa6",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 38.2,
+      "longitude": 20.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
       }
     },
     {
@@ -4168,7 +5255,7 @@
       "latitude": 8.3,
       "longitude": 105.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -4180,9 +5267,21 @@
       "latitude": 16.2,
       "longitude": -61.5,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
+      }
+    },
+    {
+      "id": "a9307fc65344",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 63.8,
+      "longitude": -18.2,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
       }
     },
     {
@@ -4192,7 +5291,7 @@
       "latitude": -34.9,
       "longitude": -56.2,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -4204,9 +5303,33 @@
       "latitude": 16.7,
       "longitude": -62.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
+      }
+    },
+    {
+      "id": "b663f8c5e300",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 20.2,
+      "longitude": -87.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "b9ce614c8371",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 65.8,
+      "longitude": -16.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
       }
     },
     {
@@ -4216,7 +5339,7 @@
       "latitude": 59.3,
       "longitude": 18.1,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -4228,7 +5351,7 @@
       "latitude": 12.8,
       "longitude": 109.7,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -4240,9 +5363,21 @@
       "latitude": -61.1,
       "longitude": -54.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "dd278f1aec8a",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 40.5,
+      "longitude": 32.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
       }
     },
     {
@@ -4252,7 +5387,7 @@
       "latitude": -37.2,
       "longitude": -55.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -4264,9 +5399,45 @@
       "latitude": 20.7,
       "longitude": -88.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2023": 1
+      }
+    },
+    {
+      "id": "edf52e5ef249",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": -51.9,
+      "longitude": -58.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "f02a5210e56b",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 54.9,
+      "longitude": 23.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "f4b85b8145a7",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 48.8,
+      "longitude": 8.2,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
       }
     },
     {
@@ -4276,9 +5447,33 @@
       "latitude": 9.5,
       "longitude": 100.0,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "fc0b001639ab",
+      "type": "walking",
+      "label": "Walking",
+      "latitude": 40.2,
+      "longitude": 117.5,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "68c3f080e1f9",
+      "type": "yoga",
+      "label": "Yoga",
+      "latitude": 52.9,
+      "longitude": 4.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
       }
     },
     {
@@ -4288,7 +5483,7 @@
       "latitude": 34.9,
       "longitude": 32.4,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2025": 1
       }
@@ -4300,7 +5495,19 @@
       "latitude": -54.9,
       "longitude": -56.8,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "b50d8bb2e353",
+      "type": "yoga",
+      "label": "Yoga",
+      "latitude": 52.5,
+      "longitude": 5.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -4312,7 +5519,7 @@
       "latitude": 36.8,
       "longitude": 34.6,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }
@@ -4324,7 +5531,7 @@
       "latitude": -51.7,
       "longitude": -57.9,
       "activityCount": 1,
-      "clusterRadiusKm": 100,
+      "clusterRadiusKm": 30,
       "years": {
         "2024": 1
       }

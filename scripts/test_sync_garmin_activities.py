@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 
 from sync_garmin_activities import (
+    DEFAULT_CLUSTER_RADIUS_KM,
     activity_location,
     build_public_archive,
     canonical_activity_type,
@@ -48,6 +49,11 @@ class GarminActivityMapTests(unittest.TestCase):
         self.assertEqual(canonical_sport("submarine"), "submarine")
         self.assertEqual(canonical_sport("hot_air_balloon"), "hot_air_balloon")
         self.assertEqual(canonical_sport("rucking"), "rucking")
+        self.assertEqual(canonical_sport("diving"), "scuba_diving")
+        self.assertEqual(canonical_sport("single_gas_diving"), "scuba_diving")
+        self.assertEqual(canonical_sport("multi_gas_diving"), "scuba_diving")
+        self.assertEqual(canonical_sport("apnea"), "freediving")
+        self.assertEqual(DEFAULT_CLUSTER_RADIUS_KM, 30.0)
 
     def test_generic_garmin_types_use_activity_name_without_overriding_specific_types(self):
         self.assertEqual(
@@ -65,6 +71,26 @@ class GarminActivityMapTests(unittest.TestCase):
         self.assertEqual(
             canonical_activity_type(activity("walking", name="Luxor AirBallon")),
             "walking",
+        )
+
+    def test_ambiguous_resort_activity_uses_name_for_skiing_or_snowboarding(self):
+        self.assertEqual(
+            canonical_activity_type(
+                activity("resort_skiing_snowboarding", name="Morning Snowboarding")
+            ),
+            "snowboarding",
+        )
+        self.assertEqual(
+            canonical_activity_type(
+                activity("resort_skiing_snowboarding", name="Alpine Skiing")
+            ),
+            "skiing",
+        )
+        self.assertEqual(
+            canonical_activity_type(
+                activity("resort_skiing_snowboarding", name="Winter resort day")
+            ),
+            "snow_sports",
         )
 
     def test_keeps_water_activities_specific(self):
