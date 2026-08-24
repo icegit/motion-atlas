@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-24T17:57:16+00:00",
+  "generatedAt": "2026-08-24T18:09:12+00:00",
   "source": "Garmin Connect",
   "clusterRadiusKm": 30,
-  "locationInferenceWindowDays": 2,
+  "locationInferenceWindowDays": 5,
   "privacyPrecisionDecimals": 1,
   "totalActivities": 2925,
   "customActivities": 0,
-  "mappedActivities": 2914,
-  "inferredLocationActivities": 371,
+  "mappedActivities": 2923,
+  "inferredLocationActivities": 380,
   "manuallyLocatedActivities": 0,
-  "unlocatedActivities": 11,
+  "unlocatedActivities": 2,
   "sportTotals": [
     {
       "type": "walking",
@@ -26,7 +26,7 @@
     {
       "type": "swimming",
       "label": "Swimming",
-      "activityCount": 236,
+      "activityCount": 238,
       "groupCount": 85
     },
     {
@@ -44,8 +44,8 @@
     {
       "type": "yoga",
       "label": "Yoga",
-      "activityCount": 66,
-      "groupCount": 8
+      "activityCount": 72,
+      "groupCount": 9
     },
     {
       "type": "boating",
@@ -72,16 +72,16 @@
       "groupCount": 3
     },
     {
+      "type": "breathwork",
+      "label": "Breathwork",
+      "activityCount": 10,
+      "groupCount": 3
+    },
+    {
       "type": "snorkeling",
       "label": "Snorkeling",
       "activityCount": 10,
       "groupCount": 7
-    },
-    {
-      "type": "breathwork",
-      "label": "Breathwork",
-      "activityCount": 9,
-      "groupCount": 2
     },
     {
       "type": "trail_running",
@@ -232,28 +232,10 @@
     {
       "type": "yoga",
       "label": "Yoga",
-      "activityCount": 8,
-      "years": {
-        "2024": 3,
-        "2022": 4,
-        "2021": 1
-      }
-    },
-    {
-      "type": "swimming",
-      "label": "Swimming",
       "activityCount": 2,
       "years": {
-        "2024": 1,
-        "2022": 1
-      }
-    },
-    {
-      "type": "breathwork",
-      "label": "Breathwork",
-      "activityCount": 1,
-      "years": {
-        "2022": 1
+        "2022": 1,
+        "2021": 1
       }
     }
   ],
@@ -321,14 +303,14 @@
       "label": "Yoga",
       "latitude": 52.3,
       "longitude": 4.8,
-      "activityCount": 58,
+      "activityCount": 63,
       "clusterRadiusKm": 30,
       "years": {
         "2026": 24,
         "2025": 6,
-        "2024": 5,
+        "2024": 8,
         "2023": 2,
-        "2022": 13,
+        "2022": 15,
         "2021": 3,
         "2020": 3,
         "2019": 2
@@ -374,11 +356,12 @@
       "label": "Swimming",
       "latitude": 52.3,
       "longitude": 4.7,
-      "activityCount": 24,
+      "activityCount": 25,
       "clusterRadiusKm": 30,
       "years": {
         "2026": 11,
         "2025": 3,
+        "2024": 1,
         "2023": 1,
         "2022": 8,
         "2021": 1
@@ -754,6 +737,18 @@
       }
     },
     {
+      "id": "612e8934a283",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 36.9,
+      "longitude": 31.0,
+      "activityCount": 6,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 6
+      }
+    },
+    {
       "id": "8edb67f70655",
       "type": "walking",
       "label": "Walking",
@@ -838,18 +833,6 @@
       "clusterRadiusKm": 30,
       "years": {
         "2025": 5
-      }
-    },
-    {
-      "id": "612e8934a283",
-      "type": "swimming",
-      "label": "Swimming",
-      "latitude": 36.9,
-      "longitude": 31.0,
-      "activityCount": 5,
-      "clusterRadiusKm": 30,
-      "years": {
-        "2022": 5
       }
     },
     {
@@ -2870,6 +2853,18 @@
       "clusterRadiusKm": 30,
       "years": {
         "2020": 1
+      }
+    },
+    {
+      "id": "025ad39869ce",
+      "type": "breathwork",
+      "label": "Breathwork",
+      "latitude": 52.1,
+      "longitude": 5.3,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
       }
     },
     {
@@ -5486,6 +5481,18 @@
       "clusterRadiusKm": 30,
       "years": {
         "2025": 1
+      }
+    },
+    {
+      "id": "8427bb1ba97c",
+      "type": "yoga",
+      "label": "Yoga",
+      "latitude": 52.1,
+      "longitude": 5.3,
+      "activityCount": 1,
+      "clusterRadiusKm": 30,
+      "years": {
+        "2022": 1
       }
     },
     {

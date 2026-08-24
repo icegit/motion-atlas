@@ -21,7 +21,7 @@ DEFAULT_OUTPUT = ROOT / "public" / "data" / "activity-groups.json"
 DEFAULT_LOCATION_RULES = ROOT / ".activity-locations.json"
 DEFAULT_CUSTOM_ACTIVITIES = ROOT / ".custom-activities.json"
 DEFAULT_CLUSTER_RADIUS_KM = 30.0
-NEARBY_GPS_WINDOW_SECONDS = 2 * 24 * 60 * 60
+NEARBY_GPS_WINDOW_SECONDS = 5 * 24 * 60 * 60
 PRIVACY_DECIMALS = 1
 EARTH_RADIUS_KM = 6371.0088
 
@@ -1011,7 +1011,7 @@ def main() -> int:
     if archive["inferredLocationActivities"]:
         print(
             f"Placed {archive['inferredLocationActivities']} GPS-free activities "
-            "from the nearest native GPS activity within two days."
+            f"from the nearest native GPS activity within {archive['locationInferenceWindowDays']} days."
         )
     if archive["customActivities"]:
         print(f"Included {archive['customActivities']} custom activities outside Garmin.")

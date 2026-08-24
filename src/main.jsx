@@ -324,7 +324,7 @@ function App() {
                     })}
                   </div>
                   <p className="unlocated-help">
-                    No native GPS was found within ±2 days. Assign an approximate place by activity type,
+                    No native GPS was found within ±{data.locationInferenceWindowDays ?? 5} days. Assign an approximate place by activity type,
                     date range, or Garmin activity ID to map these safely.
                   </p>
                 </>
@@ -350,7 +350,7 @@ function App() {
               <div className="privacy-note">
                 <span aria-hidden="true">◎</span>
                 <p>
-                  GPS-free activities inherit the nearest native GPS within ±{data.locationInferenceWindowDays ?? 2} days;
+                  GPS-free activities inherit the nearest native GPS within ±{data.locationInferenceWindowDays ?? 5} days;
                   private rules or defaults are used next. Nearby matching activity types are combined within {data.clusterRadiusKm} km,
                   and every location is rounded for privacy.
                 </p>

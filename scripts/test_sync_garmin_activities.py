@@ -160,7 +160,7 @@ class GarminActivityMapTests(unittest.TestCase):
             ["Strength", "Swimming"],
         )
 
-    def test_gps_free_activity_uses_nearest_native_gps_within_two_days(self):
+    def test_gps_free_activity_uses_nearest_native_gps_within_five_days(self):
         archive = build_public_archive(
             [
                 activity(
@@ -172,14 +172,14 @@ class GarminActivityMapTests(unittest.TestCase):
                     "running",
                     52.0,
                     4.0,
-                    started_at="2026-06-09 20:00:00",
+                    started_at="2026-06-06 09:00:00",
                     activity_id=2,
                 ),
                 activity(
                     "cycling",
                     48.0,
                     2.0,
-                    started_at="2026-06-11 07:00:00",
+                    started_at="2026-06-15 07:00:00",
                     activity_id=3,
                 ),
             ],
@@ -191,7 +191,7 @@ class GarminActivityMapTests(unittest.TestCase):
         self.assertEqual(archive["inferredLocationActivities"], 1)
         self.assertEqual(archive["manuallyLocatedActivities"], 0)
 
-    def test_default_location_is_used_when_nearest_gps_is_more_than_two_days_away(self):
+    def test_default_location_is_used_when_nearest_gps_is_more_than_five_days_away(self):
         archive = build_public_archive(
             [
                 activity(
@@ -203,7 +203,7 @@ class GarminActivityMapTests(unittest.TestCase):
                     "running",
                     48.0,
                     2.0,
-                    started_at="2026-06-13 08:00:01",
+                    started_at="2026-06-15 08:00:01",
                     activity_id=2,
                 ),
             ],

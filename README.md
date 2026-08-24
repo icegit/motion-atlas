@@ -44,11 +44,11 @@ For GitHub Actions, add the complete contents of `.garminconnect/garmin_tokens.j
 Activities such as strength training, yoga, lap swimming, and treadmill running do not normally contain coordinates. Their location is resolved in this order:
 
 1. An exact private override for the activity.
-2. The location of the temporally nearest activity with native GPS, when it is within ±2 days. Only native GPS is used, so inferred locations never form a chain.
+2. The location of the temporally nearest activity with native GPS, when it is within ±5 days. Only native GPS is used, so inferred locations never form a chain.
 3. A matching private JSON rule or default location.
 4. The **Without GPS** section when no safe match exists.
 
-To provide private rules and defaults, copy `.activity-locations.example.json` to the ignored `.activity-locations.json` file and define approximate places. Rules can match a raw Garmin activity type and an optional date range; one-off activities can be assigned by Garmin activity ID. Defaults are only used when no native GPS exists within ±2 days. The exact private coordinates are never published: the generated map uses the same one-decimal rounding and clustering as GPS activities.
+To provide private rules and defaults, copy `.activity-locations.example.json` to the ignored `.activity-locations.json` file and define approximate places. Rules can match a raw Garmin activity type and an optional date range; one-off activities can be assigned by Garmin activity ID. Defaults are only used when no native GPS exists within ±5 days. The exact private coordinates are never published: the generated map uses the same one-decimal rounding and clustering as GPS activities.
 
 For scheduled GitHub Actions syncs, store the complete JSON configuration as the `ACTIVITY_LOCATIONS_JSON` repository secret. Date ranges allow older activities to be assigned to a previous gym or home base without moving the entire history to the current location.
 
