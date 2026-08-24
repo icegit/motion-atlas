@@ -122,6 +122,16 @@ SPORT_LABELS = {
     "baseball": "Baseball",
     "basketball": "Basketball",
     "volleyball": "Volleyball",
+    "dog_sledding": "Dog Sledding",
+    "reindeer_sledding": "Reindeer Sledding",
+    "sledding": "Sledding",
+    "ziplining": "Ziplining",
+    "bungee_jumping": "Bungee Jumping",
+    "cliff_jumping": "Cliff Jumping",
+    "sandboarding": "Sandboarding",
+    "dune_bashing": "Dune Bashing",
+    "safari": "Safari",
+    "helicopter_tour": "Helicopter Tour",
     "other": "Other",
 }
 
@@ -233,6 +243,34 @@ def canonical_sport(activity_type: Any) -> str:
         return "hot_air_balloon"
     if any(phrase in key for phrase in ("submarine", "sub_marine", "submersible", "denizalt")):
         return "submarine"
+    if any(phrase in key for phrase in ("dog_sled", "dog_sleigh", "husky_sled", "husky_sleigh")):
+        return "dog_sledding"
+    if any(
+        phrase in key
+        for phrase in (
+            "reindeer_sled",
+            "reindeer_sleigh",
+            "ren_geyiği_sled",
+            "ren_geyigi_sled",
+        )
+    ):
+        return "reindeer_sledding"
+    if any(phrase in key for phrase in ("sledding", "sleigh_ride", "toboggan")):
+        return "sledding"
+    if any(phrase in key for phrase in ("zipline", "zip_line", "ziplining", "canopy_tour")):
+        return "ziplining"
+    if any(phrase in key for phrase in ("bungee_jump", "bungy_jump")):
+        return "bungee_jumping"
+    if any(phrase in key for phrase in ("cliff_jump", "coasteering")):
+        return "cliff_jumping"
+    if "sandboard" in key:
+        return "sandboarding"
+    if any(phrase in key for phrase in ("dune_bash", "dune_drive", "desert_4x4")):
+        return "dune_bashing"
+    if "safari" in key or "game_drive" in key:
+        return "safari"
+    if any(phrase in key for phrase in ("helicopter_tour", "helicopter_ride", "heli_tour")):
+        return "helicopter_tour"
     if any(phrase in key for phrase in ("scuba", "tüplü_dal", "tuplu_dal")):
         return "scuba_diving"
     if any(phrase in key for phrase in ("freediv", "free_div", "serbest_dal")):

@@ -72,6 +72,28 @@ class GarminActivityMapTests(unittest.TestCase):
             canonical_activity_type(activity("walking", name="Luxor AirBallon")),
             "walking",
         )
+        custom_name_types = {
+            "Lapland Dog Sledding": "dog_sledding",
+            "Reindeer Sleigh Ride": "reindeer_sledding",
+            "Alpine Toboggan": "sledding",
+            "Rainforest Zipline": "ziplining",
+            "Canyon Bungee Jump": "bungee_jumping",
+            "Adriatic Cliff Jumping": "cliff_jumping",
+            "Desert Sandboarding": "sandboarding",
+            "Dubai Dune Bashing": "dune_bashing",
+            "Serengeti Safari": "safari",
+            "Grand Canyon Helicopter Tour": "helicopter_tour",
+        }
+        for name, expected_type in custom_name_types.items():
+            with self.subTest(name=name):
+                self.assertEqual(
+                    canonical_activity_type(activity("other", name=name)),
+                    expected_type,
+                )
+        self.assertEqual(
+            canonical_activity_type(activity("walking", name="Serengeti Safari")),
+            "walking",
+        )
 
     def test_ambiguous_resort_activity_uses_name_for_skiing_or_snowboarding(self):
         self.assertEqual(

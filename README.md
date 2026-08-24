@@ -60,7 +60,7 @@ For GitHub Actions, store the JSON as the `CUSTOM_ACTIVITIES_JSON` repository se
 
 ## Basemap
 
-The interface uses OpenTopoMap tiles, built from OpenStreetMap and SRTM elevation data. A restrained CSS treatment reduces visual noise while keeping contours and terrain shading legible. The required attribution remains visible on the map.
+The interface defaults to a softened standard map with a persistent low-contrast fallback layer. The information panel can switch between Standard, Minimal, Cycle, Topo, and Satellite styles. Tiles are buffered for mobile navigation, and the fallback remains visible if an optional style tile is slow or unavailable. Required attribution stays visible for the active map source.
 
 ## Hosting
 

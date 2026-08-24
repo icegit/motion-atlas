@@ -4,6 +4,12 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { SPORT_META, sportIcon, sportIconNode } from "./sportConfig";
 import { areAllSportsActive, toggleAllSports, toggleSportSelection } from "./filterUtils.js";
+import {
+  DEFAULT_MAP_STYLE,
+  FALLBACK_BASEMAP_TILE_URL,
+  MAP_STYLES,
+  MOBILE_TILE_OPTIONS,
+} from "./mapTiles.js";
 import { formatActivityCount, popupMarkup } from "./mapUtils";
 import "./styles.css";
 
@@ -35,10 +41,11 @@ function markerMarkup(group) {
     </div>`;
 }
 
-function ActivityMap({ groups, activeSports }) {
+function ActivityMap({ groups, activeSports, mapStyle }) {
   const elementRef = useRef(null);
   const mapRef = useRef(null);
   const markersRef = useRef(null);
+  const mapStyleLayerRef = useRef(null);
   const fittedRef = useRef(false);
 
   useEffect(() => {
@@ -52,12 +59,19 @@ function ActivityMap({ groups, activeSports }) {
     });
 
     L.control.zoom({ position: "bottomright" }).addTo(map);
-    L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
+    map.createPane("basemap");
+    map.getPane("basemap").style.zIndex = "200";
+    map.createPane("mapstyle");
+    map.getPane("mapstyle").style.zIndex = "210";
+
+    L.tileLayer(FALLBACK_BASEMAP_TILE_URL, {
+      ...MOBILE_TILE_OPTIONS,
+      pane: "basemap",
       attribution:
-        'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, SRTM | Map style: &copy; <a href="https://opentopomap.org/">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
-      maxNativeZoom: 17,
-      maxZoom: 18,
-      subdomains: "abc",
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      maxNativeZoom: 20,
+      maxZoom: 20,
+      subdomains: "abcd",
     }).addTo(map);
 
     markersRef.current = L.layerGroup().addTo(map);
@@ -67,8 +81,30 @@ function ActivityMap({ groups, activeSports }) {
       map.remove();
       mapRef.current = null;
       markersRef.current = null;
+      mapStyleLayerRef.current = null;
     };
   }, []);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return undefined;
+    const style = MAP_STYLES[mapStyle] ?? MAP_STYLES[DEFAULT_MAP_STYLE];
+    const layer = L.tileLayer(style.url, {
+      ...MOBILE_TILE_OPTIONS,
+      pane: "mapstyle",
+      attribution: style.attribution,
+      maxNativeZoom: style.maxNativeZoom,
+      maxZoom: 18,
+      opacity: style.opacity,
+      ...(style.subdomains ? { subdomains: style.subdomains } : {}),
+    }).addTo(map);
+    mapStyleLayerRef.current = layer;
+
+    return () => {
+      if (map.hasLayer(layer)) map.removeLayer(layer);
+      if (mapStyleLayerRef.current === layer) mapStyleLayerRef.current = null;
+    };
+  }, [mapStyle]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -123,6 +159,7 @@ function App() {
   const [error, setError] = useState("");
   const [activeSports, setActiveSports] = useState(new Set());
   const [panelOpen, setPanelOpen] = useState(false);
+  const [mapStyle, setMapStyle] = useState(DEFAULT_MAP_STYLE);
 
   useEffect(() => {
     let cancelled = false;
@@ -159,6 +196,13 @@ function App() {
     groups.forEach((group) => Object.keys(group.years).forEach((year) => values.add(year)));
     return [...values].filter((year) => year !== "Unknown").sort((a, b) => b.localeCompare(a));
   }, [groups]);
+  const updatedDate = data
+    ? new Date(data.generatedAt).toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    })
+    : "";
 
   const allSportsActive = areAllSportsActive(activeSports, sportTypes);
   const selectedSport = activeSports.size === 1
@@ -182,7 +226,7 @@ function App() {
 
   return (
     <main>
-      <ActivityMap groups={groups} activeSports={activeSports} />
+      <ActivityMap groups={groups} activeSports={activeSports} mapStyle={mapStyle} />
 
       <section className={`explorer ${panelOpen ? "is-open" : "is-closed"}`} aria-label="Activity map controls">
         <button
@@ -286,6 +330,23 @@ function App() {
                 </>
               ) : null}
 
+              <div className="section-heading section-heading--map-style">
+                <span>MAP STYLE</span>
+              </div>
+              <div className="map-style-options" role="group" aria-label="Map style">
+                {Object.entries(MAP_STYLES).map(([styleKey, style]) => (
+                  <button
+                    type="button"
+                    key={styleKey}
+                    className={mapStyle === styleKey ? "map-style-button is-active" : "map-style-button"}
+                    onClick={() => setMapStyle(styleKey)}
+                    aria-pressed={mapStyle === styleKey}
+                  >
+                    {style.label}
+                  </button>
+                ))}
+              </div>
+
               <div className="privacy-note">
                 <span aria-hidden="true">◎</span>
                 <p>
@@ -294,21 +355,20 @@ function App() {
                   and every location is rounded for privacy.
                 </p>
               </div>
+              <footer className="archive-footer">
+                <span className="live-dot" aria-hidden="true" />
+                <span>
+                  Updated {updatedDate}
+                  {data.inferredLocationActivities ? ` · ${data.inferredLocationActivities} placed from nearby GPS` : ""}
+                  {data.manuallyLocatedActivities ? ` · ${data.manuallyLocatedActivities} manually placed` : ""}
+                  {data.customActivities ? ` · ${data.customActivities} custom` : ""}
+                  {data.unlocatedActivities ? ` · ${data.unlocatedActivities} without GPS` : ""}
+                </span>
+              </footer>
             </>
           ) : null}
         </div>
       </section>
-
-      {data ? (
-        <div className="map-caption">
-          <span className="live-dot" aria-hidden="true" />
-          Updated {new Date(data.generatedAt).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}
-          {data.inferredLocationActivities ? ` · ${data.inferredLocationActivities} placed from nearby GPS` : ""}
-          {data.manuallyLocatedActivities ? ` · ${data.manuallyLocatedActivities} manually placed` : ""}
-          {data.customActivities ? ` · ${data.customActivities} custom` : ""}
-          {data.unlocatedActivities ? ` · ${data.unlocatedActivities} without GPS` : ""}
-        </div>
-      ) : null}
     </main>
   );
 }

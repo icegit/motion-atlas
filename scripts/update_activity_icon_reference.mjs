@@ -37,6 +37,7 @@ function serializeIcon(meta) {
 await mkdir(iconDirectory, { recursive: true });
 const uniqueAssets = new Map();
 for (const meta of Object.values(SPORT_META)) {
+  if (meta.iconSource === "garmin") continue;
   const previous = uniqueAssets.get(meta.iconAsset);
   const serialized = serializeIcon(meta);
   if (previous && previous !== serialized) {
@@ -53,11 +54,12 @@ const updated = source.replace(
   (row, imgAttributes, type) => {
     const meta = SPORT_META[type];
     if (!meta) throw new Error(`No icon metadata for documented type: ${type}`);
-    return `<img src="docs/activity-icons/${meta.iconAsset}"${imgAttributes}> | \`${type}\``;
+    const filename = meta.iconSource === "garmin" ? `garmin-${meta.glyph}.svg` : meta.iconAsset;
+    return `<img src="docs/activity-icons/${filename}"${imgAttributes}> | \`${type}\``;
   },
 );
 
 await writeFile(referencePath, updated, "utf8");
 console.log(
-  `Updated ${Object.keys(SPORT_META).length} activity references and wrote ${uniqueAssets.size} semantic icons`,
+  `Updated ${Object.keys(SPORT_META).length} activity references and wrote ${uniqueAssets.size} custom icons`,
 );

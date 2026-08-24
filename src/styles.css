@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #14251f;
-  background: #dce7e1;
+  background: #e7efec;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -10,7 +10,15 @@
 html, body, #root, main { width: 100%; height: 100%; margin: 0; }
 body { min-width: 320px; overflow: hidden; }
 button { font: inherit; }
-.map { position: absolute; inset: 0; z-index: 0; background: #dce7e1; }
+.map { position: absolute; inset: 0; z-index: 0; background: #e7efec; }
+.map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 250;
+  pointer-events: none;
+  background: rgb(244 248 246 / 18%);
+}
 .map::after {
   content: "";
   position: absolute;
@@ -20,7 +28,8 @@ button { font: inherit; }
   box-shadow: inset 0 0 100px rgb(10 45 35 / 7%);
 }
 
-.leaflet-tile-pane { opacity: 0.6; filter: grayscale(0.22) saturate(0.7) contrast(0.58) brightness(1.13); }
+.leaflet-basemap-pane { opacity: 0.82; }
+.leaflet-tile { background: transparent; }
 .leaflet-control-zoom { border: 1px solid #e2e3df !important; box-shadow: 0 6px 20px rgb(16 48 38 / 10%) !important; }
 .leaflet-control-zoom a { color: #173b30 !important; background: #fbfaf5 !important; }
 .leaflet-control-attribution { color: #68756f; background: rgb(250 249 244 / 86%) !important; }
@@ -141,27 +150,38 @@ h1 {
 .unlocated-item > strong { color: #66736d; font-size: 0.72rem; font-variant-numeric: tabular-nums; }
 .unlocated-help { margin: 9px 2px 0; color: #7a8580; font-size: 0.68rem; line-height: 1.45; }
 
+.section-heading--map-style { margin-top: 20px; margin-bottom: 10px; }
+.map-style-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+.map-style-button {
+  min-width: 0;
+  padding: 8px 7px;
+  border: 1px solid #d9ddd8;
+  border-radius: 10px;
+  color: #66736d;
+  background: rgb(255 255 255 / 30%);
+  font-size: 0.7rem;
+  font-weight: 680;
+  cursor: pointer;
+}
+.map-style-button:hover { border-color: #aec8ba; color: #31594b; }
+.map-style-button.is-active { border-color: #9bc6ad; color: #173d2e; background: #dff0e6; }
+
 .privacy-note { display: flex; gap: 10px; margin-top: 20px; padding-top: 17px; border-top: 1px solid #d9ddd8; color: #6f7b75; }
 .privacy-note > span { color: #4b7568; font-size: 1.05rem; }
 .privacy-note p { margin: 0; font-size: 0.7rem; line-height: 1.5; }
 
-.map-caption {
-  position: absolute;
-  z-index: 700;
-  right: 24px;
-  top: 24px;
+.archive-footer {
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 10px 14px;
-  border: 1px solid rgb(255 255 255 / 62%);
-  border-radius: 999px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #d9ddd8;
   color: #54645e;
-  background: rgb(250 249 244 / 90%);
-  box-shadow: 0 6px 20px rgb(12 42 33 / 9%);
   font-size: 0.7rem;
-  backdrop-filter: blur(14px);
+  line-height: 1.45;
 }
+.archive-footer > span:last-child { min-width: 0; }
 .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #42a66f; box-shadow: 0 0 0 3px rgb(66 166 111 / 15%); }
 
 .sport-marker { border: 0; background: transparent; }
@@ -199,7 +219,6 @@ h1 {
   .explorer__content { max-height: calc(100vh - 24px); padding: 23px; }
   .explorer.is-closed { width: 52px; height: 52px; }
   .explorer.is-closed .panel-toggle { top: 8px; right: 8px; }
-  .map-caption { top: auto; right: 12px; bottom: 30px; max-width: calc(100vw - 84px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .sport-filters { grid-template-columns: 1fr; }
   .unlocated-list { grid-template-columns: 1fr; }
   .leaflet-control-attribution { max-width: 70vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
