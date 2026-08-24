@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { __iconNode as deerNode } from "@tabler/icons-react/dist/esm/icons/IconDeer.mjs";
 import { __iconNode as dogNode } from "@tabler/icons-react/dist/esm/icons/IconDog.mjs";
 import { __iconNode as barbellNode } from "@tabler/icons-react/dist/esm/icons/IconBarbell.mjs";
-import { __iconNode as camperNode } from "@tabler/icons-react/dist/esm/icons/IconCamper.mjs";
+import { __iconNode as carOffRoadNode } from "@tabler/icons-react/dist/esm/icons/IconCarOffRoad.mjs";
 import { __iconNode as rippleNode } from "@tabler/icons-react/dist/esm/icons/IconRipple.mjs";
 import { __iconNode as scubaMaskNode } from "@tabler/icons-react/dist/esm/icons/IconScubaMask.mjs";
 import { __iconNode as snowboardingNode } from "@tabler/icons-react/dist/esm/icons/IconSnowboarding.mjs";
@@ -60,7 +60,8 @@ describe("activity icon catalog", () => {
     expect(sportIconNode("yoga")).toEqual(yogaNode);
     expect(sportIconNode("strength")).toEqual(barbellNode);
     expect(SPORT_META.strength.iconAsset).toBe("tabler-barbell.svg");
-    expect(sportIconNode("excursion")).toEqual(camperNode);
+    expect(sportIconNode("excursion")).toEqual(carOffRoadNode);
+    expect(SPORT_META.excursion.iconAsset).toBe("tabler-car-off-road.svg");
   });
 
   it("publishes Proper Case labels and only one swimming category", () => {

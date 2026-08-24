@@ -74,7 +74,7 @@ Name matching accepts common separator, spelling, and language variants, includi
 | <img src="docs/activity-icons/tabler-parachute.svg" width="24" alt="Hang gliding icon"> | `hang_gliding` | hang gliding, deltaplane |
 | <img src="docs/activity-icons/tabler-parachute.svg" width="24" alt="Skydiving icon"> | `skydiving` | skydiving, BASE jump, paraşüt |
 | <img src="docs/activity-icons/tabler-plane-tilt.svg" width="24" alt="Flight icon"> | `flight` | flight, flying, uçuş |
-| <img src="docs/activity-icons/tabler-camper.svg" width="24" alt="Excursion icon"> | `excursion` | driving, overland |
+| <img src="docs/activity-icons/tabler-car-off-road.svg" width="24" alt="Excursion icon"> | `excursion` | driving, overland |
 | <img src="docs/activity-icons/garmin-activity-motorcycle.svg" width="24" alt="Motorsport icon"> | `motorsport` | motorcycling, motocross, auto racing |
 | <img src="docs/activity-icons/tabler-car-4wd.svg" width="24" alt="ATV icon"> | `atv` | ATV |
 | <img src="docs/activity-icons/garmin-activity-motorcycle.svg" width="24" alt="Snowmobiling icon"> | `snowmobiling` | snowmobile, snowmobiling |

@@ -4,8 +4,8 @@ import IconBackpack, { __iconNode as backpackNode } from "@tabler/icons-react/di
 import IconBallTennis, { __iconNode as ballTennisNode } from "@tabler/icons-react/dist/esm/icons/IconBallTennis.mjs";
 import IconBarbell, { __iconNode as barbellNode } from "@tabler/icons-react/dist/esm/icons/IconBarbell.mjs";
 import IconBolt, { __iconNode as boltNode } from "@tabler/icons-react/dist/esm/icons/IconBolt.mjs";
-import IconCamper, { __iconNode as camperNode } from "@tabler/icons-react/dist/esm/icons/IconCamper.mjs";
 import IconCar4wd, { __iconNode as car4wdNode } from "@tabler/icons-react/dist/esm/icons/IconCar4wd.mjs";
+import IconCarOffRoad, { __iconNode as carOffRoadNode } from "@tabler/icons-react/dist/esm/icons/IconCarOffRoad.mjs";
 import IconCliffJumping, { __iconNode as cliffJumpingNode } from "@tabler/icons-react/dist/esm/icons/IconCliffJumping.mjs";
 import IconDeer, { __iconNode as deerNode } from "@tabler/icons-react/dist/esm/icons/IconDeer.mjs";
 import IconDog, { __iconNode as dogNode } from "@tabler/icons-react/dist/esm/icons/IconDog.mjs";
@@ -144,7 +144,7 @@ export const SPORT_META = {
   camel_riding: c("Camel Riding", "#9a6b3f", IconCamel, camelNode, "camel.svg"),
   motorsport: g("Motorsport", "#53606b", "activity-motorcycle"),
   atv: s("ATV", "#5f665b", IconCar4wd, car4wdNode, "tabler-car-4wd.svg"),
-  excursion: s("Excursion", "#7c6448", IconCamper, camperNode, "tabler-camper.svg"),
+  excursion: s("Excursion", "#7c6448", IconCarOffRoad, carOffRoadNode, "tabler-car-off-road.svg"),
   scuba_diving: s("Scuba Diving", "#176d80", IconScubaDiving, scubaDivingNode, "tabler-scuba-diving.svg"),
   freediving: s("Freediving", "#28788a", IconScubaMask, scubaMaskNode, "tabler-scuba-mask.svg"),
   paragliding: s("Paragliding", "#9a6540", IconParachute, parachuteNode, "tabler-parachute.svg"),
