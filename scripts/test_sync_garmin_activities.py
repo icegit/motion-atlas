@@ -53,6 +53,7 @@ class GarminActivityMapTests(unittest.TestCase):
         self.assertEqual(canonical_sport("single_gas_diving"), "scuba_diving")
         self.assertEqual(canonical_sport("multi_gas_diving"), "scuba_diving")
         self.assertEqual(canonical_sport("apnea"), "freediving")
+        self.assertEqual(canonical_sport("camel_riding"), "camel_riding")
         self.assertEqual(DEFAULT_CLUSTER_RADIUS_KM, 30.0)
 
     def test_generic_garmin_types_use_activity_name_without_overriding_specific_types(self):
@@ -81,6 +82,7 @@ class GarminActivityMapTests(unittest.TestCase):
             "Adriatic Cliff Jumping": "cliff_jumping",
             "Desert Sandboarding": "sandboarding",
             "Dubai Dune Bashing": "dune_bashing",
+            "Sahara Camel Riding": "camel_riding",
             "Serengeti Safari": "safari",
             "Grand Canyon Helicopter Tour": "helicopter_tour",
         }
@@ -93,6 +95,10 @@ class GarminActivityMapTests(unittest.TestCase):
         self.assertEqual(
             canonical_activity_type(activity("walking", name="Serengeti Safari")),
             "walking",
+        )
+        self.assertEqual(
+            canonical_activity_type(activity("horseback_riding", name="Wadi Rum Camel Trek")),
+            "camel_riding",
         )
 
     def test_ambiguous_resort_activity_uses_name_for_skiing_or_snowboarding(self):

@@ -182,9 +182,21 @@ h1 {
   line-height: 1.45;
 }
 .archive-footer > span:last-child { min-width: 0; }
+.archive-footer__button {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px dotted currentColor;
+  color: #3e675a;
+  background: transparent;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+.archive-footer__button:hover,
+.archive-footer__button:focus-visible { color: #b45134; }
 .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #42a66f; box-shadow: 0 0 0 3px rgb(66 166 111 / 15%); }
 
-.sport-marker { border: 0; background: transparent; }
+.sport-marker { border: 0; background: transparent; pointer-events: auto; }
 .sport-pin { position: relative; width: 42px; height: 46px; filter: drop-shadow(0 5px 5px rgb(7 37 28 / 17%)); transition: transform 150ms ease; }
 .sport-marker:hover .sport-pin { transform: translateY(-3px); }
 .sport-pin::before {

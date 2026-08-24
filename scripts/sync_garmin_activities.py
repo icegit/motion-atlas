@@ -89,6 +89,7 @@ SPORT_LABELS = {
     "via_ferrata": "Via Ferrata",
     "equestrian": "Equestrian",
     "horseback_riding": "Horseback Riding",
+    "camel_riding": "Camel Riding",
     "motorsport": "Motorsport",
     "atv": "ATV",
     "excursion": "Excursion",
@@ -267,6 +268,8 @@ def canonical_sport(activity_type: Any) -> str:
         return "sandboarding"
     if any(phrase in key for phrase in ("dune_bash", "dune_drive", "desert_4x4")):
         return "dune_bashing"
+    if "camel" in key or "dromedary" in key or "deve_bin" in key:
+        return "camel_riding"
     if "safari" in key or "game_drive" in key:
         return "safari"
     if any(phrase in key for phrase in ("helicopter_tour", "helicopter_ride", "heli_tour")):
@@ -466,6 +469,10 @@ def canonical_activity_type(activity: dict[str, Any]) -> str:
     if raw_type == "resort_skiing_snowboarding":
         name_type = canonical_sport(activity_name(activity))
         if name_type in {"skiing", "snowboarding"}:
+            return name_type
+    if raw_type in {"equestrian", "horseback_riding"}:
+        name_type = canonical_sport(activity_name(activity))
+        if name_type == "camel_riding":
             return name_type
     if raw_type in GENERIC_ACTIVITY_TYPES or classified_type == "other":
         name_type = canonical_sport(activity_name(activity))

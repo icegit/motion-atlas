@@ -3,7 +3,7 @@ export const FALLBACK_BASEMAP_TILE_URL = "https://{s}.basemaps.cartocdn.com/ligh
 const OSM_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>';
 const CARTO_ATTRIBUTION = '&copy; <a href="https://carto.com/attributions">CARTO</a>';
 
-export const DEFAULT_MAP_STYLE = "standard";
+export const DEFAULT_MAP_STYLE = "satellite";
 
 export const MAP_STYLES = Object.freeze({
   standard: {

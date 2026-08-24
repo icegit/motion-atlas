@@ -9,8 +9,8 @@ import {
 } from "./mapTiles.js";
 
 describe("map styles and mobile tiles", () => {
-  it("defaults to Standard and offers the requested alternative map types", () => {
-    expect(DEFAULT_MAP_STYLE).toBe("standard");
+  it("defaults to Satellite and offers the requested alternative map types", () => {
+    expect(DEFAULT_MAP_STYLE).toBe("satellite");
     expect(Object.keys(MAP_STYLES)).toEqual([
       "standard",
       "minimal",

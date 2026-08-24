@@ -11,6 +11,7 @@ import {
   MOBILE_TILE_OPTIONS,
 } from "./mapTiles.js";
 import { formatActivityCount, popupMarkup } from "./mapUtils";
+import { markerOffsetMap } from "./markerLayout.js";
 import "./styles.css";
 
 const DATA_URL = `${import.meta.env.BASE_URL}data/activity-groups.json`;
@@ -113,18 +114,23 @@ function ActivityMap({ groups, activeSports, mapStyle }) {
 
     layer.clearLayers();
     const visibleGroups = groups.filter((group) => activeSports.has(group.type));
+    const markerOffsets = markerOffsetMap(visibleGroups);
 
     visibleGroups.forEach((group) => {
+      const offset = markerOffsets.get(group.id) ?? { x: 0, y: 0 };
       const marker = L.marker([group.latitude, group.longitude], {
         keyboard: true,
+        riseOnHover: true,
+        riseOffset: 1000,
+        zIndexOffset: offset.y,
         title: `${group.label}: ${formatActivityCount(group.activityCount)}`,
         alt: `${group.label} activity cluster`,
         icon: L.divIcon({
           className: "sport-marker",
           html: markerMarkup(group),
           iconSize: [42, 46],
-          iconAnchor: [21, 41],
-          popupAnchor: [0, -37],
+          iconAnchor: [21 - offset.x, 41 - offset.y],
+          popupAnchor: [offset.x, offset.y - 37],
         }),
       });
       marker.bindPopup(popupMarkup(group), {
@@ -160,6 +166,7 @@ function App() {
   const [activeSports, setActiveSports] = useState(new Set());
   const [panelOpen, setPanelOpen] = useState(false);
   const [mapStyle, setMapStyle] = useState(DEFAULT_MAP_STYLE);
+  const [unlocatedOpen, setUnlocatedOpen] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -297,8 +304,33 @@ function App() {
                 })}
               </div>
 
-              {unlocatedSportTotals.length ? (
-                <>
+              <div className="section-heading section-heading--map-style">
+                <span>MAP STYLE</span>
+              </div>
+              <div className="map-style-options" role="group" aria-label="Map style">
+                {Object.entries(MAP_STYLES).map(([styleKey, style]) => (
+                  <button
+                    type="button"
+                    key={styleKey}
+                    className={mapStyle === styleKey ? "map-style-button is-active" : "map-style-button"}
+                    onClick={() => setMapStyle(styleKey)}
+                    aria-pressed={mapStyle === styleKey}
+                  >
+                    {style.label}
+                  </button>
+                ))}
+              </div>
+
+              <div className="privacy-note">
+                <span aria-hidden="true">◎</span>
+                <p>
+                  GPS-free activities inherit the nearest native GPS within ±{data.locationInferenceWindowDays ?? 5} days;
+                  private rules or defaults are used next. Nearby matching activity types are combined within {data.clusterRadiusKm} km,
+                  and every location is rounded for privacy.
+                </p>
+              </div>
+              {unlocatedOpen && unlocatedSportTotals.length ? (
+                <section className="unlocated-details" id="without-gps-details" aria-label="Activities without GPS">
                   <div className="section-heading section-heading--unlocated">
                     <span>WITHOUT GPS</span>
                     <strong>{data.unlocatedActivities}</strong>
@@ -327,34 +359,8 @@ function App() {
                     No native GPS was found within ±{data.locationInferenceWindowDays ?? 5} days. Assign an approximate place by activity type,
                     date range, or Garmin activity ID to map these safely.
                   </p>
-                </>
+                </section>
               ) : null}
-
-              <div className="section-heading section-heading--map-style">
-                <span>MAP STYLE</span>
-              </div>
-              <div className="map-style-options" role="group" aria-label="Map style">
-                {Object.entries(MAP_STYLES).map(([styleKey, style]) => (
-                  <button
-                    type="button"
-                    key={styleKey}
-                    className={mapStyle === styleKey ? "map-style-button is-active" : "map-style-button"}
-                    onClick={() => setMapStyle(styleKey)}
-                    aria-pressed={mapStyle === styleKey}
-                  >
-                    {style.label}
-                  </button>
-                ))}
-              </div>
-
-              <div className="privacy-note">
-                <span aria-hidden="true">◎</span>
-                <p>
-                  GPS-free activities inherit the nearest native GPS within ±{data.locationInferenceWindowDays ?? 5} days;
-                  private rules or defaults are used next. Nearby matching activity types are combined within {data.clusterRadiusKm} km,
-                  and every location is rounded for privacy.
-                </p>
-              </div>
               <footer className="archive-footer">
                 <span className="live-dot" aria-hidden="true" />
                 <span>
@@ -362,7 +368,20 @@ function App() {
                   {data.inferredLocationActivities ? ` · ${data.inferredLocationActivities} placed from nearby GPS` : ""}
                   {data.manuallyLocatedActivities ? ` · ${data.manuallyLocatedActivities} manually placed` : ""}
                   {data.customActivities ? ` · ${data.customActivities} custom` : ""}
-                  {data.unlocatedActivities ? ` · ${data.unlocatedActivities} without GPS` : ""}
+                  {data.unlocatedActivities ? (
+                    <>
+                      {" · "}
+                      <button
+                        type="button"
+                        className="archive-footer__button"
+                        onClick={() => setUnlocatedOpen((open) => !open)}
+                        aria-expanded={unlocatedOpen}
+                        aria-controls="without-gps-details"
+                      >
+                        {data.unlocatedActivities} without GPS
+                      </button>
+                    </>
+                  ) : null}
                 </span>
               </footer>
             </>

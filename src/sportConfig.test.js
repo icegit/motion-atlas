@@ -3,12 +3,19 @@ import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { __iconNode as deerNode } from "@tabler/icons-react/dist/esm/icons/IconDeer.mjs";
 import { __iconNode as dogNode } from "@tabler/icons-react/dist/esm/icons/IconDog.mjs";
+import { __iconNode as car4wdNode } from "@tabler/icons-react/dist/esm/icons/IconCar4wd.mjs";
+import { __iconNode as rippleNode } from "@tabler/icons-react/dist/esm/icons/IconRipple.mjs";
+import { __iconNode as scubaMaskNode } from "@tabler/icons-react/dist/esm/icons/IconScubaMask.mjs";
+import { __iconNode as snowboardingNode } from "@tabler/icons-react/dist/esm/icons/IconSnowboarding.mjs";
+import { __iconNode as yogaNode } from "@tabler/icons-react/dist/esm/icons/IconYoga.mjs";
+import { camelNode } from "./customActivityIcons.js";
 import { GARMIN_ACTIVITY_PATHS } from "./garminActivityIcons.js";
 import { SPORT_META, sportIconNode } from "./sportConfig.js";
 
 const CUSTOM_FALLBACK_TYPES = [
   "bungee_jumping",
   "cliff_jumping",
+  "camel_riding",
   "dog_sledding",
   "dune_bashing",
   "helicopter_tour",
@@ -22,26 +29,35 @@ const CUSTOM_FALLBACK_TYPES = [
 ];
 
 describe("activity icon catalog", () => {
-  it("uses Garmin glyphs for every standard Garmin activity", () => {
-    expect(SPORT_META.strength.glyph).toBe("activity-fitness-equipment");
-    expect(SPORT_META.excursion.glyph).toBe("activity-motorcycle");
-
+  it("keeps exact Garmin glyphs for core Garmin categories", () => {
+    expect(SPORT_META.walking.glyph).toBe("activity-walking");
+    expect(SPORT_META.cycling.glyph).toBe("activity-cycling");
+    expect(SPORT_META.swimming.glyph).toBe("activity-swimming");
     for (const [type, meta] of Object.entries(SPORT_META)) {
-      if (CUSTOM_FALLBACK_TYPES.includes(type)) continue;
-      expect(meta.iconSource, type).toBe("garmin");
+      if (meta.iconSource !== "garmin") continue;
       expect(GARMIN_ACTIVITY_PATHS[meta.glyph], type).toBeTruthy();
     }
   });
 
   it("limits custom icons to name-derived Other/Custom activities", () => {
     const fallbackTypes = Object.entries(SPORT_META)
-      .filter(([, meta]) => meta.iconSource !== "garmin")
+      .filter(([, meta]) => meta.iconSource === "custom-fallback")
       .map(([type]) => type)
       .sort();
 
     expect(fallbackTypes).toEqual([...CUSTOM_FALLBACK_TYPES].sort());
     expect(sportIconNode("dog_sledding")).toEqual(dogNode);
     expect(sportIconNode("reindeer_sledding")).toEqual(deerNode);
+    expect(sportIconNode("camel_riding")).toEqual(camelNode);
+  });
+
+  it("replaces misleading Garmin parent glyphs with precise sport icons", () => {
+    expect(SPORT_META.surfing.iconSource).toBe("semantic");
+    expect(sportIconNode("surfing")).toEqual(rippleNode);
+    expect(sportIconNode("snorkeling")).toEqual(scubaMaskNode);
+    expect(sportIconNode("snowboarding")).toEqual(snowboardingNode);
+    expect(sportIconNode("yoga")).toEqual(yogaNode);
+    expect(sportIconNode("excursion")).toEqual(car4wdNode);
   });
 
   it("publishes Proper Case labels and only one swimming category", () => {
@@ -49,6 +65,7 @@ describe("activity icon catalog", () => {
     expect(SPORT_META.table_tennis.label).toBe("Table Tennis");
     expect(SPORT_META.dog_sledding.label).toBe("Dog Sledding");
     expect(SPORT_META.reindeer_sledding.label).toBe("Reindeer Sledding");
+    expect(SPORT_META.camel_riding.label).toBe("Camel Riding");
     expect(SPORT_META.swimming).toBeDefined();
     expect(SPORT_META.open_water_swimming).toBeUndefined();
     expect(SPORT_META.lap_swimming).toBeUndefined();
