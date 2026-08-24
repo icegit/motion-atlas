@@ -2,12 +2,13 @@ import IconAerialLift, { __iconNode as aerialLiftNode } from "@tabler/icons-reac
 import IconAirBalloon, { __iconNode as airBalloonNode } from "@tabler/icons-react/dist/esm/icons/IconAirBalloon.mjs";
 import IconBackpack, { __iconNode as backpackNode } from "@tabler/icons-react/dist/esm/icons/IconBackpack.mjs";
 import IconBallTennis, { __iconNode as ballTennisNode } from "@tabler/icons-react/dist/esm/icons/IconBallTennis.mjs";
+import IconBarbell, { __iconNode as barbellNode } from "@tabler/icons-react/dist/esm/icons/IconBarbell.mjs";
 import IconBolt, { __iconNode as boltNode } from "@tabler/icons-react/dist/esm/icons/IconBolt.mjs";
+import IconCamper, { __iconNode as camperNode } from "@tabler/icons-react/dist/esm/icons/IconCamper.mjs";
 import IconCar4wd, { __iconNode as car4wdNode } from "@tabler/icons-react/dist/esm/icons/IconCar4wd.mjs";
 import IconCliffJumping, { __iconNode as cliffJumpingNode } from "@tabler/icons-react/dist/esm/icons/IconCliffJumping.mjs";
 import IconDeer, { __iconNode as deerNode } from "@tabler/icons-react/dist/esm/icons/IconDeer.mjs";
 import IconDog, { __iconNode as dogNode } from "@tabler/icons-react/dist/esm/icons/IconDog.mjs";
-import IconDumbbell, { __iconNode as dumbbellNode } from "@tabler/icons-react/dist/esm/icons/IconDumbbell.mjs";
 import IconFall, { __iconNode as fallNode } from "@tabler/icons-react/dist/esm/icons/IconFall.mjs";
 import IconFerry, { __iconNode as ferryNode } from "@tabler/icons-react/dist/esm/icons/IconFerry.mjs";
 import IconFish, { __iconNode as fishNode } from "@tabler/icons-react/dist/esm/icons/IconFish.mjs";
@@ -91,7 +92,7 @@ export const SPORT_META = {
   hiking: g("Hiking", "#4f7b52", "activity-hiking"),
   mountaineering: s("Mountaineering", "#606e4b", IconMountain, mountainNode, "tabler-mountain.svg"),
   rucking: s("Rucking", "#6d7248", IconBackpack, backpackNode, "tabler-backpack.svg"),
-  strength: s("Strength", "#6d5b91", IconDumbbell, dumbbellNode, "tabler-dumbbell.svg"),
+  strength: s("Strength", "#6d5b91", IconBarbell, barbellNode, "tabler-barbell.svg"),
   fitness: g("Fitness", "#bc4d78", "activity-fitness-equipment"),
   cardio: s("Cardio", "#b84d76", IconHeartbeat, heartbeatNode, "tabler-heartbeat.svg"),
   hiit: s("HIIT", "#d04d64", IconBolt, boltNode, "tabler-bolt.svg"),
@@ -143,7 +144,7 @@ export const SPORT_META = {
   camel_riding: c("Camel Riding", "#9a6b3f", IconCamel, camelNode, "camel.svg"),
   motorsport: g("Motorsport", "#53606b", "activity-motorcycle"),
   atv: s("ATV", "#5f665b", IconCar4wd, car4wdNode, "tabler-car-4wd.svg"),
-  excursion: s("Excursion", "#7c6448", IconCar4wd, car4wdNode, "tabler-car-4wd.svg"),
+  excursion: s("Excursion", "#7c6448", IconCamper, camperNode, "tabler-camper.svg"),
   scuba_diving: s("Scuba Diving", "#176d80", IconScubaDiving, scubaDivingNode, "tabler-scuba-diving.svg"),
   freediving: s("Freediving", "#28788a", IconScubaMask, scubaMaskNode, "tabler-scuba-mask.svg"),
   paragliding: s("Paragliding", "#9a6540", IconParachute, parachuteNode, "tabler-parachute.svg"),

@@ -3,7 +3,8 @@ import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { __iconNode as deerNode } from "@tabler/icons-react/dist/esm/icons/IconDeer.mjs";
 import { __iconNode as dogNode } from "@tabler/icons-react/dist/esm/icons/IconDog.mjs";
-import { __iconNode as car4wdNode } from "@tabler/icons-react/dist/esm/icons/IconCar4wd.mjs";
+import { __iconNode as barbellNode } from "@tabler/icons-react/dist/esm/icons/IconBarbell.mjs";
+import { __iconNode as camperNode } from "@tabler/icons-react/dist/esm/icons/IconCamper.mjs";
 import { __iconNode as rippleNode } from "@tabler/icons-react/dist/esm/icons/IconRipple.mjs";
 import { __iconNode as scubaMaskNode } from "@tabler/icons-react/dist/esm/icons/IconScubaMask.mjs";
 import { __iconNode as snowboardingNode } from "@tabler/icons-react/dist/esm/icons/IconSnowboarding.mjs";
@@ -57,7 +58,9 @@ describe("activity icon catalog", () => {
     expect(sportIconNode("snorkeling")).toEqual(scubaMaskNode);
     expect(sportIconNode("snowboarding")).toEqual(snowboardingNode);
     expect(sportIconNode("yoga")).toEqual(yogaNode);
-    expect(sportIconNode("excursion")).toEqual(car4wdNode);
+    expect(sportIconNode("strength")).toEqual(barbellNode);
+    expect(SPORT_META.strength.iconAsset).toBe("tabler-barbell.svg");
+    expect(sportIconNode("excursion")).toEqual(camperNode);
   });
 
   it("publishes Proper Case labels and only one swimming category", () => {
