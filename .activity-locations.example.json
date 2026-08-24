@@ -17,6 +17,10 @@
       "from": "2026-01-01"
     }
   ],
+  "defaults": {
+    "strength": "amsterdam_gym",
+    "lap_swimming": "amsterdam_gym"
+  },
   "activities": {
     "123456789": "amsterdam_gym"
   }

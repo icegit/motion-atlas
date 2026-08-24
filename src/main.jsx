@@ -50,10 +50,12 @@ function ActivityMap({ groups, activeSports }) {
     });
 
     L.control.zoom({ position: "bottomright" }).addTo(map);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
       attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, SRTM | Map style: &copy; <a href="https://opentopomap.org/">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+      maxNativeZoom: 17,
       maxZoom: 18,
+      subdomains: "abc",
     }).addTo(map);
 
     markersRef.current = L.layerGroup().addTo(map);
@@ -201,7 +203,7 @@ function App() {
               </div>
 
               <div className="section-heading">
-                <span>SPORTS</span>
+                <span>ACTIVITY TYPES</span>
                 <button type="button" onClick={showAll}>Show all</button>
               </div>
 
@@ -256,7 +258,8 @@ function App() {
                     })}
                   </div>
                   <p className="unlocated-help">
-                    Assign an approximate place by activity type, date range, or Garmin activity ID to map these safely.
+                    No native GPS was found within ±2 days. Assign an approximate place by activity type,
+                    date range, or Garmin activity ID to map these safely.
                   </p>
                 </>
               ) : null}
@@ -264,8 +267,9 @@ function App() {
               <div className="privacy-note">
                 <span aria-hidden="true">◎</span>
                 <p>
-                  Nearby matching sports are combined within {data.clusterRadiusKm} km.
-                  GPS starts and privately assigned places are rounded for privacy.
+                  GPS-free activities inherit the nearest native GPS within ±{data.locationInferenceWindowDays ?? 2} days;
+                  private rules or defaults are used next. Nearby matching activity types are combined within {data.clusterRadiusKm} km,
+                  and every location is rounded for privacy.
                 </p>
               </div>
             </>
@@ -277,7 +281,9 @@ function App() {
         <div className="map-caption">
           <span className="live-dot" aria-hidden="true" />
           Updated {new Date(data.generatedAt).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}
+          {data.inferredLocationActivities ? ` · ${data.inferredLocationActivities} placed from nearby GPS` : ""}
           {data.manuallyLocatedActivities ? ` · ${data.manuallyLocatedActivities} manually placed` : ""}
+          {data.customActivities ? ` · ${data.customActivities} custom` : ""}
           {data.unlocatedActivities ? ` · ${data.unlocatedActivities} without GPS` : ""}
         </div>
       ) : null}

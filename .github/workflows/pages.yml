@@ -49,6 +49,7 @@ jobs:
           GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL }}
           GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
           ACTIVITY_LOCATIONS_JSON: ${{ secrets.ACTIVITY_LOCATIONS_JSON }}
+          CUSTOM_ACTIVITIES_JSON: ${{ secrets.CUSTOM_ACTIVITIES_JSON }}
         run: python scripts/sync_garmin_activities.py
 
       - name: Publish changed activity summary

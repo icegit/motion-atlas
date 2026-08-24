@@ -8,18 +8,26 @@ from sync_garmin_activities import (
     build_public_archive,
     canonical_sport,
     haversine_km,
+    load_custom_activities,
     write_archive,
 )
 
 
-def activity(activity_type: str, latitude=None, longitude=None, year="2026"):
+def activity(
+    activity_type: str,
+    latitude=None,
+    longitude=None,
+    year="2026",
+    started_at=None,
+    activity_id=123456789,
+):
     return {
-        "activityId": 123456789,
+        "activityId": activity_id,
         "activityName": "Private morning route",
         "activityType": {"typeKey": activity_type},
         "startLatitude": latitude,
         "startLongitude": longitude,
-        "startTimeLocal": f"{year}-06-10 08:00:00",
+        "startTimeLocal": started_at or f"{year}-06-10 08:00:00",
     }
 
 
@@ -33,7 +41,10 @@ class GarminActivityMapTests(unittest.TestCase):
         self.assertEqual(canonical_sport("gravel_cycling"), "gravel_cycling")
         self.assertEqual(canonical_sport("resort_skiing_snowboarding_ws"), "snow_sports")
         self.assertEqual(canonical_sport("boating_v2"), "boating")
-        self.assertEqual(canonical_sport("overland"), "overland")
+        self.assertEqual(canonical_sport("overland"), "excursion")
+        self.assertEqual(canonical_sport("driving_general"), "excursion")
+        self.assertEqual(canonical_sport("submarine"), "submarine")
+        self.assertEqual(canonical_sport("hot_air_balloon"), "hot_air_balloon")
         self.assertEqual(canonical_sport("rucking"), "rucking")
 
     def test_keeps_water_activities_specific(self):
@@ -81,6 +92,64 @@ class GarminActivityMapTests(unittest.TestCase):
             ["Lap swimming", "Strength"],
         )
 
+    def test_gps_free_activity_uses_nearest_native_gps_within_two_days(self):
+        archive = build_public_archive(
+            [
+                activity(
+                    "strength_training",
+                    started_at="2026-06-10 08:00:00",
+                    activity_id=1,
+                ),
+                activity(
+                    "running",
+                    52.0,
+                    4.0,
+                    started_at="2026-06-09 20:00:00",
+                    activity_id=2,
+                ),
+                activity(
+                    "cycling",
+                    48.0,
+                    2.0,
+                    started_at="2026-06-11 07:00:00",
+                    activity_id=3,
+                ),
+            ],
+            100.0,
+        )
+        strength = next(group for group in archive["groups"] if group["type"] == "strength")
+        self.assertEqual(strength["latitude"], 52.0)
+        self.assertEqual(strength["longitude"], 4.0)
+        self.assertEqual(archive["inferredLocationActivities"], 1)
+        self.assertEqual(archive["manuallyLocatedActivities"], 0)
+
+    def test_default_location_is_used_when_nearest_gps_is_more_than_two_days_away(self):
+        archive = build_public_archive(
+            [
+                activity(
+                    "strength_training",
+                    started_at="2026-06-10 08:00:00",
+                    activity_id=1,
+                ),
+                activity(
+                    "running",
+                    48.0,
+                    2.0,
+                    started_at="2026-06-13 08:00:01",
+                    activity_id=2,
+                ),
+            ],
+            100.0,
+            {
+                "locations": {"gym": {"latitude": 52.37, "longitude": 4.90}},
+                "defaults": {"strength": "gym"},
+            },
+        )
+        strength = next(group for group in archive["groups"] if group["type"] == "strength")
+        self.assertEqual(strength["latitude"], 52.4)
+        self.assertEqual(archive["inferredLocationActivities"], 0)
+        self.assertEqual(archive["manuallyLocatedActivities"], 1)
+
     def test_private_rules_can_place_gps_free_activities_by_type_and_date(self):
         archive = build_public_archive(
             [activity("strength_training", year="2026")],
@@ -106,6 +175,42 @@ class GarminActivityMapTests(unittest.TestCase):
 
     def test_zero_zero_is_not_a_real_activity_start(self):
         self.assertIsNone(activity_location(activity("running", 0, 0)))
+
+    def test_custom_activities_support_garmin_missing_types(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "custom.json"
+            source.write_text(
+                json.dumps(
+                    {
+                        "activities": [
+                            {
+                                "id": "sub-1",
+                                "type": "submarine",
+                                "label": "Submarine",
+                                "date": "2026-04-05T10:30:00",
+                                "latitude": 36.1,
+                                "longitude": -5.4,
+                            },
+                            {
+                                "id": "balloon-1",
+                                "type": "hot_air_balloon",
+                                "label": "Hot-air balloon",
+                                "date": "2026-04-07T08:00:00",
+                                "latitude": 38.6,
+                                "longitude": 34.8,
+                            },
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            custom = load_custom_activities(source)
+        archive = build_public_archive(custom, 100.0)
+        self.assertEqual(archive["customActivities"], 2)
+        self.assertEqual(
+            {group["type"] for group in archive["groups"]},
+            {"submarine", "hot_air_balloon"},
+        )
 
     def test_public_file_omits_identifiers_names_and_exact_coordinates(self):
         archive = build_public_archive(

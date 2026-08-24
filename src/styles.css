@@ -20,7 +20,7 @@ button { font: inherit; }
   box-shadow: inset 0 0 100px rgb(10 45 35 / 7%);
 }
 
-.leaflet-tile-pane { filter: saturate(0.62) contrast(0.93) brightness(1.06); }
+.leaflet-tile-pane { opacity: 0.88; filter: grayscale(0.25) saturate(0.42) contrast(0.88) brightness(1.08); }
 .leaflet-control-zoom { border: 1px solid #e2e3df !important; box-shadow: 0 6px 20px rgb(16 48 38 / 10%) !important; }
 .leaflet-control-zoom a { color: #173b30 !important; background: #fbfaf5 !important; }
 .leaflet-control-attribution { color: #68756f; background: rgb(250 249 244 / 86%) !important; }

@@ -19,7 +19,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TOKEN_STORE = ROOT / ".garminconnect"
 DEFAULT_OUTPUT = ROOT / "public" / "data" / "activity-groups.json"
 DEFAULT_LOCATION_RULES = ROOT / ".activity-locations.json"
+DEFAULT_CUSTOM_ACTIVITIES = ROOT / ".custom-activities.json"
 DEFAULT_CLUSTER_RADIUS_KM = 100.0
+NEARBY_GPS_WINDOW_SECONDS = 2 * 24 * 60 * 60
 PRIVACY_DECIMALS = 1
 EARTH_RADIUS_KM = 6371.0088
 
@@ -87,8 +89,9 @@ SPORT_LABELS = {
     "horseback_riding": "Horseback riding",
     "motorsport": "Motorsport",
     "atv": "ATV",
-    "driving": "Driving",
-    "overland": "Overland",
+    "excursion": "Excursion",
+    "submarine": "Submarine",
+    "hot_air_balloon": "Hot-air balloon",
     "boating": "Boating",
     "snorkeling": "Snorkeling",
     "multisport": "Multisport",
@@ -118,7 +121,7 @@ EXACT_ACTIVITY_TYPES = {
     "surfing": "surfing",
     "boating": "boating",
     "snorkeling": "snorkeling",
-    "overland": "overland",
+    "overland": "excursion",
     "multi_sport": "multisport",
     "skating": "skating",
     "rucking": "rucking",
@@ -126,7 +129,11 @@ EXACT_ACTIVITY_TYPES = {
     "mobility": "mobility",
     "pilates": "pilates",
     "breathwork": "breathwork",
-    "driving_general": "driving",
+    "driving_general": "excursion",
+    "submarine": "submarine",
+    "hot_air_balloon": "hot_air_balloon",
+    "air_balloon": "hot_air_balloon",
+    "ballooning": "hot_air_balloon",
     "atv": "atv",
     "hiit": "hiit",
 }
@@ -257,9 +264,13 @@ def canonical_sport(activity_type: Any) -> str:
         return "equestrian"
     if "atv" in key:
         return "atv"
-    if "driving" in key:
-        return "driving"
-    if any(word in key for word in ("motocross", "motorcycling", "auto_racing", "atv", "driving")):
+    if "overland" in key or "driving" in key:
+        return "excursion"
+    if "submarine" in key or "submersible" in key:
+        return "submarine"
+    if "balloon" in key:
+        return "hot_air_balloon"
+    if any(word in key for word in ("motocross", "motorcycling", "auto_racing", "atv")):
         return "motorsport"
     if "stair" in key:
         return "stair_climbing"
@@ -283,6 +294,18 @@ def activity_type_key(activity: dict[str, Any]) -> str:
     if isinstance(value, dict):
         return str(value.get("typeKey") or value.get("typeId") or "")
     return str(value or activity.get("activityTypeKey") or "")
+
+
+def canonical_activity_type(activity: dict[str, Any]) -> str:
+    if activity.get("_custom"):
+        return normalized_activity_type(activity.get("publicType")) or "other"
+    return canonical_sport(activity_type_key(activity))
+
+
+def public_activity_label(activity: dict[str, Any], activity_type: str) -> str:
+    if activity.get("_custom") and activity.get("publicLabel"):
+        return str(activity["publicLabel"]).strip()[:80] or activity_type.replace("_", " ").title()
+    return SPORT_LABELS.get(activity_type, activity_type.replace("_", " ").title())
 
 
 def activity_year(activity: dict[str, Any]) -> str:
@@ -324,6 +347,25 @@ def activity_date(activity: dict[str, Any]) -> str:
     return ""
 
 
+def activity_datetime(activity: dict[str, Any]) -> datetime | None:
+    for key in ("startTimeLocal", "startTimeGMT", "calendarDate"):
+        value = activity.get(key)
+        if not isinstance(value, str) or not value.strip():
+            continue
+        try:
+            parsed = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if parsed.tzinfo is not None:
+            parsed = parsed.astimezone(UTC).replace(tzinfo=None)
+        return parsed
+    timestamp = activity.get("beginTimestamp") or activity.get("startTimestamp")
+    if isinstance(timestamp, (int, float)) and timestamp > 0:
+        seconds = timestamp / 1000 if timestamp > 10_000_000_000 else timestamp
+        return datetime.fromtimestamp(seconds, UTC).replace(tzinfo=None)
+    return None
+
+
 def load_location_rules(path: Path) -> dict[str, Any]:
     inline_json = os.getenv("ACTIVITY_LOCATIONS_JSON", "").strip()
     if inline_json:
@@ -340,6 +382,8 @@ def load_location_rules(path: Path) -> dict[str, Any]:
         raise ValueError("Activity location rules 'activities' must be an object")
     if not isinstance(payload.get("rules", []), list):
         raise ValueError("Activity location rules 'rules' must be an array")
+    if not isinstance(payload.get("defaults", {}), dict):
+        raise ValueError("Activity location rules 'defaults' must be an object")
     return payload
 
 
@@ -363,28 +407,50 @@ def configured_location(
     return latitude, longitude
 
 
-def manual_activity_location(
+def activity_override_location(
+    activity: dict[str, Any], location_rules: dict[str, Any]
+) -> tuple[float, float] | None:
+    if not location_rules:
+        return None
+    if activity.get("_locationReference"):
+        location = configured_location(activity["_locationReference"], location_rules)
+        if location is not None:
+            return location
+    activity_id = str(activity.get("activityId") or "")
+    activity_overrides = location_rules.get("activities", {})
+    if activity_id and activity_id in activity_overrides:
+        return configured_location(activity_overrides[activity_id], location_rules)
+    return None
+
+
+def rule_values(value: Any) -> list[Any]:
+    if isinstance(value, list):
+        return value
+    if isinstance(value, str):
+        return [value]
+    return []
+
+
+def fallback_activity_location(
     activity: dict[str, Any], location_rules: dict[str, Any]
 ) -> tuple[float, float] | None:
     if not location_rules:
         return None
 
-    activity_id = str(activity.get("activityId") or "")
-    activity_overrides = location_rules.get("activities", {})
-    if activity_id and activity_id in activity_overrides:
-        return configured_location(activity_overrides[activity_id], location_rules)
-
     raw_type = normalized_activity_type(activity_type_key(activity))
-    sport = canonical_sport(raw_type)
+    sport = canonical_activity_type(activity)
     date = activity_date(activity)
     for rule in location_rules.get("rules", []):
         if not isinstance(rule, dict):
             continue
         activity_types = {
             normalized_activity_type(value)
-            for value in rule.get("activityTypes", [])
+            for value in rule_values(rule.get("activityTypes"))
         }
-        sports = {str(value) for value in rule.get("sports", [])}
+        sports = {
+            normalized_activity_type(value)
+            for value in rule_values(rule.get("sports"))
+        }
         if activity_types and raw_type not in activity_types:
             continue
         if sports and sport not in sports:
@@ -398,7 +464,49 @@ def manual_activity_location(
         location = configured_location(rule.get("location"), location_rules)
         if location is not None:
             return location
-    return None
+    defaults = location_rules.get("defaults", {})
+    reference = defaults.get(raw_type, defaults.get(sport))
+    return configured_location(reference, location_rules)
+
+
+def manual_activity_location(
+    activity: dict[str, Any], location_rules: dict[str, Any]
+) -> tuple[float, float] | None:
+    override = activity_override_location(activity, location_rules)
+    if override is not None:
+        return override
+    return fallback_activity_location(activity, location_rules)
+
+
+def native_gps_candidates(
+    activities: list[dict[str, Any]],
+) -> list[tuple[datetime, tuple[float, float]]]:
+    candidates: list[tuple[datetime, tuple[float, float]]] = []
+    for activity in activities:
+        location = activity_location(activity)
+        timestamp = activity_datetime(activity)
+        if location is not None and timestamp is not None:
+            candidates.append((timestamp, location))
+    return candidates
+
+
+def nearest_native_gps_location(
+    activity: dict[str, Any],
+    candidates: list[tuple[datetime, tuple[float, float]]],
+    window_seconds: int = NEARBY_GPS_WINDOW_SECONDS,
+) -> tuple[float, float] | None:
+    target_time = activity_datetime(activity)
+    if target_time is None:
+        return None
+    nearby = [
+        (abs((candidate_time - target_time).total_seconds()), candidate_time, location)
+        for candidate_time, location in candidates
+        if abs((candidate_time - target_time).total_seconds()) <= window_seconds
+    ]
+    if not nearby:
+        return None
+    _, _, location = min(nearby, key=lambda item: (item[0], item[1]))
+    return location
 
 
 def haversine_km(left: tuple[float, float], right: tuple[float, float]) -> float:
@@ -461,16 +569,29 @@ def build_public_archive(
     location_rules = location_rules or {}
     located_by_sport: dict[str, list[dict[str, Any]]] = defaultdict(list)
     unlocated_by_sport: dict[str, Counter[str]] = defaultdict(Counter)
+    labels: dict[str, str] = {}
+    gps_candidates = native_gps_candidates(activities)
+    inferred_locations = 0
     manually_located = 0
     for activity in activities:
-        sport = canonical_sport(activity_type_key(activity))
+        sport = canonical_activity_type(activity)
+        labels.setdefault(sport, public_activity_label(activity, sport))
         location = activity_location(activity)
         if location is None:
-            location = manual_activity_location(activity, location_rules)
+            location = activity_override_location(activity, location_rules)
+            if location is not None:
+                manually_located += 1
+            else:
+                location = nearest_native_gps_location(activity, gps_candidates)
+                if location is not None:
+                    inferred_locations += 1
+                else:
+                    location = fallback_activity_location(activity, location_rules)
+                    if location is not None:
+                        manually_located += 1
             if location is None:
                 unlocated_by_sport[sport][activity_year(activity)] += 1
                 continue
-            manually_located += 1
         located_by_sport[sport].append(
             {"location": location, "year": activity_year(activity)}
         )
@@ -489,7 +610,7 @@ def build_public_archive(
                 {
                     "id": hashlib.sha256(stable_key.encode("utf-8")).hexdigest()[:12],
                     "type": sport,
-                    "label": SPORT_LABELS[sport],
+                    "label": labels.get(sport, SPORT_LABELS.get(sport, sport.replace("_", " ").title())),
                     "latitude": latitude,
                     "longitude": longitude,
                     "activityCount": len(cluster),
@@ -502,7 +623,7 @@ def build_public_archive(
     sport_totals = [
         {
             "type": sport,
-            "label": SPORT_LABELS[sport],
+            "label": labels.get(sport, SPORT_LABELS.get(sport, sport.replace("_", " ").title())),
             "activityCount": count,
             "groupCount": sum(group["type"] == sport for group in groups),
         }
@@ -511,7 +632,7 @@ def build_public_archive(
     unlocated_sport_totals = [
         {
             "type": sport,
-            "label": SPORT_LABELS[sport],
+            "label": labels.get(sport, SPORT_LABELS.get(sport, sport.replace("_", " ").title())),
             "activityCount": sum(years.values()),
             "years": dict(sorted(years.items(), reverse=True)),
         }
@@ -526,11 +647,14 @@ def build_public_archive(
     )
     return {
         "generatedAt": datetime.now(UTC).replace(microsecond=0).isoformat(),
-        "source": "Garmin Connect",
+        "source": "Garmin Connect + custom activities" if any(activity.get("_custom") for activity in activities) else "Garmin Connect",
         "clusterRadiusKm": int(radius_km) if radius_km.is_integer() else radius_km,
+        "locationInferenceWindowDays": NEARBY_GPS_WINDOW_SECONDS // (24 * 60 * 60),
         "privacyPrecisionDecimals": PRIVACY_DECIMALS,
         "totalActivities": len(activities),
+        "customActivities": sum(bool(activity.get("_custom")) for activity in activities),
         "mappedActivities": mapped,
+        "inferredLocationActivities": inferred_locations,
         "manuallyLocatedActivities": manually_located,
         "unlocatedActivities": unlocated,
         "sportTotals": sport_totals,
@@ -597,11 +721,59 @@ def read_activities_file(path: Path) -> list[dict[str, Any]]:
     return [item for item in payload if isinstance(item, dict)]
 
 
+def load_custom_activities(path: Path) -> list[dict[str, Any]]:
+    inline_json = os.getenv("CUSTOM_ACTIVITIES_JSON", "").strip()
+    if inline_json:
+        payload = json.loads(inline_json)
+    elif path.exists():
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    else:
+        return []
+    if isinstance(payload, dict):
+        payload = payload.get("activities")
+    if not isinstance(payload, list):
+        raise ValueError("Custom activities must be a JSON array or an object with an 'activities' array")
+
+    activities: list[dict[str, Any]] = []
+    for index, item in enumerate(payload):
+        if not isinstance(item, dict):
+            raise ValueError(f"Custom activity {index + 1} must be an object")
+        public_type = normalized_activity_type(item.get("type"))
+        if not public_type:
+            raise ValueError(f"Custom activity {index + 1} needs a type")
+        label = str(item.get("label") or public_type.replace("_", " ").title()).strip()
+        if not label:
+            raise ValueError(f"Custom activity {index + 1} needs a label")
+        activity = {
+            "_custom": True,
+            "activityId": str(item.get("id") or f"custom-{index + 1}"),
+            "activityType": {"typeKey": public_type},
+            "publicType": public_type,
+            "publicLabel": label[:80],
+            "startTimeLocal": str(item.get("date") or ""),
+            "startLatitude": item.get("latitude"),
+            "startLongitude": item.get("longitude"),
+        }
+        if item.get("location"):
+            activity["_locationReference"] = str(item["location"])
+        if activity_datetime(activity) is None:
+            raise ValueError(f"Custom activity {index + 1} needs an ISO date or date-time")
+        has_latitude = item.get("latitude") is not None
+        has_longitude = item.get("longitude") is not None
+        if has_latitude != has_longitude:
+            raise ValueError(f"Custom activity {index + 1} must provide both latitude and longitude")
+        if has_latitude and activity_location(activity) is None:
+            raise ValueError(f"Custom activity {index + 1} has invalid coordinates")
+        activities.append(activity)
+    return activities
+
+
 def unclassified_type_counts(activities: list[dict[str, Any]]) -> Counter[str]:
     return Counter(
         activity_type_key(activity) or "unknown"
         for activity in activities
-        if canonical_sport(activity_type_key(activity)) == "other"
+        if not activity.get("_custom")
+        and canonical_sport(activity_type_key(activity)) == "other"
     )
 
 
@@ -621,6 +793,12 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_LOCATION_RULES,
         help="Ignored JSON file that assigns approximate locations to activities without GPS",
     )
+    parser.add_argument(
+        "--custom-activities",
+        type=Path,
+        default=DEFAULT_CUSTOM_ACTIVITIES,
+        help="Ignored JSON file for activities that do not exist in Garmin",
+    )
     return parser.parse_args()
 
 
@@ -630,11 +808,12 @@ def main() -> int:
         print("Cluster radius must be greater than zero", file=sys.stderr)
         return 2
     try:
-        activities = (
+        garmin_activities = (
             read_activities_file(args.activities_file)
             if args.activities_file
             else fetch_all_activities(connect_to_garmin(args.token_store))
         )
+        activities = garmin_activities + load_custom_activities(args.custom_activities)
         location_rules = load_location_rules(args.location_rules)
         archive = build_public_archive(activities, args.radius_km, location_rules)
         write_archive(archive, args.output)
@@ -650,6 +829,13 @@ def main() -> int:
             f"Placed {archive['manuallyLocatedActivities']} GPS-free activities "
             "using private location rules."
         )
+    if archive["inferredLocationActivities"]:
+        print(
+            f"Placed {archive['inferredLocationActivities']} GPS-free activities "
+            "from the nearest native GPS activity within two days."
+        )
+    if archive["customActivities"]:
+        print(f"Included {archive['customActivities']} custom activities outside Garmin.")
     if archive["unlocatedActivities"]:
         print(f"Left {archive['unlocatedActivities']} activities without a map location.")
     unknown_types = unclassified_type_counts(activities)
