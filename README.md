@@ -2,7 +2,9 @@
 
 A privacy-conscious topographic view of Garmin Connect activities. Activities of the same specific type whose start points are connected within a 100 km radius are published as one marker. Clicking a marker shows the activity count for each year.
 
-The public data file contains only specific activity categories, rounded cluster centers, totals, and per-year counts. Sailing, kayaking, surfing, open-water swimming, lap swimming, trail running, treadmill running, and other distinct Garmin types stay separate. Garmin `driving` and `overland` activities are published under the single **Excursion** type. Garmin activity IDs, names, routes, timestamps, and exact coordinates are never written to the repository.
+The public data file contains only canonical activity categories, rounded cluster centers, totals, and per-year counts. Sailing, kayaking, surfing, trail running, treadmill running, and other distinct Garmin types stay separate; open-water, pool, and lap swimming are combined as **Swimming**. Garmin `driving` and `overland` activities are published under the single **Excursion** type. Garmin activity IDs, names, routes, timestamps, and exact coordinates are never written to the repository.
+
+See [ACTIVITY_TYPES.md](ACTIVITY_TYPES.md) for the complete supported vocabulary, name-matching rules, and a visible catalog of every map icon.
 
 ## Local development
 
@@ -52,9 +54,9 @@ For scheduled GitHub Actions syncs, store the complete JSON configuration as the
 
 ## Activities outside Garmin
 
-Activities without a Garmin type, such as a submarine dive or hot-air balloon flight, can be added from private JSON. Copy `.custom-activities.example.json` to the ignored `.custom-activities.json` file, then provide a date, public type and label. A custom activity may have its own coordinates or a named private location; without either, it follows the same nearest-GPS and fallback rules as Garmin activities.
+Activities without a Garmin type, such as a submarine dive or hot-air balloon flight, can be added from private JSON. Copy `.custom-activities.example.json` to the ignored `.custom-activities.json` file, then provide a date, a generic type such as `custom` or `other`, and an activity name. A custom activity may have its own coordinates or a named private location; without either, it follows the same nearest-GPS and fallback rules as Garmin activities.
 
-For GitHub Actions, store the JSON as the `CUSTOM_ACTIVITIES_JSON` repository secret. `submarine` and `hot_air_balloon` have dedicated map icons; any other custom type remains supported with the generic activity icon and its configured public label.
+For GitHub Actions, store the JSON as the `CUSTOM_ACTIVITIES_JSON` repository secret. Generic Garmin/custom types are classified from the private activity name—for example, `Luxor AirBallon` becomes `hot_air_balloon`. `submarine` and `hot_air_balloon` have dedicated map icons; unmatched custom types use the generic activity icon. Private activity names are not published.
 
 ## Basemap
 

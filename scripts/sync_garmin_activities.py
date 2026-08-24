@@ -35,13 +35,13 @@ SPORT_LABELS = {
     "mountain_biking": "Mountain biking",
     "indoor_cycling": "Indoor cycling",
     "e_biking": "E-biking",
-    "open_water_swimming": "Open-water swimming",
-    "lap_swimming": "Lap swimming",
+    "swimming": "Swimming",
     "walking": "Walking",
     "hiking": "Hiking",
     "mountaineering": "Mountaineering",
     "rucking": "Rucking",
     "strength": "Strength",
+    "fitness": "Fitness",
     "cardio": "Cardio",
     "hiit": "HIIT",
     "stair_climbing": "Stair climbing",
@@ -54,6 +54,7 @@ SPORT_LABELS = {
     "snow_sports": "Skiing & snowboarding",
     "snowshoeing": "Snowshoeing",
     "golf": "Golf",
+    "racket": "Racket sports",
     "tennis": "Tennis",
     "table_tennis": "Table tennis",
     "badminton": "Badminton",
@@ -67,6 +68,7 @@ SPORT_LABELS = {
     "cricket": "Cricket",
     "lacrosse": "Lacrosse",
     "handball": "Handball",
+    "team_sport": "Team sports",
     "sailing": "Sailing",
     "kayaking": "Kayaking",
     "canoeing": "Canoeing",
@@ -92,6 +94,27 @@ SPORT_LABELS = {
     "excursion": "Excursion",
     "submarine": "Submarine",
     "hot_air_balloon": "Hot-air balloon",
+    "scuba_diving": "Scuba diving",
+    "freediving": "Freediving",
+    "paragliding": "Paragliding",
+    "hang_gliding": "Hang gliding",
+    "skydiving": "Skydiving",
+    "flight": "Flight",
+    "rafting": "Rafting",
+    "wakeboarding": "Wakeboarding",
+    "water_skiing": "Water skiing",
+    "archery": "Archery",
+    "bowling": "Bowling",
+    "disc_golf": "Disc golf",
+    "fishing": "Fishing",
+    "hunting": "Hunting",
+    "geocaching": "Geocaching",
+    "camping": "Camping",
+    "martial_arts": "Martial arts",
+    "gymnastics": "Gymnastics",
+    "scooter": "Scooter",
+    "snowmobiling": "Snowmobiling",
+    "ferry": "Ferry",
     "boating": "Boating",
     "snorkeling": "Snorkeling",
     "multisport": "Multisport",
@@ -104,9 +127,10 @@ SPORT_LABELS = {
 
 EXACT_ACTIVITY_TYPES = {
     "strength_training": "strength",
-    "open_water_swimming": "open_water_swimming",
-    "lap_swimming": "lap_swimming",
-    "pool_swimming": "lap_swimming",
+    "swimming": "swimming",
+    "open_water_swimming": "swimming",
+    "lap_swimming": "swimming",
+    "pool_swimming": "swimming",
     "trail_running": "trail_running",
     "treadmill_running": "treadmill_running",
     "gravel_cycling": "gravel_cycling",
@@ -134,9 +158,42 @@ EXACT_ACTIVITY_TYPES = {
     "hot_air_balloon": "hot_air_balloon",
     "air_balloon": "hot_air_balloon",
     "ballooning": "hot_air_balloon",
+    "scuba_diving": "scuba_diving",
+    "free_diving": "freediving",
+    "freediving": "freediving",
+    "paragliding": "paragliding",
+    "hang_gliding": "hang_gliding",
+    "skydiving": "skydiving",
+    "whitewater_rafting": "rafting",
+    "wakeboarding": "wakeboarding",
+    "water_skiing": "water_skiing",
+    "archery": "archery",
+    "bowling": "bowling",
+    "disc_golf": "disc_golf",
+    "fishing": "fishing",
+    "hunting": "hunting",
+    "geocaching": "geocaching",
+    "camping": "camping",
+    "martial_arts": "martial_arts",
+    "gymnastics": "gymnastics",
+    "scooter": "scooter",
+    "snowmobiling": "snowmobiling",
+    "ferry": "ferry",
     "atv": "atv",
     "hiit": "hiit",
 }
+
+GENERIC_ACTIVITY_TYPES = {
+    "",
+    "other",
+    "custom",
+    "custom_activity",
+    "uncategorized",
+    "unknown",
+}
+
+for canonical_type in SPORT_LABELS:
+    EXACT_ACTIVITY_TYPES.setdefault(canonical_type, canonical_type)
 
 
 def normalized_activity_type(activity_type: Any) -> str:
@@ -151,9 +208,44 @@ def canonical_sport(activity_type: Any) -> str:
     key = normalized_activity_type(activity_type)
     if key in EXACT_ACTIVITY_TYPES:
         return EXACT_ACTIVITY_TYPES[key]
+    if any(
+        phrase in key
+        for phrase in (
+            "hot_air_balloon",
+            "hotairballoon",
+            "air_balloon",
+            "airballoon",
+            "hot_air_ballon",
+            "hotairballon",
+            "air_ballon",
+            "airballon",
+            "hava_bal",
+        )
+    ):
+        return "hot_air_balloon"
+    if any(phrase in key for phrase in ("submarine", "sub_marine", "submersible", "denizalt")):
+        return "submarine"
+    if any(phrase in key for phrase in ("scuba", "tüplü_dal", "tuplu_dal")):
+        return "scuba_diving"
+    if any(phrase in key for phrase in ("freediv", "free_div", "serbest_dal")):
+        return "freediving"
+    if "paraglid" in key or "yamaç_paraş" in key or "yamac_paras" in key:
+        return "paragliding"
+    if "hang_glid" in key or "deltaplan" in key:
+        return "hang_gliding"
+    if any(phrase in key for phrase in ("skydiv", "sky_div", "base_jump", "paraşüt", "parasut")):
+        return "skydiving"
+    if any(phrase in key for phrase in ("whitewater_raft", "white_water_raft", "rafting")):
+        return "rafting"
+    if any(phrase in key for phrase in ("wakeboard", "wake_board", "wakesurf")):
+        return "wakeboarding"
+    if any(phrase in key for phrase in ("water_ski", "waterski")):
+        return "water_skiing"
+    if "scuba" not in key and any(phrase in key for phrase in ("flight", "flying", "uçuş", "ucus")):
+        return "flight"
     if "multi_sport" in key or "multisport" in key or "triathlon" in key:
         return "multisport"
-    if "rollerblade" in key or "inline_skat" in key or "ice_skat" in key:
+    if any(phrase in key for phrase in ("rollerblade", "inline_skat", "ice_skat", "skating", "skateboard")):
         return "skating"
     if "snowboard" in key:
         return "snowboarding"
@@ -161,12 +253,8 @@ def canonical_sport(activity_type: Any) -> str:
         return "snowshoeing"
     if "ski" in key:
         return "skiing"
-    if "open_water" in key and "swim" in key:
-        return "open_water_swimming"
-    if any(word in key for word in ("lap_swim", "pool_swim")):
-        return "lap_swimming"
     if "swim" in key:
-        return "open_water_swimming"
+        return "swimming"
     if "indoor" in key and any(word in key for word in ("bike", "cycling")):
         return "indoor_cycling"
     if "gravel" in key and any(word in key for word in ("bike", "cycling")):
@@ -207,6 +295,8 @@ def canonical_sport(activity_type: Any) -> str:
         return "indoor_rowing"
     if any(word in key for word in ("row", "rowing", "crew")):
         return "rowing"
+    if any(word in key for word in ("snorkel", "snoerkel")):
+        return "snorkeling"
     if "kitesurf" in key:
         return "kitesurfing"
     if "windsurf" in key:
@@ -266,12 +356,32 @@ def canonical_sport(activity_type: Any) -> str:
         return "atv"
     if "overland" in key or "driving" in key:
         return "excursion"
-    if "submarine" in key or "submersible" in key:
-        return "submarine"
-    if "balloon" in key:
-        return "hot_air_balloon"
     if any(word in key for word in ("motocross", "motorcycling", "auto_racing", "atv")):
         return "motorsport"
+    if "snowmobil" in key:
+        return "snowmobiling"
+    if "scooter" in key:
+        return "scooter"
+    if "archer" in key or "archery" in key or "okçuluk" in key or "okculuk" in key:
+        return "archery"
+    if "bowling" in key:
+        return "bowling"
+    if "disc_golf" in key or "frisbee_golf" in key:
+        return "disc_golf"
+    if any(word in key for word in ("fishing", "angling", "balık_tut", "balik_tut")):
+        return "fishing"
+    if "hunting" in key or "avcılık" in key or "avcilik" in key:
+        return "hunting"
+    if "geocach" in key:
+        return "geocaching"
+    if "camping" in key or "kamp" in key:
+        return "camping"
+    if any(word in key for word in ("martial_art", "karate", "judo", "taekwondo", "kickbox")):
+        return "martial_arts"
+    if "gymnast" in key:
+        return "gymnastics"
+    if "ferry" in key or "feribot" in key:
+        return "ferry"
     if "stair" in key:
         return "stair_climbing"
     if "elliptical" in key:
@@ -296,10 +406,22 @@ def activity_type_key(activity: dict[str, Any]) -> str:
     return str(value or activity.get("activityTypeKey") or "")
 
 
+def activity_name(activity: dict[str, Any]) -> str:
+    for key in ("activityName", "name", "title"):
+        value = activity.get(key)
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+    return ""
+
+
 def canonical_activity_type(activity: dict[str, Any]) -> str:
-    if activity.get("_custom"):
-        return normalized_activity_type(activity.get("publicType")) or "other"
-    return canonical_sport(activity_type_key(activity))
+    raw_type = normalized_activity_type(activity_type_key(activity))
+    classified_type = canonical_sport(raw_type)
+    if raw_type in GENERIC_ACTIVITY_TYPES or classified_type == "other":
+        name_type = canonical_sport(activity_name(activity))
+        if name_type != "other":
+            return name_type
+    return classified_type
 
 
 def public_activity_label(activity: dict[str, Any], activity_type: str) -> str:
@@ -738,18 +860,25 @@ def load_custom_activities(path: Path) -> list[dict[str, Any]]:
     for index, item in enumerate(payload):
         if not isinstance(item, dict):
             raise ValueError(f"Custom activity {index + 1} must be an object")
-        public_type = normalized_activity_type(item.get("type"))
-        if not public_type:
-            raise ValueError(f"Custom activity {index + 1} needs a type")
-        label = str(item.get("label") or public_type.replace("_", " ").title()).strip()
-        if not label:
-            raise ValueError(f"Custom activity {index + 1} needs a label")
+        public_type = normalized_activity_type(item.get("type")) or "custom"
+        name = str(
+            item.get("name")
+            or item.get("activityName")
+            or item.get("label")
+            or ""
+        ).strip()
+        public_label = str(item.get("label") or "").strip()
+        if public_type in GENERIC_ACTIVITY_TYPES and not name:
+            raise ValueError(
+                f"Custom activity {index + 1} needs a name when its type is generic"
+            )
         activity = {
             "_custom": True,
             "activityId": str(item.get("id") or f"custom-{index + 1}"),
             "activityType": {"typeKey": public_type},
             "publicType": public_type,
-            "publicLabel": label[:80],
+            "publicLabel": public_label[:80],
+            "activityName": name[:160],
             "startTimeLocal": str(item.get("date") or ""),
             "startLatitude": item.get("latitude"),
             "startLongitude": item.get("longitude"),
@@ -773,7 +902,7 @@ def unclassified_type_counts(activities: list[dict[str, Any]]) -> Counter[str]:
         activity_type_key(activity) or "unknown"
         for activity in activities
         if not activity.get("_custom")
-        and canonical_sport(activity_type_key(activity)) == "other"
+        and canonical_activity_type(activity) == "other"
     )
 
 

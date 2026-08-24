@@ -2,16 +2,16 @@
   "activities": [
     {
       "id": "submarine-2026-04-05",
-      "type": "submarine",
-      "label": "Submarine",
+      "type": "other",
+      "name": "Strait sub-marine dive",
       "date": "2026-04-05T10:30:00",
       "latitude": 36.1,
       "longitude": -5.4
     },
     {
       "id": "balloon-2026-04-07",
-      "type": "hot_air_balloon",
-      "label": "Hot-air balloon",
+      "type": "custom",
+      "name": "Luxor AirBallon",
       "date": "2026-04-07T08:00:00",
       "latitude": 38.6,
       "longitude": 34.8

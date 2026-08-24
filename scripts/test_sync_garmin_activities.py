@@ -6,6 +6,7 @@ from pathlib import Path
 from sync_garmin_activities import (
     activity_location,
     build_public_archive,
+    canonical_activity_type,
     canonical_sport,
     haversine_km,
     load_custom_activities,
@@ -20,10 +21,11 @@ def activity(
     year="2026",
     started_at=None,
     activity_id=123456789,
+    name="Private morning route",
 ):
     return {
         "activityId": activity_id,
-        "activityName": "Private morning route",
+        "activityName": name,
         "activityType": {"typeKey": activity_type},
         "startLatitude": latitude,
         "startLongitude": longitude,
@@ -35,8 +37,8 @@ class GarminActivityMapTests(unittest.TestCase):
     def test_classifies_common_garmin_sports(self):
         self.assertEqual(canonical_sport("trail_running"), "trail_running")
         self.assertEqual(canonical_sport("treadmill_running"), "treadmill_running")
-        self.assertEqual(canonical_sport("lap_swimming"), "lap_swimming")
-        self.assertEqual(canonical_sport("open_water_swimming"), "open_water_swimming")
+        self.assertEqual(canonical_sport("lap_swimming"), "swimming")
+        self.assertEqual(canonical_sport("open_water_swimming"), "swimming")
         self.assertEqual(canonical_sport("road_biking"), "road_cycling")
         self.assertEqual(canonical_sport("gravel_cycling"), "gravel_cycling")
         self.assertEqual(canonical_sport("resort_skiing_snowboarding_ws"), "snow_sports")
@@ -46,6 +48,24 @@ class GarminActivityMapTests(unittest.TestCase):
         self.assertEqual(canonical_sport("submarine"), "submarine")
         self.assertEqual(canonical_sport("hot_air_balloon"), "hot_air_balloon")
         self.assertEqual(canonical_sport("rucking"), "rucking")
+
+    def test_generic_garmin_types_use_activity_name_without_overriding_specific_types(self):
+        self.assertEqual(
+            canonical_activity_type(activity("custom", name="Luxor AirBallon")),
+            "hot_air_balloon",
+        )
+        self.assertEqual(
+            canonical_activity_type(activity("other", name="Strait sub-marine dive")),
+            "submarine",
+        )
+        self.assertEqual(
+            canonical_activity_type(activity("other", name="Khasab Snoerkeling")),
+            "snorkeling",
+        )
+        self.assertEqual(
+            canonical_activity_type(activity("walking", name="Luxor AirBallon")),
+            "walking",
+        )
 
     def test_keeps_water_activities_specific(self):
         self.assertEqual(canonical_sport("sailing_v2"), "sailing")
@@ -89,7 +109,7 @@ class GarminActivityMapTests(unittest.TestCase):
         self.assertEqual(archive["unlocatedActivities"], 2)
         self.assertEqual(
             [item["label"] for item in archive["unlocatedSportTotals"]],
-            ["Lap swimming", "Strength"],
+            ["Strength", "Swimming"],
         )
 
     def test_gps_free_activity_uses_nearest_native_gps_within_two_days(self):
@@ -185,16 +205,16 @@ class GarminActivityMapTests(unittest.TestCase):
                         "activities": [
                             {
                                 "id": "sub-1",
-                                "type": "submarine",
-                                "label": "Submarine",
+                                "type": "other",
+                                "name": "Strait sub-marine dive",
                                 "date": "2026-04-05T10:30:00",
                                 "latitude": 36.1,
                                 "longitude": -5.4,
                             },
                             {
                                 "id": "balloon-1",
-                                "type": "hot_air_balloon",
-                                "label": "Hot-air balloon",
+                                "type": "custom",
+                                "name": "Luxor AirBallon",
                                 "date": "2026-04-07T08:00:00",
                                 "latitude": 38.6,
                                 "longitude": 34.8,

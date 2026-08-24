@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T15:42:29+00:00",
+  "generatedAt": "2026-08-24T16:04:25+00:00",
   "source": "Garmin Connect",
   "clusterRadiusKm": 100,
   "locationInferenceWindowDays": 2,
@@ -14,7 +14,7 @@
     {
       "type": "walking",
       "label": "Walking",
-      "activityCount": 1368,
+      "activityCount": 1369,
       "groupCount": 87
     },
     {
@@ -24,16 +24,16 @@
       "groupCount": 8
     },
     {
+      "type": "swimming",
+      "label": "Swimming",
+      "activityCount": 236,
+      "groupCount": 66
+    },
+    {
       "type": "strength",
       "label": "Strength",
       "activityCount": 205,
       "groupCount": 32
-    },
-    {
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "activityCount": 184,
-      "groupCount": 53
     },
     {
       "type": "excursion",
@@ -60,12 +60,6 @@
       "groupCount": 10
     },
     {
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "activityCount": 52,
-      "groupCount": 22
-    },
-    {
       "type": "hiking",
       "label": "Hiking",
       "activityCount": 36,
@@ -78,10 +72,10 @@
       "groupCount": 3
     },
     {
-      "type": "other",
-      "label": "Other",
-      "activityCount": 10,
-      "groupCount": 4
+      "type": "snorkeling",
+      "label": "Snorkeling",
+      "activityCount": 11,
+      "groupCount": 6
     },
     {
       "type": "breathwork",
@@ -93,12 +87,6 @@
       "type": "trail_running",
       "label": "Trail running",
       "activityCount": 8,
-      "groupCount": 3
-    },
-    {
-      "type": "snorkeling",
-      "label": "Snorkeling",
-      "activityCount": 7,
       "groupCount": 3
     },
     {
@@ -126,6 +114,18 @@
       "groupCount": 1
     },
     {
+      "type": "sailing",
+      "label": "Sailing",
+      "activityCount": 4,
+      "groupCount": 2
+    },
+    {
+      "type": "skating",
+      "label": "Skating",
+      "activityCount": 4,
+      "groupCount": 1
+    },
+    {
       "type": "table_tennis",
       "label": "Table tennis",
       "activityCount": 3,
@@ -144,12 +144,6 @@
       "groupCount": 1
     },
     {
-      "type": "sailing",
-      "label": "Sailing",
-      "activityCount": 2,
-      "groupCount": 2
-    },
-    {
       "type": "atv",
       "label": "ATV",
       "activityCount": 2,
@@ -158,12 +152,6 @@
     {
       "type": "multisport",
       "label": "Multisport",
-      "activityCount": 2,
-      "groupCount": 1
-    },
-    {
-      "type": "skating",
-      "label": "Skating",
       "activityCount": 2,
       "groupCount": 1
     },
@@ -210,6 +198,12 @@
       "groupCount": 1
     },
     {
+      "type": "hockey",
+      "label": "Hockey",
+      "activityCount": 1,
+      "groupCount": 1
+    },
+    {
       "type": "gravel_cycling",
       "label": "Gravel cycling",
       "activityCount": 1,
@@ -228,27 +222,20 @@
       }
     },
     {
+      "type": "swimming",
+      "label": "Swimming",
+      "activityCount": 2,
+      "years": {
+        "2024": 1,
+        "2022": 1
+      }
+    },
+    {
       "type": "breathwork",
       "label": "Breathwork",
       "activityCount": 1,
       "years": {
         "2022": 1
-      }
-    },
-    {
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "activityCount": 1,
-      "years": {
-        "2022": 1
-      }
-    },
-    {
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "activityCount": 1,
-      "years": {
-        "2024": 1
       }
     }
   ],
@@ -259,7 +246,7 @@
       "label": "Walking",
       "latitude": 52.3,
       "longitude": 4.8,
-      "activityCount": 1043,
+      "activityCount": 1044,
       "clusterRadiusKm": 100,
       "years": {
         "2026": 156,
@@ -268,7 +255,7 @@
         "2023": 145,
         "2022": 98,
         "2021": 31,
-        "2020": 13,
+        "2020": 14,
         "2019": 3
       }
     },
@@ -364,33 +351,25 @@
       }
     },
     {
-      "id": "3e8ac0d87a56",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 28.1,
-      "longitude": -16.7,
-      "activityCount": 16,
+      "id": "39a9372b1b0e",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 52.3,
+      "longitude": 4.7,
+      "activityCount": 24,
       "clusterRadiusKm": 100,
       "years": {
-        "2025": 16
+        "2026": 11,
+        "2025": 3,
+        "2023": 1,
+        "2022": 8,
+        "2021": 1
       }
     },
     {
-      "id": "7d5db3a6355c",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 16.6,
-      "longitude": -22.9,
-      "activityCount": 16,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 16
-      }
-    },
-    {
-      "id": "8759a8dc67da",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
+      "id": "5dcc93d3c236",
+      "type": "swimming",
+      "label": "Swimming",
       "latitude": -8.7,
       "longitude": 115.2,
       "activityCount": 16,
@@ -400,18 +379,27 @@
       }
     },
     {
-      "id": "5fb5a7d4ea21",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 52.3,
-      "longitude": 4.7,
-      "activityCount": 15,
+      "id": "c17021861033",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 16.6,
+      "longitude": -22.9,
+      "activityCount": 16,
       "clusterRadiusKm": 100,
       "years": {
-        "2026": 10,
-        "2025": 3,
-        "2023": 1,
-        "2021": 1
+        "2026": 16
+      }
+    },
+    {
+      "id": "fbf987f5d35e",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 28.1,
+      "longitude": -16.7,
+      "activityCount": 16,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 16
       }
     },
     {
@@ -437,6 +425,18 @@
       "clusterRadiusKm": 100,
       "years": {
         "2025": 14
+      }
+    },
+    {
+      "id": "fd134d09928f",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 36.9,
+      "longitude": 27.2,
+      "activityCount": 14,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2020": 14
       }
     },
     {
@@ -524,9 +524,9 @@
       }
     },
     {
-      "id": "15b256e984db",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
+      "id": "5f7633d5222f",
+      "type": "swimming",
+      "label": "Swimming",
       "latitude": 42.0,
       "longitude": 35.2,
       "activityCount": 11,
@@ -540,15 +540,15 @@
       }
     },
     {
-      "id": "6af45368dc80",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 36.9,
-      "longitude": 27.2,
+      "id": "ab14e7b548f8",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -6.1,
+      "longitude": 39.4,
       "activityCount": 10,
       "clusterRadiusKm": 100,
       "years": {
-        "2020": 10
+        "2023": 10
       }
     },
     {
@@ -601,22 +601,9 @@
       }
     },
     {
-      "id": "f82ae36a5ed9",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 52.3,
-      "longitude": 4.8,
-      "activityCount": 9,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 1,
-        "2022": 8
-      }
-    },
-    {
-      "id": "29ea0ac2d9fb",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
+      "id": "52d3ab4fd5e8",
+      "type": "swimming",
+      "label": "Swimming",
       "latitude": 34.9,
       "longitude": 32.4,
       "activityCount": 9,
@@ -665,9 +652,9 @@
       }
     },
     {
-      "id": "fd51b054f0ae",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
+      "id": "d3488d27250c",
+      "type": "swimming",
+      "label": "Swimming",
       "latitude": 20.6,
       "longitude": -87.1,
       "activityCount": 8,
@@ -800,31 +787,6 @@
       }
     },
     {
-      "id": "8795ed47ee23",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -6.1,
-      "longitude": 39.4,
-      "activityCount": 6,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 6
-      }
-    },
-    {
-      "id": "8bb160638594",
-      "type": "other",
-      "label": "Other",
-      "latitude": 52.3,
-      "longitude": 4.8,
-      "activityCount": 6,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2021": 2,
-        "2020": 4
-      }
-    },
-    {
       "id": "3839b5282f74",
       "type": "snow_sports",
       "label": "Skiing & snowboarding",
@@ -834,6 +796,18 @@
       "clusterRadiusKm": 100,
       "years": {
         "2023": 6
+      }
+    },
+    {
+      "id": "0e58840ce2dc",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 43.3,
+      "longitude": 77.0,
+      "activityCount": 6,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2026": 6
       }
     },
     {
@@ -950,15 +924,54 @@
       }
     },
     {
-      "id": "b6e886e02f50",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
+      "id": "0436fba5d24f",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 49.3,
+      "longitude": 3.3,
+      "activityCount": 5,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 1,
+        "2022": 2,
+        "2020": 2
+      }
+    },
+    {
+      "id": "42d85bd627e5",
+      "type": "swimming",
+      "label": "Swimming",
       "latitude": 27.2,
       "longitude": 33.8,
       "activityCount": 5,
       "clusterRadiusKm": 100,
       "years": {
         "2024": 5
+      }
+    },
+    {
+      "id": "612e8934a283",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 36.9,
+      "longitude": 31.0,
+      "activityCount": 5,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2022": 5
+      }
+    },
+    {
+      "id": "b53047384f9a",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 51.4,
+      "longitude": 5.6,
+      "activityCount": 5,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2026": 2,
+        "2025": 3
       }
     },
     {
@@ -1170,101 +1183,16 @@
       }
     },
     {
-      "id": "66414b318e91",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 49.4,
-      "longitude": 3.4,
+      "id": "95abba90aab9",
+      "type": "skating",
+      "label": "Skating",
+      "latitude": 52.3,
+      "longitude": 4.9,
       "activityCount": 4,
       "clusterRadiusKm": 100,
       "years": {
-        "2022": 2,
-        "2020": 2
-      }
-    },
-    {
-      "id": "aea1ca860e52",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": -6.2,
-      "longitude": 39.3,
-      "activityCount": 4,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 4
-      }
-    },
-    {
-      "id": "deae3e2b5c9a",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 36.9,
-      "longitude": 31.0,
-      "activityCount": 4,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2022": 4
-      }
-    },
-    {
-      "id": "ee177be62838",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 36.9,
-      "longitude": 27.2,
-      "activityCount": 4,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2020": 4
-      }
-    },
-    {
-      "id": "6939fe32a5c6",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -46.0,
-      "longitude": -62.0,
-      "activityCount": 4,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 4
-      }
-    },
-    {
-      "id": "6aba07d7b04a",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 51.6,
-      "longitude": 5.9,
-      "activityCount": 4,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 1,
-        "2025": 3
-      }
-    },
-    {
-      "id": "6b4480f59930",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 38.0,
-      "longitude": 23.7,
-      "activityCount": 4,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 4
-      }
-    },
-    {
-      "id": "c5e4990e889e",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 41.0,
-      "longitude": 38.0,
-      "activityCount": 4,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 4
+        "2021": 3,
+        "2020": 1
       }
     },
     {
@@ -1290,6 +1218,42 @@
       "years": {
         "2026": 2,
         "2025": 2
+      }
+    },
+    {
+      "id": "708f6d9a4f5d",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -46.0,
+      "longitude": -62.0,
+      "activityCount": 4,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 4
+      }
+    },
+    {
+      "id": "735591107a0e",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 38.0,
+      "longitude": 23.7,
+      "activityCount": 4,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 4
+      }
+    },
+    {
+      "id": "e352a15ae293",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 41.0,
+      "longitude": 38.0,
+      "activityCount": 4,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2026": 4
       }
     },
     {
@@ -1524,99 +1488,15 @@
       }
     },
     {
-      "id": "2c4d51724dbc",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 50.0,
-      "longitude": 19.9,
+      "id": "f68d0429f86e",
+      "type": "sailing",
+      "label": "Sailing",
+      "latitude": 52.3,
+      "longitude": 4.8,
       "activityCount": 3,
       "clusterRadiusKm": 100,
       "years": {
-        "2023": 3
-      }
-    },
-    {
-      "id": "a945232ee478",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 43.3,
-      "longitude": 77.0,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 3
-      }
-    },
-    {
-      "id": "cc6922e019ad",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 41.4,
-      "longitude": 60.4,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 3
-      }
-    },
-    {
-      "id": "24e671efc472",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 1.3,
-      "longitude": 103.9,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 3
-      }
-    },
-    {
-      "id": "4cfdd2299623",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 43.3,
-      "longitude": 77.0,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 3
-      }
-    },
-    {
-      "id": "83c91161d797",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 48.5,
-      "longitude": 8.2,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 3
-      }
-    },
-    {
-      "id": "8be33b974956",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 13.9,
-      "longitude": 109.6,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 3
-      }
-    },
-    {
-      "id": "fc7337eddbe4",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 6.8,
-      "longitude": 102.7,
-      "activityCount": 3,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 3
+        "2020": 3
       }
     },
     {
@@ -1677,6 +1557,91 @@
       "clusterRadiusKm": 100,
       "years": {
         "2020": 3
+      }
+    },
+    {
+      "id": "2a9580d010b6",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 13.9,
+      "longitude": 109.6,
+      "activityCount": 3,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 3
+      }
+    },
+    {
+      "id": "4a8ed0e4bf33",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 40.6,
+      "longitude": 31.9,
+      "activityCount": 3,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 2,
+        "2023": 1
+      }
+    },
+    {
+      "id": "67ef5fcf73c0",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 50.0,
+      "longitude": 19.9,
+      "activityCount": 3,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2023": 3
+      }
+    },
+    {
+      "id": "99a814f00a7b",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 6.8,
+      "longitude": 102.7,
+      "activityCount": 3,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 3
+      }
+    },
+    {
+      "id": "b83d70d51703",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 1.3,
+      "longitude": 103.9,
+      "activityCount": 3,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 3
+      }
+    },
+    {
+      "id": "d42fcda493a6",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 41.4,
+      "longitude": 60.4,
+      "activityCount": 3,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2026": 3
+      }
+    },
+    {
+      "id": "fcb13e9cf406",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 48.5,
+      "longitude": 8.2,
+      "activityCount": 3,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 3
       }
     },
     {
@@ -2105,54 +2070,6 @@
       }
     },
     {
-      "id": "001c84b86bc6",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 65.7,
-      "longitude": -17.3,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2022": 2
-      }
-    },
-    {
-      "id": "769fa157a21a",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 53.1,
-      "longitude": 10.0,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2022": 2
-      }
-    },
-    {
-      "id": "bdc1dbce75de",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 38.7,
-      "longitude": 35.5,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2022": 2
-      }
-    },
-    {
-      "id": "bdc5eacdfcf3",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": -7.7,
-      "longitude": 38.2,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 2
-      }
-    },
-    {
       "id": "32a8b080b402",
       "type": "mountaineering",
       "label": "Mountaineering",
@@ -2178,116 +2095,6 @@
       }
     },
     {
-      "id": "192259780425",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 16.6,
-      "longitude": -62.5,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 2
-      }
-    },
-    {
-      "id": "43a6f233f04e",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 40.7,
-      "longitude": 31.5,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 2
-      }
-    },
-    {
-      "id": "44a2fd1f1957",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 20.4,
-      "longitude": 111.4,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 2
-      }
-    },
-    {
-      "id": "45f60f5291a5",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -44.3,
-      "longitude": -59.2,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 2
-      }
-    },
-    {
-      "id": "7441963beeac",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 43.5,
-      "longitude": 16.4,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 2
-      }
-    },
-    {
-      "id": "b3823fbe48a0",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -35.0,
-      "longitude": -55.9,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1,
-        "2024": 1
-      }
-    },
-    {
-      "id": "d30ae8ae157e",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -34.6,
-      "longitude": -58.4,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 2
-      }
-    },
-    {
-      "id": "68bb6737228a",
-      "type": "other",
-      "label": "Other",
-      "latitude": 26.2,
-      "longitude": 56.4,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 2
-      }
-    },
-    {
-      "id": "95abba90aab9",
-      "type": "skating",
-      "label": "Skating",
-      "latitude": 52.3,
-      "longitude": 4.9,
-      "activityCount": 2,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2021": 1,
-        "2020": 1
-      }
-    },
-    {
       "id": "1b4e8ed6008e",
       "type": "snorkeling",
       "label": "Snorkeling",
@@ -2305,6 +2112,18 @@
       "label": "Snorkeling",
       "latitude": 20.4,
       "longitude": -87.3,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2023": 2
+      }
+    },
+    {
+      "id": "8589c5642bc5",
+      "type": "snorkeling",
+      "label": "Snorkeling",
+      "latitude": 26.2,
+      "longitude": 56.4,
       "activityCount": 2,
       "clusterRadiusKm": 100,
       "years": {
@@ -2345,6 +2164,139 @@
       "clusterRadiusKm": 100,
       "years": {
         "2026": 1,
+        "2024": 1
+      }
+    },
+    {
+      "id": "5e2f44d07dbd",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 53.1,
+      "longitude": 10.0,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2022": 2
+      }
+    },
+    {
+      "id": "767bdf9fe062",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -34.6,
+      "longitude": -58.4,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 2
+      }
+    },
+    {
+      "id": "7e527376e5ed",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -44.3,
+      "longitude": -59.2,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 2
+      }
+    },
+    {
+      "id": "82cc563897ca",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 43.5,
+      "longitude": 16.4,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 2
+      }
+    },
+    {
+      "id": "a7bdef6c133e",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 20.4,
+      "longitude": 111.4,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2026": 2
+      }
+    },
+    {
+      "id": "b77ac855e48b",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 38.7,
+      "longitude": 35.5,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2022": 2
+      }
+    },
+    {
+      "id": "b8f7e35a3f4a",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -7.7,
+      "longitude": 38.2,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2023": 2
+      }
+    },
+    {
+      "id": "e170d99abbc2",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 65.7,
+      "longitude": -17.3,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2022": 2
+      }
+    },
+    {
+      "id": "e5eb095de56f",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 78.2,
+      "longitude": 15.6,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 2
+      }
+    },
+    {
+      "id": "e81e4b9469e0",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 16.6,
+      "longitude": -62.5,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2023": 2
+      }
+    },
+    {
+      "id": "f5029580228e",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -35.0,
+      "longitude": -55.9,
+      "activityCount": 2,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1,
         "2024": 1
       }
     },
@@ -2998,6 +2950,18 @@
       }
     },
     {
+      "id": "220027ff79ed",
+      "type": "hockey",
+      "label": "Hockey",
+      "latitude": 52.3,
+      "longitude": 4.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2020": 1
+      }
+    },
+    {
       "id": "0435309db911",
       "type": "horseback_riding",
       "label": "Horseback riding",
@@ -3058,126 +3022,6 @@
       }
     },
     {
-      "id": "3cfe5d87efa9",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 64.1,
-      "longitude": -21.9,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2022": 1
-      }
-    },
-    {
-      "id": "4eb8575d9534",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 40.5,
-      "longitude": 32.6,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 1
-      }
-    },
-    {
-      "id": "593bcd19de17",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 39.7,
-      "longitude": 67.0,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 1
-      }
-    },
-    {
-      "id": "7862b8417043",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 43.4,
-      "longitude": 79.1,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 1
-      }
-    },
-    {
-      "id": "8c130a4400f8",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 50.3,
-      "longitude": 6.5,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2021": 1
-      }
-    },
-    {
-      "id": "963c13b44b0c",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 50.8,
-      "longitude": 4.4,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 1
-      }
-    },
-    {
-      "id": "bfaf0b5d5496",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 78.2,
-      "longitude": 15.6,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "c9efab87fa49",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 42.9,
-      "longitude": 74.6,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2026": 1
-      }
-    },
-    {
-      "id": "d4000cc7a0a9",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 25.7,
-      "longitude": 32.6,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 1
-      }
-    },
-    {
-      "id": "f3f302472870",
-      "type": "lap_swimming",
-      "label": "Lap swimming",
-      "latitude": 30.0,
-      "longitude": 31.1,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 1
-      }
-    },
-    {
       "id": "0834570ec826",
       "type": "mobility",
       "label": "Mobility",
@@ -3199,354 +3043,6 @@
       "clusterRadiusKm": 100,
       "years": {
         "2019": 1
-      }
-    },
-    {
-      "id": "02f7d37221d0",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -39.8,
-      "longitude": -59.3,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "072902487ed8",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 54.9,
-      "longitude": 23.9,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 1
-      }
-    },
-    {
-      "id": "12fc75edc62d",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -54.9,
-      "longitude": -56.8,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 1
-      }
-    },
-    {
-      "id": "1b6c121118ae",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 59.9,
-      "longitude": 10.8,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "372a44d125c8",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 18.0,
-      "longitude": -63.0,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 1
-      }
-    },
-    {
-      "id": "3a6710645c8e",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 16.5,
-      "longitude": 108.0,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "3d39458db749",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 59.3,
-      "longitude": 18.1,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 1
-      }
-    },
-    {
-      "id": "4086a744f173",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 41.1,
-      "longitude": 29.0,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "4e2475f3ec94",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -39.0,
-      "longitude": -58.3,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "604354a7e822",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 53.3,
-      "longitude": -6.2,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "6403f32c0049",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 25.3,
-      "longitude": 51.6,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "6514cf2f32fe",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -42.8,
-      "longitude": -64.8,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "691415f062b4",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 20.7,
-      "longitude": -88.2,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 1
-      }
-    },
-    {
-      "id": "77232ae2f38e",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 13.1,
-      "longitude": 100.8,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "7bf5da792c7d",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 8.4,
-      "longitude": 105.3,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "7edd1ac30ff4",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 25.7,
-      "longitude": 52.6,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "8670802944a8",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 51.5,
-      "longitude": -0.2,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "97218047e06a",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 48.9,
-      "longitude": 2.8,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 1
-      }
-    },
-    {
-      "id": "b80608f2c2d4",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 24.3,
-      "longitude": 52.6,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "bc3c16611abd",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 35.5,
-      "longitude": 24.2,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 1
-      }
-    },
-    {
-      "id": "c9ea6ce236f5",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -36.3,
-      "longitude": -55.5,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 1
-      }
-    },
-    {
-      "id": "ca1f0ad1b660",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 9.5,
-      "longitude": 100.0,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "eae4e196349c",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 36.9,
-      "longitude": 31.0,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2022": 1
-      }
-    },
-    {
-      "id": "f2500dfee99c",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 78.2,
-      "longitude": 15.5,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2025": 1
-      }
-    },
-    {
-      "id": "f357eb15f9ce",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": 40.5,
-      "longitude": 18.9,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 1
-      }
-    },
-    {
-      "id": "f50d00fd1297",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -50.8,
-      "longitude": -62.6,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 1
-      }
-    },
-    {
-      "id": "f6b94503d758",
-      "type": "open_water_swimming",
-      "label": "Open-water swimming",
-      "latitude": -64.7,
-      "longitude": -63.0,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2024": 1
-      }
-    },
-    {
-      "id": "620089577f92",
-      "type": "other",
-      "label": "Other",
-      "latitude": 15.2,
-      "longitude": -61.4,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2023": 1
-      }
-    },
-    {
-      "id": "e5c32666e63c",
-      "type": "other",
-      "label": "Other",
-      "latitude": 36.9,
-      "longitude": 27.2,
-      "activityCount": 1,
-      "clusterRadiusKm": 100,
-      "years": {
-        "2020": 1
       }
     },
     {
@@ -3694,15 +3190,27 @@
       }
     },
     {
-      "id": "f68d0429f86e",
-      "type": "sailing",
-      "label": "Sailing",
-      "latitude": 52.3,
-      "longitude": 4.8,
+      "id": "44c18e878882",
+      "type": "snorkeling",
+      "label": "Snorkeling",
+      "latitude": 36.9,
+      "longitude": 27.2,
       "activityCount": 1,
       "clusterRadiusKm": 100,
       "years": {
         "2020": 1
+      }
+    },
+    {
+      "id": "e80bc8648c16",
+      "type": "snorkeling",
+      "label": "Snorkeling",
+      "latitude": 15.2,
+      "longitude": -61.4,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2023": 1
       }
     },
     {
@@ -4015,6 +3523,378 @@
       "clusterRadiusKm": 100,
       "years": {
         "2024": 1
+      }
+    },
+    {
+      "id": "0d075e013758",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 51.5,
+      "longitude": -0.2,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "216b35dea7a9",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 24.3,
+      "longitude": 52.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "531b4e4a4f66",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -42.8,
+      "longitude": -64.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "5c1dcc781320",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 35.5,
+      "longitude": 24.2,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "5f5a56d82f2a",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 39.7,
+      "longitude": 67.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2026": 1
+      }
+    },
+    {
+      "id": "604d52451192",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 8.4,
+      "longitude": 105.3,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "68533fa71b22",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 9.5,
+      "longitude": 100.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "6b7165d76b84",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 16.5,
+      "longitude": 108.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "6be114091a39",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 20.7,
+      "longitude": -88.2,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "8557a44bfd9b",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 13.1,
+      "longitude": 100.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "867bcba1207c",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 59.3,
+      "longitude": 18.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "8d0d6ff48a05",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 50.3,
+      "longitude": 6.5,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2021": 1
+      }
+    },
+    {
+      "id": "919dec6a6990",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 43.4,
+      "longitude": 79.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2026": 1
+      }
+    },
+    {
+      "id": "955ae78191b7",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -64.7,
+      "longitude": -63.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "9ee15843e1da",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -39.0,
+      "longitude": -58.3,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "a015ad35ba1d",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -36.3,
+      "longitude": -55.5,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "a215d5bb760a",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -54.9,
+      "longitude": -56.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "a8e9503e6b2a",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 30.0,
+      "longitude": 31.1,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "b13704815666",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 64.1,
+      "longitude": -21.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2022": 1
+      }
+    },
+    {
+      "id": "b4b45bc5a2d5",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -50.8,
+      "longitude": -62.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "becaec2ecc0e",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 54.9,
+      "longitude": 23.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "c5a81ac54673",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 25.3,
+      "longitude": 51.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "d359979e9690",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 40.5,
+      "longitude": 18.9,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "d45d085d1251",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 18.0,
+      "longitude": -63.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2023": 1
+      }
+    },
+    {
+      "id": "d5b739e2f46b",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 41.1,
+      "longitude": 29.0,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "e2974f58cc33",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 53.3,
+      "longitude": -6.2,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "e4c17c62a500",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": -39.8,
+      "longitude": -59.3,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "ea9be602c441",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 25.7,
+      "longitude": 32.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2024": 1
+      }
+    },
+    {
+      "id": "f2281e075c86",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 59.9,
+      "longitude": 10.8,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
+      }
+    },
+    {
+      "id": "fbf51856381a",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 42.9,
+      "longitude": 74.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2026": 1
+      }
+    },
+    {
+      "id": "ff06b6b170f5",
+      "type": "swimming",
+      "label": "Swimming",
+      "latitude": 25.7,
+      "longitude": 52.6,
+      "activityCount": 1,
+      "clusterRadiusKm": 100,
+      "years": {
+        "2025": 1
       }
     },
     {
