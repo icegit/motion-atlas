@@ -1,7 +1,11 @@
 import json
+import os
+import sys
 import tempfile
+import types
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from sync_garmin_activities import (
     DEFAULT_CLUSTER_RADIUS_KM,
@@ -9,6 +13,7 @@ from sync_garmin_activities import (
     build_public_archive,
     canonical_activity_type,
     canonical_sport,
+    connect_to_garmin,
     haversine_km,
     load_custom_activities,
     write_archive,
@@ -35,6 +40,35 @@ def activity(
 
 
 class GarminActivityMapTests(unittest.TestCase):
+    def test_token_login_keeps_credentials_available_for_stale_token_recovery(self):
+        created_clients = []
+
+        class FakeGarmin:
+            def __init__(self, email=None, password=None):
+                self.email = email
+                self.password = password
+                self.login_value = None
+                created_clients.append(self)
+
+            def login(self, value=None):
+                self.login_value = value
+
+        fake_module = types.SimpleNamespace(Garmin=FakeGarmin)
+        environment = {
+            "GARMIN_TOKENS_JSON": "x" * 600,
+            "GARMIN_EMAIL": "runner@example.com",
+            "GARMIN_PASSWORD": "secret",
+        }
+        with patch.dict(sys.modules, {"garminconnect": fake_module}), patch.dict(
+            os.environ, environment, clear=True
+        ):
+            client = connect_to_garmin(Path("missing-token-store"))
+
+        self.assertIs(client, created_clients[0])
+        self.assertEqual(client.email, environment["GARMIN_EMAIL"])
+        self.assertEqual(client.password, environment["GARMIN_PASSWORD"])
+        self.assertEqual(client.login_value, environment["GARMIN_TOKENS_JSON"])
+
     def test_classifies_common_garmin_sports(self):
         self.assertEqual(canonical_sport("trail_running"), "trail_running")
         self.assertEqual(canonical_sport("treadmill_running"), "treadmill_running")

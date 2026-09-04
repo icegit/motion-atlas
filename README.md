@@ -37,7 +37,7 @@ An existing private Garmin summary export can be used without reconnecting:
 python scripts/sync_garmin_activities.py --activities-file path/to/activities_all_summaries.json
 ```
 
-For GitHub Actions, add the complete contents of `.garminconnect/garmin_tokens.json` as the repository secret `GARMIN_TOKENS_JSON`. The scheduled workflow refreshes and deploys the activity map every day at 03:17 UTC. `GARMIN_EMAIL` and `GARMIN_PASSWORD` are supported as a fallback.
+For GitHub Actions, add the complete contents of `.garminconnect/garmin_tokens.json` as the repository secret `GARMIN_TOKENS_JSON`. The scheduled workflow refreshes and deploys the activity map every day at 03:17 UTC. Add `GARMIN_EMAIL` and `GARMIN_PASSWORD` as well so the client can replace a stale token automatically. Accounts that require interactive MFA still need a fresh `GARMIN_TOKENS_JSON` secret when Garmin rejects the saved session.
 
 ## Activities without GPS
 
@@ -60,7 +60,7 @@ For GitHub Actions, store the JSON as the `CUSTOM_ACTIVITIES_JSON` repository se
 
 ## Basemap
 
-The interface defaults to a softened standard map with a persistent low-contrast fallback layer. The information panel can switch between Standard, Minimal, Cycle, Topo, and Satellite styles. Tiles are buffered for mobile navigation, and the fallback remains visible if an optional style tile is slow or unavailable. Required attribution stays visible for the active map source.
+The interface defaults to a softened standard map with a persistent low-contrast fallback layer. The information panel can switch between Standard, Minimal, Cycle, and Topo styles. Every configured tile source works without a visitor-supplied API key. Tiles are buffered for mobile navigation, and the fallback remains visible if an optional style tile is slow or unavailable. Required attribution stays visible for the active map source.
 
 ## Hosting
 

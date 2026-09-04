@@ -3,7 +3,7 @@ export const FALLBACK_BASEMAP_TILE_URL = "https://{s}.basemaps.cartocdn.com/ligh
 const OSM_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>';
 const CARTO_ATTRIBUTION = '&copy; <a href="https://carto.com/attributions">CARTO</a>';
 
-export const DEFAULT_MAP_STYLE = "satellite";
+export const DEFAULT_MAP_STYLE = "standard";
 
 export const MAP_STYLES = Object.freeze({
   standard: {
@@ -37,13 +37,6 @@ export const MAP_STYLES = Object.freeze({
     subdomains: "abc",
     maxNativeZoom: 17,
     opacity: 0.36,
-  },
-  satellite: {
-    label: "Satellite",
-    url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-    attribution: "Tiles &copy; Esri and its imagery providers",
-    maxNativeZoom: 19,
-    opacity: 0.48,
   },
 });
 

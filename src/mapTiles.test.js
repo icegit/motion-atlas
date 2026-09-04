@@ -9,17 +9,19 @@ import {
 } from "./mapTiles.js";
 
 describe("map styles and mobile tiles", () => {
-  it("defaults to Satellite and offers the requested alternative map types", () => {
-    expect(DEFAULT_MAP_STYLE).toBe("satellite");
+  it("defaults to a no-key standard map and offers alternative map types", () => {
+    expect(DEFAULT_MAP_STYLE).toBe("standard");
     expect(Object.keys(MAP_STYLES)).toEqual([
       "standard",
       "minimal",
       "cycle",
       "topo",
-      "satellite",
     ]);
     expect(MAP_STYLES.cycle.url).toContain("cyclosm");
     expect(MAP_STYLES.topo.url).toContain("opentopomap");
+    for (const style of Object.values(MAP_STYLES)) {
+      expect(style.url).not.toContain("arcgis");
+    }
   });
 
   it("keeps a light fallback layer behind every selectable style", () => {

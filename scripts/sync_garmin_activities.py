@@ -850,19 +850,21 @@ def connect_to_garmin(token_store: Path) -> Any:
             "garminconnect is not installed; run pip install -r requirements-garmin.txt"
         ) from error
 
+    email = os.getenv("GARMIN_EMAIL", "").strip()
+    password = os.getenv("GARMIN_PASSWORD", "")
     token_json = os.getenv("GARMIN_TOKENS_JSON", "").strip()
     if token_json:
-        client = Garmin()
+        # Supplying credentials here lets garminconnect recover from a stale
+        # cached token instead of failing the scheduled job permanently.
+        client = Garmin(email=email or None, password=password or None)
         client.login(token_json)
         return client
 
     if token_store.exists():
-        client = Garmin()
+        client = Garmin(email=email or None, password=password or None)
         client.login(str(token_store))
         return client
 
-    email = os.getenv("GARMIN_EMAIL", "").strip()
-    password = os.getenv("GARMIN_PASSWORD", "")
     if not email or not password:
         raise RuntimeError(
             "Set GARMIN_TOKENS_JSON, provide --token-store, or set GARMIN_EMAIL and GARMIN_PASSWORD"

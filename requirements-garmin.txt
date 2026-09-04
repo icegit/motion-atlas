@@ -1,1 +1,1 @@
-garminconnect==0.3.8
+garminconnect==0.3.11
