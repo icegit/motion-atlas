@@ -60,7 +60,7 @@ For GitHub Actions, store the JSON as the `CUSTOM_ACTIVITIES_JSON` repository se
 
 ## Basemap
 
-The interface defaults to a softened standard map with a persistent low-contrast fallback layer. The information panel can switch between Standard, Minimal, Cycle, and Topo styles. Every configured tile source works without a visitor-supplied API key. Tiles are buffered for mobile navigation, and the fallback remains visible if an optional style tile is slow or unavailable. Required attribution stays visible for the active map source.
+The interface defaults to a softened standard map with a persistent low-contrast fallback layer. The information panel can switch between Standard, Minimal, Cycle, Topo, and Satellite styles. Every configured tile source works without a visitor-supplied API key. Tiles are buffered for mobile navigation, and the fallback remains visible if an optional style tile is slow or unavailable. Required attribution stays visible for the active map source.
 
 ## Hosting
 

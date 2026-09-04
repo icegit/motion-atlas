@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 import { SPORT_META, sportIcon, sportIconNode } from "./sportConfig";
 import { areAllSportsActive, toggleAllSports, toggleSportSelection } from "./filterUtils.js";
 import {
+  BASEMAP_ATTRIBUTION,
   DEFAULT_MAP_STYLE,
   FALLBACK_BASEMAP_TILE_URL,
   MAP_STYLES,
@@ -68,11 +69,9 @@ function ActivityMap({ groups, activeSports, mapStyle }) {
     L.tileLayer(FALLBACK_BASEMAP_TILE_URL, {
       ...MOBILE_TILE_OPTIONS,
       pane: "basemap",
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      maxNativeZoom: 20,
-      maxZoom: 20,
-      subdomains: "abcd",
+      attribution: BASEMAP_ATTRIBUTION,
+      maxNativeZoom: 19,
+      maxZoom: 19,
     }).addTo(map);
 
     markersRef.current = L.layerGroup().addTo(map);

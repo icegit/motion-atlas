@@ -16,20 +16,28 @@ describe("map styles and mobile tiles", () => {
       "minimal",
       "cycle",
       "topo",
+      "satellite",
     ]);
     expect(MAP_STYLES.cycle.url).toContain("cyclosm");
     expect(MAP_STYLES.topo.url).toContain("opentopomap");
+    expect(MAP_STYLES.satellite.url).toContain("server.arcgisonline.com");
     for (const style of Object.values(MAP_STYLES)) {
-      expect(style.url).not.toContain("arcgis");
+      expect(style.url).not.toContain("cartocdn");
+      expect(style.attribution).not.toContain("CARTO");
     }
   });
 
-  it("keeps a light fallback layer behind every selectable style", () => {
-    expect(FALLBACK_BASEMAP_TILE_URL).toContain("cartocdn.com/light_all");
+  it("keeps a keyless fallback layer behind every selectable style", () => {
+    expect(FALLBACK_BASEMAP_TILE_URL).toBe("https://tile.openstreetmap.org/{z}/{x}/{y}.png");
     for (const style of Object.values(MAP_STYLES)) {
       expect(style.opacity).toBeLessThanOrEqual(0.5);
       expect(style.attribution).toBeTruthy();
     }
+  });
+
+  it("does not reference CARTO from the map setup", () => {
+    const mapSource = readFileSync(new URL("./main.jsx", import.meta.url), "utf8");
+    expect(mapSource).not.toMatch(/carto/i);
   });
 
   it("preloads a generous tile buffer without pane-wide rendering filters", () => {
