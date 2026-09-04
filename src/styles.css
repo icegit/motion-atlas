@@ -113,7 +113,7 @@ h1 {
 .section-heading--unlocated { margin-top: 20px; }
 .section-heading--unlocated strong { color: #7b8580; font-size: 0.72rem; font-variant-numeric: tabular-nums; }
 
-.sport-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.sport-filters { display: grid; grid-template-columns: 1fr; gap: 8px; }
 .sport-filter {
   display: grid;
   grid-template-columns: 38px minmax(0, 1fr) auto;
