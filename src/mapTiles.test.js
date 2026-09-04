@@ -41,4 +41,12 @@ describe("map styles and mobile tiles", () => {
     const styles = readFileSync(stylesPath, "utf8");
     expect(styles).not.toMatch(/leaflet-(?:tile|basemap|mapstyle)[^{]*\{[^}]*filter:/s);
   });
+
+  it("keeps activity legend icons and labels comfortably legible", () => {
+    const stylesPath = fileURLToPath(new URL("./styles.css", import.meta.url));
+    const styles = readFileSync(stylesPath, "utf8");
+    expect(styles).toMatch(/\.sport-filter__icon \{[^}]*width: 34px;[^}]*height: 34px;/s);
+    expect(styles).toMatch(/\.sport-filter__icon svg \{[^}]*width: 23px;[^}]*height: 23px;/s);
+    expect(styles).toMatch(/\.sport-filter__label \{[^}]*font-size: 0\.875rem;/s);
+  });
 });

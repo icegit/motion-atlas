@@ -116,10 +116,10 @@ h1 {
 .sport-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .sport-filter {
   display: grid;
-  grid-template-columns: 30px minmax(0, 1fr) auto;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
   align-items: center;
   min-width: 0;
-  padding: 8px 10px;
+  padding: 9px 10px;
   border: 1px solid #dde0dc;
   border-radius: 12px;
   color: #65706b;
@@ -129,9 +129,9 @@ h1 {
 }
 .sport-filter:hover { border-color: color-mix(in srgb, var(--sport-color) 28%, #d9ddd8); }
 .sport-filter.is-active { color: #173d2e; border-color: #a9cfba; background: #dff0e6; box-shadow: inset 0 0 0 1px rgb(88 151 114 / 8%); }
-.sport-filter__icon { display: grid; width: 26px; height: 26px; place-items: center; border-radius: 9px; color: var(--sport-color); background: color-mix(in srgb, var(--sport-color) 12%, white); }
-.sport-filter__icon svg { width: 17px; height: 17px; }
-.sport-filter__label { overflow: hidden; font-size: 0.75rem; font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
+.sport-filter__icon { display: grid; width: 34px; height: 34px; place-items: center; border-radius: 10px; color: var(--sport-color); background: color-mix(in srgb, var(--sport-color) 12%, white); }
+.sport-filter__icon svg { width: 23px; height: 23px; }
+.sport-filter__label { overflow: hidden; font-size: 0.875rem; font-weight: 680; text-overflow: ellipsis; white-space: nowrap; }
 .sport-filter strong { color: #66736d; font-size: 0.72rem; font-variant-numeric: tabular-nums; }
 
 .unlocated-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
